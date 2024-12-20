@@ -5,15 +5,24 @@ import os
 from openpyxl.styles import Font,Border
 from openpyxl.utils import get_column_letter
 import pdfplumber
-import PyPDF2
-import json
 import re
-import pytesseract
-from PIL import Image
-from fpdf import FPDF
 from openpyxl import Workbook
 
+# Define colors
+light_green_fill = styles.PatternFill(start_color="92D050", end_color="92D050", fill_type="solid")
+orange_fill = styles.PatternFill(start_color="FFC300", end_color="FFC300", fill_type="solid")
+yellow_fill = styles.PatternFill(start_color="FFFF00", end_color="FFFF00", fill_type="solid")
+grey_fill = styles.PatternFill(start_color="c0c0c0", end_color="c0c0c0", fill_type="solid")
+
+# Define a bold border  
+bold_border = styles.Border(left=styles.Side(border_style='thin', color='000000'),
+                right=styles.Side(border_style='thin', color='000000'),
+                top=styles.Side(border_style='thin', color='000000'),
+                bottom=styles.Side(border_style='thin', color='000000'))
+
 app = Flask(__name__)
+
+
 
 @app.route('/')
 def index():
@@ -135,41 +144,8 @@ def generate_question_number(question_numbers,length):
         else:
             qnum.append("Q"+str(question_numbers[i]))
     return qnum
-    
 
-def generate_excel(pdf_paths):
-
-    question_numbers1=[]
-    question_numbers2=[]
-    question_numbers3=[]
-    marks1=[]
-    marks2=[] 
-    marks3=[]
-
-    extract_question_numbers_from_pdf(pdf_paths[0], question_numbers1, marks1)
-    extract_question_numbers_from_pdf(pdf_paths[1], question_numbers2, marks2)
-    extract_question_numbers_from_pdf(pdf_paths[2], question_numbers3, marks3)
-
-    # Create a new workbook
-    workbook = Workbook()
-    worksheet = workbook.active
-
-# Define colors
-    light_green_fill = styles.PatternFill(start_color="92D050", end_color="92D050", fill_type="solid")
-    orange_fill = styles.PatternFill(start_color="FFC300", end_color="FFC300", fill_type="solid")
-    yellow_fill = styles.PatternFill(start_color="FFFF00", end_color="FFFF00", fill_type="solid")
-    grey_fill = styles.PatternFill(start_color="c0c0c0", end_color="c0c0c0", fill_type="solid")
-
-# Define a bold border  
-    bold_border = styles.Border(left=styles.Side(border_style='thin', color='000000'),
-                    right=styles.Side(border_style='thin', color='000000'),
-                    top=styles.Side(border_style='thin', color='000000'),
-                    bottom=styles.Side(border_style='thin', color='000000'))
-
-    co1=len(question_numbers1)
-    co2=len(question_numbers2)
-    co3=len(question_numbers3)
-
+def generate_first_row(worksheet,co1,co2,co3):
     worksheet.merge_cells(start_row=1, start_column=1, end_row=1, end_column=3)
     worksheet.cell(row=1, column=1).value = "CLAT->"
     worksheet.cell(row=1, column=1).alignment = styles.Alignment(horizontal='center', vertical='center')
@@ -188,8 +164,9 @@ def generate_excel(pdf_paths):
     worksheet.merge_cells(start_row=1, start_column=4+co1+co2, end_row=1, end_column=3+co1+co2+co3)
     worksheet.cell(row=1, column=4+co1+co2).value='FT-III'
     worksheet.cell(row=1, column=4+co1+co2).alignment = styles.Alignment(horizontal='center', vertical='center')
-    worksheet.cell(row=1, column=4+co1+co2).fill=light_green_fill
+    worksheet.cell(row=1, column=4+co1+co2).fill=light_green_fill    
 
+def generate_second_row(worksheet,co1,co2,co3):
     worksheet.merge_cells(start_row=2, start_column=1, end_row=2, end_column=3)
     worksheet.cell(row=2, column=1).value = "CO ->"
     worksheet.cell(row=2, column=1).alignment = styles.Alignment(horizontal='center', vertical='center')
@@ -210,6 +187,7 @@ def generate_excel(pdf_paths):
     worksheet.cell(row=2, column=4+co1+co2).alignment = styles.Alignment(horizontal='center', vertical='center')
     worksheet.cell(row=2, column=4+co1+co2).fill=orange_fill
 
+def generate_third_row(worksheet,co1,co2,co3):
     worksheet.merge_cells(start_row=3, start_column=4, end_row=3, end_column=3+co1)
     worksheet.cell(row=3, column=4).value = 'THEORY \n (for either/or Q, \n award marks for the attempted students only)'
     worksheet.cell(row=3, column=4).alignment = styles.Alignment(horizontal='center', vertical='center')
@@ -222,6 +200,7 @@ def generate_excel(pdf_paths):
     worksheet.cell(row=3, column=4+co1+co2).value='THEORY \n (for either/or Q, \n award marks for the attempted students only)'
     worksheet.cell(row=3, column=4+co1+co2).alignment = styles.Alignment(horizontal='center', vertical='center')
 
+def generate_fourth_row(worksheet,marks1,marks2,marks3,co1,co2,co3):
     worksheet.merge_cells(start_row=4, start_column=1, end_row=4, end_column=3)
     worksheet.cell(row=4, column=1).value = "MAX. MARKS (If not applicable, leave BLANK)->"
     worksheet.cell(row=4, column=1).alignment = styles.Alignment(horizontal='right', vertical='center')
@@ -242,6 +221,7 @@ def generate_excel(pdf_paths):
         worksheet.cell(row=4, column=4+co1+co2+i).value = marks3[i]
         worksheet.cell(row=4, column=4+co1+co2+i).alignment = styles.Alignment(horizontal='center', vertical='center')
 
+def generate_fifth_row(worksheet,co1,co2,co3):
     worksheet.merge_cells(start_row=5, start_column=4, end_row=5, end_column=3+co1)
     worksheet.cell(row=5, column=4).value = 'Question numbers mapping'
     worksheet.cell(row=5, column=4).alignment = styles.Alignment(horizontal='center', vertical='center')
@@ -256,7 +236,8 @@ def generate_excel(pdf_paths):
     worksheet.cell(row=5, column=4+co1+co2).value = 'Question numbers mapping'
     worksheet.cell(row=5, column=4+co1+co2).alignment = styles.Alignment(horizontal='center', vertical='center')
     worksheet.cell(row=5, column=4+co1+co2).fill = grey_fill
-
+    
+def generate_sixth_row(worksheet):
     worksheet.cell(row=6,column=1).value="Sl.No"
     worksheet.column_dimensions[get_column_letter(1)].width=6
     worksheet.cell(row=6, column=1).alignment = styles.Alignment(horizontal='center', vertical='center')
@@ -269,6 +250,32 @@ def generate_excel(pdf_paths):
     worksheet.column_dimensions[get_column_letter(3)].width=30
     worksheet.cell(row=6, column=3).alignment = styles.Alignment(horizontal='center', vertical='center')
 
+def generate_excel(pdf_paths):
+
+    question_numbers1=[]
+    question_numbers2=[]
+    question_numbers3=[]
+    marks1=[]
+    marks2=[] 
+    marks3=[]
+
+    extract_question_numbers_from_pdf(pdf_paths[0], question_numbers1, marks1)
+    extract_question_numbers_from_pdf(pdf_paths[1], question_numbers2, marks2)
+    extract_question_numbers_from_pdf(pdf_paths[2], question_numbers3, marks3)
+
+    # Create a new workbook
+    workbook = Workbook()
+    worksheet = workbook.active
+
+    co1=len(question_numbers1)
+    co2=len(question_numbers2)
+    co3=len(question_numbers3)
+    generate_first_row(worksheet,co1,co2,co3)
+    generate_second_row(worksheet,co1,co2,co3)
+    generate_third_row(worksheet,co1,co2,co3)
+    generate_fourth_row(worksheet,marks1,marks2,marks3,co1,co2,co3)
+    generate_fifth_row(worksheet,co1,co2,co3)
+    generate_sixth_row(worksheet)
     qnum=generate_question_number(question_numbers1,co1)
     for i in range(0, co1):
         worksheet.cell(row=6, column=4+i).value = qnum[i]
