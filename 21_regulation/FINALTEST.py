@@ -236,8 +236,8 @@ def generate_fifth_row(worksheet,co1,co2,co3):
     worksheet.cell(row=5, column=4+co1+co2).value = 'Question numbers mapping'
     worksheet.cell(row=5, column=4+co1+co2).alignment = styles.Alignment(horizontal='center', vertical='center')
     worksheet.cell(row=5, column=4+co1+co2).fill = grey_fill
-    
-def generate_sixth_row(worksheet):
+
+def generate_sixth_row(worksheet,question_numbers1,question_numbers2,question_numbers3,co1,co2,co3):
     worksheet.cell(row=6,column=1).value="Sl.No"
     worksheet.column_dimensions[get_column_letter(1)].width=6
     worksheet.cell(row=6, column=1).alignment = styles.Alignment(horizontal='center', vertical='center')
@@ -249,6 +249,21 @@ def generate_sixth_row(worksheet):
     worksheet.cell(row=6,column=3).value="student Name"
     worksheet.column_dimensions[get_column_letter(3)].width=30
     worksheet.cell(row=6, column=3).alignment = styles.Alignment(horizontal='center', vertical='center')
+
+    qnum=generate_question_number(question_numbers1,co1)
+    for i in range(0, co1):
+        worksheet.cell(row=6, column=4+i).value = qnum[i]
+        worksheet.cell(row=6, column=4+i).alignment = styles.Alignment(horizontal='center', vertical='center')
+    
+    qnum=generate_question_number(question_numbers2,co2)        
+    for i in range(0, co2):
+        worksheet.cell(row=6, column=4+co1+i).value = qnum[i]
+        worksheet.cell(row=6, column=4+co1+i).alignment = styles.Alignment(horizontal='center', vertical='center')
+    
+    qnum=generate_question_number(question_numbers3,co3)
+    for i in range(0, co3):
+        worksheet.cell(row=6, column=4+co1+co2+i).value =qnum[i]
+        worksheet.cell(row=6, column=4+co1+co2+i).alignment = styles.Alignment(horizontal='center', vertical='center')
 
 def generate_excel(pdf_paths):
 
@@ -275,21 +290,7 @@ def generate_excel(pdf_paths):
     generate_third_row(worksheet,co1,co2,co3)
     generate_fourth_row(worksheet,marks1,marks2,marks3,co1,co2,co3)
     generate_fifth_row(worksheet,co1,co2,co3)
-    generate_sixth_row(worksheet)
-    qnum=generate_question_number(question_numbers1,co1)
-    for i in range(0, co1):
-        worksheet.cell(row=6, column=4+i).value = qnum[i]
-        worksheet.cell(row=6, column=4+i).alignment = styles.Alignment(horizontal='center', vertical='center')
-    
-    qnum=generate_question_number(question_numbers2,co2)        
-    for i in range(0, co2):
-        worksheet.cell(row=6, column=4+co1+i).value = qnum[i]
-        worksheet.cell(row=6, column=4+co1+i).alignment = styles.Alignment(horizontal='center', vertical='center')
-    
-    qnum=generate_question_number(question_numbers3,co3)
-    for i in range(0, co3):
-        worksheet.cell(row=6, column=4+co1+co2+i).value =qnum[i]
-        worksheet.cell(row=6, column=4+co1+co2+i).alignment = styles.Alignment(horizontal='center', vertical='center')
+    generate_sixth_row(worksheet,question_numbers1,question_numbers2,question_numbers3,co1,co2,co3)
     
     times_new_roman_font = Font(name="Times New Roman", size=10, bold=True)
     for row_num, row in enumerate(worksheet.iter_rows(min_row=1, max_row=worksheet.max_row), 1):
