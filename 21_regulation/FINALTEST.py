@@ -210,25 +210,16 @@ def generate_first_row(worksheet,co1,co2,co3,co4,co5):
     worksheet.cell(row=1, column=4).alignment = styles.Alignment(horizontal='center', vertical='center')
     worksheet.cell(row=1, column=4).fill = light_green_fill
 
-    worksheet.merge_cells(start_row=1, start_column=4+co1, end_row=1, end_column=3+co1+co2)
+    worksheet.merge_cells(start_row=1, start_column=4+co1, end_row=1, end_column=3+co1+co2+co3)
     worksheet.cell(row=1, column=4+co1).value='FT-II , FT-IV'
     worksheet.cell(row=1, column=4+co1).alignment = styles.Alignment(horizontal='center', vertical='center')
     worksheet.cell(row=1, column=4+co1).fill=light_green_fill
 
-    worksheet.merge_cells(start_row=1, start_column=4+co1+co2, end_row=1, end_column=3+co1+co2+co3)
-    worksheet.cell(row=1, column=4+co1+co2).value='FT-II , FT-IV'
-    worksheet.cell(row=1, column=4+co1+co2).alignment = styles.Alignment(horizontal='center', vertical='center')
-    worksheet.cell(row=1, column=4+co1+co2).fill=light_green_fill    
-
-    worksheet.merge_cells(start_row=1, start_column=4+co1+co2+co3, end_row=1, end_column=3+co1+co2+co3+co4)
+    worksheet.merge_cells(start_row=1, start_column=4+co1+co2+co3, end_row=1, end_column=3+co1+co2+co3+co4+co5)
     worksheet.cell(row=1, column=4+co1+co2+co3).value='FT-III'
     worksheet.cell(row=1, column=4+co1+co2+co3).alignment = styles.Alignment(horizontal='center', vertical='center')
     worksheet.cell(row=1, column=4+co1+co2+co3).fill=light_green_fill    
-
-    worksheet.merge_cells(start_row=1, start_column=4+co1+co2+co3+co4, end_row=1, end_column=3+co1+co2+co3+co4+co5)
-    worksheet.cell(row=1, column=4+co1+co2+co3+co4).value='FT-III, REPORT'
-    worksheet.cell(row=1, column=4+co1+co2+co3+co4).alignment = styles.Alignment(horizontal='center', vertical='center')
-    worksheet.cell(row=1, column=4+co1+co2+co3+co4).fill=light_green_fill    
+    
 
 def generate_second_row(worksheet,co1,co2,co3,co4,co5):
     worksheet.merge_cells(start_row=2, start_column=1, end_row=2, end_column=3)
