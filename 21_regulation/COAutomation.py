@@ -72,7 +72,7 @@ def generate_excel(pdf_paths):
     # Generate various rows in the worksheet (headers, data, and formulas)
     generate_first_row(worksheet,ct1,ct2,ct3)
     coColumns = generate_second_row(worksheet,ct1_grouping,ct2_grouping,ct3_grouping)
-    generate_third_row(worksheet,ct1,ct2,ct3)
+    generate_third_row(worksheet)
     generate_fourth_row(worksheet,ct1_Marks,ct2_Marks,ct3_Marks,ct1_grouping,ct2_grouping,ct3_grouping)
     generate_fifth_row(worksheet,ct1,ct2,ct3)
     generate_sixth_row(worksheet,ct1_QNos, ct2_QNos, ct3_QNos,ct1_grouping, ct2_grouping, ct3_grouping)
@@ -292,35 +292,12 @@ def generate_second_row(worksheet,coGrouping1, coGrouping2, coGrouping3):
             col+=len(value)
     return coColumns
 
-def generate_third_row(worksheet,ct1,ct2,ct3):    
+def generate_third_row(worksheet):    
 
-    """
-    Generates the third row of the worksheet to display the "THEORY" header
-    for question categories, organized by the number of Course Tests (CTs).
-
-    Args:
-        worksheet: The Excel worksheet object.
-        ct1, ct2, ct3: Column counts allocated for CT1, CT2, and CT3.
-
-    Returns:
-        None
-    """
     worksheet.merge_cells(start_row=3, start_column=1, end_row=3, end_column=3)
+    worksheet.cell(row=3, column=1).value = 'THEORY (for either/or Q, award marks for the attempted students only)'
 
-    # Merge the first three columns in row 3 (typically for Sl.No, Register Number, and Student Name)
-    worksheet.merge_cells(start_row=3, start_column=4, end_row=3, end_column=3+ct1)
-    worksheet.cell(row=3, column=4).value = 'THEORY (for either/or Q, award marks for the attempted students only)'
-
-    # If there are more than one Course Test (qpCount > 1), process CT2
-    if qpCount > 1:
-        worksheet.merge_cells(start_row=3, start_column=4+ct1, end_row=3, end_column=3+ct1+ct2)
-        worksheet.cell(row=3, column=4+ct1).value='THEORY (for either/or Q, award marks for the attempted students only)'
-    
-    # If there are more than two Course Tests (qpCount > 2), process CT3
-    if qpCount > 2:
-        worksheet.merge_cells(start_row=3, start_column=4+ct1+ct2, end_row=3, end_column=3+ct1+ct2+ct3)
-        worksheet.cell(row=3, column=4+ct1+ct2).value='THEORY (for either/or Q, award marks for the attempted students only)'
-    
+   
 def generate_fourth_row(worksheet,marks1,marks2,marks3,coGrouping1,coGrouping2,coGrouping3):
 
     """
@@ -377,7 +354,7 @@ def generate_Qno_marks(worksheet,row, col, coGrouping, list):
     for i in range(0, len(list)):
 
         # Set column width for better visibility
-        worksheet.column_dimensions[get_column_letter(col+i)].width=6
+        worksheet.column_dimensions[get_column_letter(col+i)].width=7
 
         # Write the question number or description at the specified row and column
         worksheet.cell(row=row, column=col+i).value = list[indexList[i]]
@@ -398,6 +375,7 @@ def generate_fifth_row(worksheet,ct1,ct2,ct3):
 
     # Merge the first three columns in row 5 (sl.no, register number, and student name are grouped here)
     worksheet.merge_cells(start_row=5, start_column=1, end_row=5, end_column=3)
+    
 
     # Merge cells for CT1 columns and set the header "Question numbers mapping"
     worksheet.merge_cells(start_row=5, start_column=4, end_row=5, end_column=3+ct1)
@@ -430,11 +408,11 @@ def generate_sixth_row(worksheet,question_numbers1,question_numbers2,question_nu
 
     # Add header for "Register Number" in column 2 and set its width
     worksheet.cell(row=6,column=2).value="Register Number"
-    worksheet.column_dimensions[get_column_letter(2)].width=20
+    worksheet.column_dimensions[get_column_letter(2)].width=21
 
     # Add header for "Student Name" in column 3 and set its width
     worksheet.cell(row=6,column=3).value="Student Name"
-    worksheet.column_dimensions[get_column_letter(3)].width=40
+    worksheet.column_dimensions[get_column_letter(3)].width=42
 
     # Generate headers for question numbers and marks for CT1 and get the next column index
     col=generate_Qno_marks(worksheet,6,4,coGrouping1, question_numbers1)
@@ -463,7 +441,7 @@ def generate_Formulas(worksheet,ct1,ct2,ct3, coColumns):
     generate_Rowwise_Formula(worksheet,68,"Number of students who got more than 65% of marks","=COUNTIF({0}7:{0}66,\">=\"&0.65*{0}4)",ct1,ct2,ct3)
     
      # Generate the average percentage of students who scored more than 65% across multiple columns (CT-wise)
-    generate_Rowwise_Formula(worksheet,69,"Percentage of students who got more than 65% of marks","=IF({0}67>0,{0}68/{0}67*100,\"-\")",ct1,ct2,ct3)
+    generate_Rowwise_Formula(worksheet,69,"Percentage of students who got more than 65% of marks","=IF({0}67>0,ROUND({0}68/{0}67*100,2),\"-\")",ct1,ct2,ct3)
     
     # Generate the Course Outcome (CO) attainment level based on predefined thresholds (>=85: 3, >=75: 2, >=65: 1, <65: 0)
     generate_CTwise_Formula(worksheet,70,"Average Percentage of students who got more than 65% of marks","=IFERROR(ROUND(SUMPRODUCT({0}69:{1}69,{0}4:{1}4)/SUM({0}4:{1}4), 2),\"-\")",ct1,ct2,ct3)
@@ -566,29 +544,32 @@ def generate_COWise_Formulas(worksheet, coColumns):
     for key, value in coColumns.items():
         text1 = "CO" + str(key)# CO label, like CO1, CO2, etc.
 
-        # Base of the formula for the CO-wise average calculation
+        # Base of the formula for the CO-wise average calculation 
         text2 = "=IFERROR(ROUND(("
+        listColumns = list(value)
+        if (len(listColumns) == 1 and listColumns[0][0] == listColumns[0][1]):
+            text2 += "AVERAGE({0}7:{0}66)/{0}4".format(get_column_letter(listColumns[0][0])) +")*100,2),\"-\")"
+        else:
+            # Define the sub-formula structure for each pair of columns (like SUMPRODUCT)
+            sub_formula = "SUMPRODUCT({0}69:{1}69,{0}4:{1}4)/SUM({0}4:{1}4)"
+            num_subformulas = len(value) # Number of column pairs for the current CO
+            
+            # Iterate through the column pairs and append them to the formula   
+            for i, col_pair in enumerate(value):
+                start_col_letter = get_column_letter(col_pair[0])# Convert column number to letter
+                end_col_letter = get_column_letter(col_pair[1])# Convert column number to letter
 
-        # Define the sub-formula structure for each pair of columns (like SUMPRODUCT)
-        sub_formula = "SUMPRODUCT({0}69:{1}69,{0}4:{1}4)/SUM({0}4:{1}4)"
-        num_subformulas = len(value) # Number of column pairs for the current CO
+                # Append sub-formula for this column pair
+                text2 += sub_formula.format(start_col_letter, end_col_letter)
 
-        # Iterate through the column pairs and append them to the formula   
-        for i, col_pair in enumerate(value):
-            start_col_letter = get_column_letter(col_pair[0])# Convert column number to letter
-            end_col_letter = get_column_letter(col_pair[1])# Convert column number to letter
-
-            # Append sub-formula for this column pair
-            text2 += sub_formula.format(start_col_letter, end_col_letter)
-
-            # Add '+' if not the last pair, else complete the formula structure
-            if i != num_subformulas - 1:
-                text2 += "+"
-            else:
-                text2 += f")/{num_subformulas},2),\"-\")"
+                # Add '+' if not the last pair, else complete the formula structure
+                if i != num_subformulas - 1:
+                    text2 += "+"
+                else:
+                    text2 += f")/{num_subformulas},2),\"-\")"
         
         # Add the attainment level formula based on the CO value
-        text3 = f"=IF(C{row}>=85,3,IF(C{row}>=75,2,IF(C{row}>=65,1,0)))"
+        text3 = f"=IF(B{row}>=85,3,IF(B{row}>=75,2,IF(B{row}>=65,1,0)))"
 
         # Generate the row with the CO-wise formula and the attainment level formula
         generate_CO_wise_table(worksheet, row, text1, text2, text3, False)
@@ -613,37 +594,35 @@ def generate_CO_wise_table(worksheet,row,text1,text2,text3,header):
     grey_fill = styles.PatternFill(start_color="c0c0c0", end_color="c0c0c0", fill_type="solid")
 
     # Merge cells for the first column (CO label) and set its value
-    worksheet.merge_cells(start_row=row, start_column=1, end_row=row, end_column=2)
     worksheet.cell(row, column=1).value = text1
     worksheet.cell(row, column=1).alignment =styles.Alignment(horizontal='center', vertical='center')
+    worksheet.cell(row, column=1).border = bold_border  
 
     # Merge cells for the second column (CO-wise formula) and set its value
-    worksheet.merge_cells(start_row=row, start_column=3, end_row=row, end_column=10)
-    worksheet.cell(row, column=3).value = text2
-    worksheet.cell(row, column=3).alignment =styles.Alignment(horizontal='center', vertical='center')
+    worksheet.merge_cells(start_row=row, start_column=2, end_row=row, end_column=3)
+    worksheet.cell(row, column=2).value = text2
+    worksheet.cell(row, column=2).alignment =styles.Alignment(horizontal='center', vertical='center')
 
     # Merge cells for the third column (attainment level formula) and set its value
-    worksheet.merge_cells(start_row=row, start_column=11, end_row=row, end_column=20)
-    worksheet.cell(row, column=11).value = text3
-    worksheet.cell(row, column=11).alignment =styles.Alignment(horizontal='center', vertical='center')
+    worksheet.merge_cells(start_row=row, start_column=4, end_row=row, end_column=11)
+    worksheet.cell(row, column=4).value = text3
+    worksheet.cell(row, column=4).alignment =styles.Alignment(horizontal='center', vertical='center')
 
     # Apply bold font if this is a header row, otherwise apply regular font
     if header:
         worksheet.cell(row, column=1).font = font_bold
-        worksheet.cell(row, column=3).font = font_bold
-        worksheet.cell(row, column=11).font = font_bold
+        worksheet.cell(row, column=2).font = font_bold
+        worksheet.cell(row, column=4).font = font_bold
         worksheet.cell(row, column=1).fill = grey_fill
-        worksheet.cell(row, column=3).fill = grey_fill
-        worksheet.cell(row, column=11).fill = grey_fill
+        worksheet.cell(row, column=2).fill = grey_fill
+        worksheet.cell(row, column=4).fill = grey_fill
     else:
         worksheet.cell(row, column=1).font = font
-        worksheet.cell(row, column=3).font = font
-        worksheet.cell(row, column=11).font = font
+        worksheet.cell(row, column=2).font = font
+        worksheet.cell(row, column=4).font = font
         # Apply bold border to all the cells in the merged ranges
     
-    for col in range(1, 3):
-        worksheet.cell(row, column=col).border = bold_border  # First column merged cells
-    for col in range(3, 11):
+    for col in range(2, 4):
         worksheet.cell(row, column=col).border = bold_border  # Second column merged cells
-    for col in range(11, 21):
+    for col in range(4, 12):
         worksheet.cell(row, column=col).border = bold_border  # Third column merged cells
