@@ -32,6 +32,7 @@ def generate_excel(pdf_paths):
     ct3_QNos = []
     ct3_Marks = []
     ct3_COs = []
+    errors = []
 
     # Determine the number of question papers based on the number of pdf_paths
     ct1_grouping = {}
@@ -43,20 +44,34 @@ def generate_excel(pdf_paths):
     qpCount = len(pdf_paths)
 
     # Extract details from the first question paper PDF
-    ct1_grouping = extract_details_from_pdf(pdf_paths[0], ct1_QNos, ct1_Marks, ct1_COs)
+    #ct1_grouping = extract_data_from_pdf(pdf_paths[0], ct1_QNos, ct1_Marks, ct1_COs)
+    ct1_grouping = extract_details_from_pdf(pdf_paths[0], ct1_QNos, ct1_Marks, ct1_COs, errors)
     
+    if len(errors) > 0:
+        return errors
+
     # Update the Question No Choices
     ct1_QNos = update_QuestionNo_Choices(ct1_QNos)
 
     # If there are more than one question papers, process the second one
     if qpCount > 1:
-        ct2_grouping = extract_details_from_pdf(pdf_paths[1], ct2_QNos, ct2_Marks, ct2_COs)
+        errors = []
+        ct2_grouping = extract_details_from_pdf(pdf_paths[1], ct2_QNos, ct2_Marks, ct2_COs, errors)
+
+        if len(errors) > 0:
+            return errors
+    
         # Update the Question No Choices
         ct2_QNos = update_QuestionNo_Choices(ct2_QNos)
 
     # If there are more than two question papers, process the third one 
     if qpCount > 2:
-        ct3_grouping = extract_details_from_pdf(pdf_paths[2], ct3_QNos, ct3_Marks, ct3_COs)
+        errors = []
+        ct3_grouping = extract_details_from_pdf(pdf_paths[2], ct3_QNos, ct3_Marks, ct3_COs, errors)
+
+        if len(errors) > 0:
+            return errors
+        
         # Update the Question No Choices
         ct3_QNos = update_QuestionNo_Choices(ct3_QNos)
 
@@ -79,10 +94,11 @@ def generate_excel(pdf_paths):
     generate_Formulas(worksheet,ct1,ct2,ct3, coColumns)
     apply_styles(worksheet)
 
-# Adjust the path as needed
+    # Adjust the path as needed
     file_path = os.getcwd()+"/output/result.xlsx" 
     # Save the workbook to the specified path
     workbook.save(file_path)
+    return errors
 
 def apply_styles(worksheet):
     # Define colors
@@ -118,7 +134,7 @@ def apply_styles(worksheet):
                 if cell.column != 3:
                     cell.alignment = styles.Alignment(horizontal='center', vertical='center')
 
-def extract_details_from_pdf(pdf_path, question_numbers, marks, co_lists):
+def extract_details_from_pdf(pdf_path, question_numbers, marks, co_lists, errors):
     """
     Extracts question numbers (Q.no) from a question paper PDF.
 
@@ -133,41 +149,55 @@ def extract_details_from_pdf(pdf_path, question_numbers, marks, co_lists):
 
     # Define a regex pattern to match question numbers (e.g., "1", "2", etc.)
     flag=0
+    try:
+        with pdfplumber.open(pdf_path) as pdf:
+            for page_num, page in enumerate(pdf.pages):
+                try:
+                    # Extract all text from the page
+                    text = page.extract_text()
+                except pdfplumber.PDFPageExtractionError as e:
+                    errors.append(f"Error extracting text from page {page_num+1}: {e}")
+                    return None
 
-    with pdfplumber.open(pdf_path) as pdf:
-        for page_num, page in enumerate(pdf.pages):
-            # Extract all text from the page
-            text = page.extract_text()
+                if text: 
+                    text = text.replace('&', '"&"')  # Handle potential ampersand issues
 
-            if text: 
-                text = text.replace('&', '"&"')
-                 # Ensure the page has text
-                # Split the text into lines
-                lines = text.split("\n")
+                    # Ensure the page has text
+                    # Split the text into lines
+                    lines = text.split("\n")
 
-                for line in lines:
-                    if flag==0 and line.find("Part")!=-1:
-                        flag=1
-                        continue
-                    if flag==1:
-                        match = re.search(r".\d \d \d \d$",line.strip()) 
-                        question_no= re.match(r"^(\d{2})|\d",line.strip()) 
-                        if question_no and match:
-                            # Add the matched number to the list
+                    for line in lines:
+                        if flag==0 and line.find("Part")!=-1:
+                            flag=1
+                            continue
+                        if flag==1:
                             try:
-                                qnum=question_no.group().strip()
-                                question_numbers.append("Q"+qnum)
-                                marks.append(int(match.group().strip().split()[0]))
-                                co_lists.append(match.group().strip().split()[2])
+                                # Match question number and marks with regex
+                                match = re.search(r".\d \d \d \d$",line.strip()) 
+                                question_no= re.match(r"^(\d{2})|\d",line.strip()) 
+                                if question_no and match:
+                                    # Add the matched number to the list
+                                    qnum=question_no.group().strip()
+                                    question_numbers.append("Q"+qnum)
+                                    marks.append(int(match.group().strip().split()[0]))
+                                    co_lists.append(match.group().strip().split()[2])
 
-                            except ValueError:
-                                pass  # Skip if the match isn't a valid integer
+                            except (re.error, IndexError) as e:
+                                errors.append(f"Error parsing line: {line.strip()}. Reason: {e}")
+    except (FileNotFoundError, IOError) as e:
+        errors.append(f"Error opening PDF file: {e}")
+        return None
 
-    # Get the CO grouping indices
-    for i in range(1,coCount+1):
-        co = get_matching_value_indices(co_lists,str(i))
-        if len(co) > 0:
-            coGrouping[i] = co
+    if (len(question_numbers) > 0):
+        # Get the CO grouping indices
+        for i in range(1,coCount+1):
+            co = get_matching_value_indices(co_lists,str(i))
+            if len(co) > 0:
+                coGrouping[i] = co
+    else:
+        file_name = os.path.basename(pdf_path)
+        errors.append(f"Unable to extract Question Numbers, CO and Marks from {file_name}. Please check the PDF format.")
+
     return coGrouping
 
 def update_QuestionNo_Choices(qNos):
@@ -626,3 +656,31 @@ def generate_CO_wise_table(worksheet,row,text1,text2,text3,header):
         worksheet.cell(row, column=col).border = bold_border  # Second column merged cells
     for col in range(4, 12):
         worksheet.cell(row, column=col).border = bold_border  # Third column merged cells
+
+"""
+import tabula
+
+def extract_data_from_pdf(pdf_path, question_numbers, marks, co_lists):
+# Extract tables using tabula-py
+tables = tabula.read_pdf(pdf_path, pages="all", multiple_tables=True)
+
+coGrouping = {}
+
+# Iterate through each extracted table
+for table in tables:
+    # Assuming the first table contains the relevant data
+    # You might need to adjust this logic based on your PDF structure
+    if len(table.columns) == 6:  # Check if there are at least 3 columns
+    for row in table.itertuples():
+        question_numbers.append(str(row[1]).strip())  # Assuming Q.no is in column 1
+        marks.append(int(row[3].split()[0]))  # Assuming marks are in column 3 (split to get first word)
+        co_lists.append(row[5].strip())  # Assuming COs are in column 5
+
+    # Get the CO grouping indices
+    for i in range(1,coCount+1):
+        co = get_matching_value_indices(co_lists,str(i))
+        if len(co) > 0:
+            coGrouping[i] = co
+    return coGrouping
+
+"""
