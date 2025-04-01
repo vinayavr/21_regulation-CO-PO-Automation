@@ -1,245 +1,203 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    background-color: #f5f5f5;
-}
-
-header {
-    background-color: #062C53;
-    color: white;
-    padding: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-}
-
-header .logo, header .sync-logo {
-    height: 150px;
-    margin: 0 20px;
-}
-
-main {
-    display: flex;
-    justify-content: center;
-    padding: 16px;
-}
-
-.form-section {
-    background: white;
-    padding: 32px;
+    background-color: #ffffff;
+  }
+  
+  .header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #fff;
+  }
+  
+  .header img {
+    width: 400px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .topic {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .container {
+    margin: 30px auto;
+    padding: 20px;
+    width: 500px;
+    background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-    width: 600px;
-    overflow: hidden; /* Ensure content within the form does not exceed the boundary */
-}
-
-.form-group {
-    margin-bottom: 24px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-textarea, input[type="file"], input[type="text"] {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-button, .square-button, .cambutton, .download-button {
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    box-sizing: border-box;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s ease-in-out;
-}
-
-button[type="submit"], #calculateAttainmentButton {
-    background-color: #34A853;
-    color: white;
-    width: 100%;
-}
-
-button[type="submit"]:hover, #calculateAttainmentButton:hover {
-    background-color: #0F9D58;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    transform: translateY(-2px);
-}
-
-button:hover, .square-button:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.square-button {
-    width: 40px;
-    height: 40px;
-    color: white;
-    background-color: #FF0000;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+  }
+  ul {
+    list-style-type: none; 
+    padding: 0;  
+    margin: 0;   
+  }
+  
+  h1 {
     font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s ease-in-out;
-}
-
-.square-button.add {
-    background-color: #34A853;
-}
-
-.square-button.add:hover {
-    background-color: #0F9D58;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    transform: translateY(-2px);
-}
-
-form {
-    max-width: 100%;
-    overflow-x: auto;
-}
-
-.table-wrapper {
-    overflow-x: auto; /* Add horizontal scroll if needed */
-    margin-top: 16px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 25px 0;
+    margin-bottom: 20px;
+    color: #444;
+  }
+  h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #444;
+  }
+  h3 {
     font-size: 18px;
-    text-align: left;
-}
-
-th, td {
-    padding: 12px;
-    border: 1px solid #dddddd;
-}
-
-th {
-    background-color: #e66909;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  button {
+    background-color: #007bff;
     color: white;
-}
-
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-input[type="text"] {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.cambutton {
-    background-color: #FF0000;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 8px 10px;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
+  
+  .file-label {
+    background-color: #28a745;
     color: white;
-    margin-top: 16px;
-    width: 100%;
-}
-
-.download-button {
-    background-color: red;
-    margin-top: 16px;
-    text-align: center;
-    text-decoration: none;
-    padding: 12px;
-    display: block;
-    width: 100%;
-    color: white;
+    padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s ease-in-out;
-}
-
-.download-button:hover {
-    background-color: darkred;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    transform: translateY(-2px);
-}
-
-.button-group {
-    display: flex;
-    align-items: center;
-}
-
-.button-group input[type="file"] {
-    flex: 1;
-    margin-right: 8px; /* Adjust as needed */
-}
-
-#form-group ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-#form-group ul li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 4px;
-}
-
-.editable-cell {
-    width: 50px;
-    padding: 4px;
-    text-align: center;
-    box-sizing: border-box;
-}
-
-#camTable {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 16px;
-    min-width: 600px; /* Adjust based on your table width */
-}
-
-#camTable th, #camTable td {
-    padding: 12px;
+    display: inline-block;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .file-label:hover {
+    background-color: #218838;
+  }
+  
+  .file-input {
+    display: none;
+  }
+  
+  .file-list {
+    margin-top: 10px;
+    padding: 8px;
+    background: #f4f4f4;
+    border-radius: 5px;
     border: 1px solid #ddd;
+    font-size: 14px;
+    width: 90%;
     text-align: center;
-}
-
-#camTable th {
-    background-color: #337AB7;
-    color: white;
-}
-
-#camTable td {
-    background-color: #f2f2f2;
-}
-
-#camTable tbody tr:nth-child(even) td {
-    background-color: #e9eef3;
-}
-
-#camTable tfoot {
-    background-color: #337AB7;
-}
-
-#camTable tfoot th {
-    color: white;
+    color: #333;
+  }
+  
+  #message {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
     text-align: center;
-    padding: 12px;
-}
-
-#calculateAttainmentButton {
-    margin-top: 16px;
-}
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .success {
+    color: green;
+    background-color: #e6ffed;
+    border: 1px solid green;
+  }
+  
+  .error {
+    color: red;
+    background-color: #ffe6e6;
+    border: 1px solid red;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .co-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .co-inputs label {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .co-inputs input {
+    width: 50px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .Note {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px;
+    background: #fff3cd;
+    border-left: 6px solid #ffb300;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #856404;
+  }
+  
+  .Note h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .Note ul {
+    padding-left: 20px;
+  }
+  
+  .Note li {
+    margin-bottom: 5px;
+  }
+  
+  @media (max-width: 600px) {
+    .container {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    button {
+      width: 100%;
+      padding: 12px;
+    }
+  
+    .file-list {
+      width: 100%;
+    }
+  }
+  
