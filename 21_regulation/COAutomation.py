@@ -1,10 +1,19 @@
-from openpyxl import Workbook, styles
+from flask import Flask, render_template, make_response,request, jsonify, send_file
+from openpyxl import Workbook, styles,load_workbook
+from openpyxl.styles import Side,PatternFill
+import pandas as pd
 import os
-from openpyxl.styles import Font
+import io
+from io import BytesIO
+import os.path
+from flask import send_file
+from openpyxl.styles import Font,Border
 from openpyxl.utils import get_column_letter
 import pdfplumber
 import re
-from openpyxl import Workbook
+from openpyxl import workbook
+from FINALTEST import second_bp
+
 
 # Define a bold border  
 bold_border = styles.Border(left=styles.Side(border_style='thin', color='000000'),
@@ -20,6 +29,57 @@ qpCount = 0
 coCount = 6
 maxRows = 71
 
+app = Flask(__name__)
+app.register_blueprint(second_bp)
+
+app.config['UPLOAD_FOLDER'] = 'uploads'
+app.config['ALLOWED_EXTENSIONS'] = {'pdf'}
+
+# Function to check if the file type is allowed
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in app.config['ALLOWED_EXTENSIONS']
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+
+@app.route('/upload1', methods=['POST'])
+def upload():
+    if 'pdf_files' not in request.files:
+        return jsonify({"message": "No files part in the request"}), 400
+
+    uploaded_files = request.files.getlist('pdf_files')
+    if not uploaded_files or all(file.filename == '' for file in uploaded_files):
+        return jsonify({"message": "No selected files"}), 400
+
+    upload_folder = 'uploads'
+    os.makedirs(upload_folder, exist_ok=True)
+
+    saved_files = []
+    for file in uploaded_files:
+        if file and file.filename.endswith('.pdf'):
+            file_path = os.path.join(upload_folder, file.filename)
+            file.save(file_path)
+            saved_files.append(file_path)
+
+    # Pass the saved files to the generate_excel function
+    excel_file_path = generate_excel(saved_files)
+
+    '''return jsonify({
+        "message": f"Successfully processed {len(saved_files)} file(s).",
+        "generated_excel": excel_file_path
+    }), 200'''
+    return jsonify({
+    "success": True,
+    "message": f"Successfully processed {len(saved_files)} file(s).",
+    "download_url": "/download/result.xlsx"  # Adjust the download URL as needed
+}), 200
+
+
+
+
+@app.route("/generate_excel", methods=["POST"])
 def generate_excel(pdf_paths):
     
     # Initialize empty lists for storing data for each set of questions, marks, and COs
@@ -32,7 +92,6 @@ def generate_excel(pdf_paths):
     ct3_QNos = []
     ct3_Marks = []
     ct3_COs = []
-    errors = []
 
     # Determine the number of question papers based on the number of pdf_paths
     ct1_grouping = {}
@@ -44,34 +103,20 @@ def generate_excel(pdf_paths):
     qpCount = len(pdf_paths)
 
     # Extract details from the first question paper PDF
-    #ct1_grouping = extract_data_from_pdf(pdf_paths[0], ct1_QNos, ct1_Marks, ct1_COs)
-    ct1_grouping = extract_details_from_pdf(pdf_paths[0], ct1_QNos, ct1_Marks, ct1_COs, errors)
+    ct1_grouping = extract_details_from_pdf(pdf_paths[0], ct1_QNos, ct1_Marks, ct1_COs)
     
-    if len(errors) > 0:
-        return errors
-
     # Update the Question No Choices
     ct1_QNos = update_QuestionNo_Choices(ct1_QNos)
 
     # If there are more than one question papers, process the second one
     if qpCount > 1:
-        errors = []
-        ct2_grouping = extract_details_from_pdf(pdf_paths[1], ct2_QNos, ct2_Marks, ct2_COs, errors)
-
-        if len(errors) > 0:
-            return errors
-    
+        ct2_grouping = extract_details_from_pdf(pdf_paths[1], ct2_QNos, ct2_Marks, ct2_COs)
         # Update the Question No Choices
         ct2_QNos = update_QuestionNo_Choices(ct2_QNos)
 
     # If there are more than two question papers, process the third one 
     if qpCount > 2:
-        errors = []
-        ct3_grouping = extract_details_from_pdf(pdf_paths[2], ct3_QNos, ct3_Marks, ct3_COs, errors)
-
-        if len(errors) > 0:
-            return errors
-        
+        ct3_grouping = extract_details_from_pdf(pdf_paths[2], ct3_QNos, ct3_Marks, ct3_COs)
         # Update the Question No Choices
         ct3_QNos = update_QuestionNo_Choices(ct3_QNos)
 
@@ -87,19 +132,34 @@ def generate_excel(pdf_paths):
     # Generate various rows in the worksheet (headers, data, and formulas)
     generate_first_row(worksheet,ct1,ct2,ct3)
     coColumns = generate_second_row(worksheet,ct1_grouping,ct2_grouping,ct3_grouping)
-    generate_third_row(worksheet)
+    generate_third_row(worksheet,ct1,ct2,ct3)
     generate_fourth_row(worksheet,ct1_Marks,ct2_Marks,ct3_Marks,ct1_grouping,ct2_grouping,ct3_grouping)
     generate_fifth_row(worksheet,ct1,ct2,ct3)
     generate_sixth_row(worksheet,ct1_QNos, ct2_QNos, ct3_QNos,ct1_grouping, ct2_grouping, ct3_grouping)
     generate_Formulas(worksheet,ct1,ct2,ct3, coColumns)
     apply_styles(worksheet)
 
-    # Adjust the path as needed
-    file_path = os.getcwd()+"/output/result.xlsx" 
-    # Save the workbook to the specified path
-    workbook.save(file_path)
-    return errors
+    # Define the path for the output folder and file
+    '''output_folder = os.path.join(os.getcwd(), "output")
+    os.makedirs(output_folder, exist_ok=True)
+    file_path = os.path.join(output_folder, "result.xlsx")
 
+    # Save the workbook
+    workbook.save(file_path)
+    return file_path'''
+    # Define the static folder for downloads
+    static_folder = os.path.join(os.getcwd(), "static")
+    os.makedirs(static_folder, exist_ok=True)  # Ensure the folder exists
+
+    # Save file to static folder
+    file_path = os.path.join(static_folder, "result.xlsx")
+
+    # Save to disk before sending
+    workbook.save(file_path)  
+
+    # Send the file as a download
+    return send_file(file_path, as_attachment=True, download_name="result.xlsx",
+                 mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
 def apply_styles(worksheet):
     # Define colors
     light_green_fill = styles.PatternFill(start_color="92D050", end_color="92D050", fill_type="solid")
@@ -134,7 +194,7 @@ def apply_styles(worksheet):
                 if cell.column != 3:
                     cell.alignment = styles.Alignment(horizontal='center', vertical='center')
 
-def extract_details_from_pdf(pdf_path, question_numbers, marks, co_lists, errors):
+def extract_details_from_pdf(pdf_path, question_numbers, marks, co_lists):
     """
     Extracts question numbers (Q.no) from a question paper PDF.
 
@@ -149,55 +209,41 @@ def extract_details_from_pdf(pdf_path, question_numbers, marks, co_lists, errors
 
     # Define a regex pattern to match question numbers (e.g., "1", "2", etc.)
     flag=0
-    try:
-        with pdfplumber.open(pdf_path) as pdf:
-            for page_num, page in enumerate(pdf.pages):
-                try:
-                    # Extract all text from the page
-                    text = page.extract_text()
-                except pdfplumber.PDFPageExtractionError as e:
-                    errors.append(f"Error extracting text from page {page_num+1}: {e}")
-                    return None
 
-                if text: 
-                    text = text.replace('&', '"&"')  # Handle potential ampersand issues
+    with pdfplumber.open(pdf_path) as pdf:
+        for page_num, page in enumerate(pdf.pages):
+            # Extract all text from the page
+            text = page.extract_text()
 
-                    # Ensure the page has text
-                    # Split the text into lines
-                    lines = text.split("\n")
+            if text: 
+                text = text.replace('&', '"&"')
+                 # Ensure the page has text
+                # Split the text into lines
+                lines = text.split("\n")
 
-                    for line in lines:
-                        if flag==0 and line.find("Part")!=-1:
-                            flag=1
-                            continue
-                        if flag==1:
+                for line in lines:
+                    if flag==0 and line.find("Part")!=-1:
+                        flag=1
+                        continue
+                    if flag==1:
+                        match = re.search(r".\d \d \d \d$",line.strip()) 
+                        question_no= re.match(r"^(\d{2})|\d",line.strip()) 
+                        if question_no and match:
+                            # Add the matched number to the list
                             try:
-                                # Match question number and marks with regex
-                                match = re.search(r".\d \d \d \d$",line.strip()) 
-                                question_no= re.match(r"^(\d{2})|\d",line.strip()) 
-                                if question_no and match:
-                                    # Add the matched number to the list
-                                    qnum=question_no.group().strip()
-                                    question_numbers.append("Q"+qnum)
-                                    marks.append(int(match.group().strip().split()[0]))
-                                    co_lists.append(match.group().strip().split()[2])
+                                qnum=question_no.group().strip()
+                                question_numbers.append("Q"+qnum)
+                                marks.append(int(match.group().strip().split()[0]))
+                                co_lists.append(match.group().strip().split()[2])
 
-                            except (re.error, IndexError) as e:
-                                errors.append(f"Error parsing line: {line.strip()}. Reason: {e}")
-    except (FileNotFoundError, IOError) as e:
-        errors.append(f"Error opening PDF file: {e}")
-        return None
+                            except ValueError:
+                                pass  # Skip if the match isn't a valid integer
 
-    if (len(question_numbers) > 0):
-        # Get the CO grouping indices
-        for i in range(1,coCount+1):
-            co = get_matching_value_indices(co_lists,str(i))
-            if len(co) > 0:
-                coGrouping[i] = co
-    else:
-        file_name = os.path.basename(pdf_path)
-        errors.append(f"Unable to extract Question Numbers, CO and Marks from {file_name}. Please check the PDF format.")
-
+    # Get the CO grouping indices
+    for i in range(1,coCount+1):
+        co = get_matching_value_indices(co_lists,str(i))
+        if len(co) > 0:
+            coGrouping[i] = co
     return coGrouping
 
 def update_QuestionNo_Choices(qNos):
@@ -322,12 +368,35 @@ def generate_second_row(worksheet,coGrouping1, coGrouping2, coGrouping3):
             col+=len(value)
     return coColumns
 
-def generate_third_row(worksheet):    
+def generate_third_row(worksheet,ct1,ct2,ct3):    
 
+    """
+    Generates the third row of the worksheet to display the "THEORY" header
+    for question categories, organized by the number of Course Tests (CTs).
+
+    Args:
+        worksheet: The Excel worksheet object.
+        ct1, ct2, ct3: Column counts allocated for CT1, CT2, and CT3.
+
+    Returns:
+        None
+    """
     worksheet.merge_cells(start_row=3, start_column=1, end_row=3, end_column=3)
-    worksheet.cell(row=3, column=1).value = 'THEORY (for either/or Q, award marks for the attempted students only)'
 
-   
+    # Merge the first three columns in row 3 (typically for Sl.No, Register Number, and Student Name)
+    worksheet.merge_cells(start_row=3, start_column=4, end_row=3, end_column=3+ct1)
+    worksheet.cell(row=3, column=4).value = 'THEORY (for either/or Q, award marks for the attempted students only)'
+
+    # If there are more than one Course Test (qpCount > 1), process CT2
+    if qpCount > 1:
+        worksheet.merge_cells(start_row=3, start_column=4+ct1, end_row=3, end_column=3+ct1+ct2)
+        worksheet.cell(row=3, column=4+ct1).value='THEORY (for either/or Q, award marks for the attempted students only)'
+    
+    # If there are more than two Course Tests (qpCount > 2), process CT3
+    if qpCount > 2:
+        worksheet.merge_cells(start_row=3, start_column=4+ct1+ct2, end_row=3, end_column=3+ct1+ct2+ct3)
+        worksheet.cell(row=3, column=4+ct1+ct2).value='THEORY (for either/or Q, award marks for the attempted students only)'
+    
 def generate_fourth_row(worksheet,marks1,marks2,marks3,coGrouping1,coGrouping2,coGrouping3):
 
     """
@@ -384,7 +453,7 @@ def generate_Qno_marks(worksheet,row, col, coGrouping, list):
     for i in range(0, len(list)):
 
         # Set column width for better visibility
-        worksheet.column_dimensions[get_column_letter(col+i)].width=7
+        worksheet.column_dimensions[get_column_letter(col+i)].width=6
 
         # Write the question number or description at the specified row and column
         worksheet.cell(row=row, column=col+i).value = list[indexList[i]]
@@ -405,7 +474,6 @@ def generate_fifth_row(worksheet,ct1,ct2,ct3):
 
     # Merge the first three columns in row 5 (sl.no, register number, and student name are grouped here)
     worksheet.merge_cells(start_row=5, start_column=1, end_row=5, end_column=3)
-    
 
     # Merge cells for CT1 columns and set the header "Question numbers mapping"
     worksheet.merge_cells(start_row=5, start_column=4, end_row=5, end_column=3+ct1)
@@ -438,11 +506,11 @@ def generate_sixth_row(worksheet,question_numbers1,question_numbers2,question_nu
 
     # Add header for "Register Number" in column 2 and set its width
     worksheet.cell(row=6,column=2).value="Register Number"
-    worksheet.column_dimensions[get_column_letter(2)].width=21
+    worksheet.column_dimensions[get_column_letter(2)].width=20
 
     # Add header for "Student Name" in column 3 and set its width
     worksheet.cell(row=6,column=3).value="Student Name"
-    worksheet.column_dimensions[get_column_letter(3)].width=42
+    worksheet.column_dimensions[get_column_letter(3)].width=40
 
     # Generate headers for question numbers and marks for CT1 and get the next column index
     col=generate_Qno_marks(worksheet,6,4,coGrouping1, question_numbers1)
@@ -471,7 +539,7 @@ def generate_Formulas(worksheet,ct1,ct2,ct3, coColumns):
     generate_Rowwise_Formula(worksheet,68,"Number of students who got more than 65% of marks","=COUNTIF({0}7:{0}66,\">=\"&0.65*{0}4)",ct1,ct2,ct3)
     
      # Generate the average percentage of students who scored more than 65% across multiple columns (CT-wise)
-    generate_Rowwise_Formula(worksheet,69,"Percentage of students who got more than 65% of marks","=IF({0}67>0,ROUND({0}68/{0}67*100,2),\"-\")",ct1,ct2,ct3)
+    generate_Rowwise_Formula(worksheet,69,"Percentage of students who got more than 65% of marks","=IF({0}67>0,{0}68/{0}67*100,\"-\")",ct1,ct2,ct3)
     
     # Generate the Course Outcome (CO) attainment level based on predefined thresholds (>=85: 3, >=75: 2, >=65: 1, <65: 0)
     generate_CTwise_Formula(worksheet,70,"Average Percentage of students who got more than 65% of marks","=IFERROR(ROUND(SUMPRODUCT({0}69:{1}69,{0}4:{1}4)/SUM({0}4:{1}4), 2),\"-\")",ct1,ct2,ct3)
@@ -574,32 +642,29 @@ def generate_COWise_Formulas(worksheet, coColumns):
     for key, value in coColumns.items():
         text1 = "CO" + str(key)# CO label, like CO1, CO2, etc.
 
-        # Base of the formula for the CO-wise average calculation 
+        # Base of the formula for the CO-wise average calculation
         text2 = "=IFERROR(ROUND(("
-        listColumns = list(value)
-        if (len(listColumns) == 1 and listColumns[0][0] == listColumns[0][1]):
-            text2 += "AVERAGE({0}7:{0}66)/{0}4".format(get_column_letter(listColumns[0][0])) +")*100,2),\"-\")"
-        else:
-            # Define the sub-formula structure for each pair of columns (like SUMPRODUCT)
-            sub_formula = "SUMPRODUCT({0}69:{1}69,{0}4:{1}4)/SUM({0}4:{1}4)"
-            num_subformulas = len(value) # Number of column pairs for the current CO
-            
-            # Iterate through the column pairs and append them to the formula   
-            for i, col_pair in enumerate(value):
-                start_col_letter = get_column_letter(col_pair[0])# Convert column number to letter
-                end_col_letter = get_column_letter(col_pair[1])# Convert column number to letter
 
-                # Append sub-formula for this column pair
-                text2 += sub_formula.format(start_col_letter, end_col_letter)
+        # Define the sub-formula structure for each pair of columns (like SUMPRODUCT)
+        sub_formula = "SUMPRODUCT({0}69:{1}69,{0}4:{1}4)/SUM({0}4:{1}4)"
+        num_subformulas = len(value) # Number of column pairs for the current CO
 
-                # Add '+' if not the last pair, else complete the formula structure
-                if i != num_subformulas - 1:
-                    text2 += "+"
-                else:
-                    text2 += f")/{num_subformulas},2),\"-\")"
+        # Iterate through the column pairs and append them to the formula   
+        for i, col_pair in enumerate(value):
+            start_col_letter = get_column_letter(col_pair[0])# Convert column number to letter
+            end_col_letter = get_column_letter(col_pair[1])# Convert column number to letter
+
+            # Append sub-formula for this column pair
+            text2 += sub_formula.format(start_col_letter, end_col_letter)
+
+            # Add '+' if not the last pair, else complete the formula structure
+            if i != num_subformulas - 1:
+                text2 += "+"
+            else:
+                text2 += f")/{num_subformulas},2),\"-\")"
         
         # Add the attainment level formula based on the CO value
-        text3 = f"=IF(B{row}>=85,3,IF(B{row}>=75,2,IF(B{row}>=65,1,0)))"
+        text3 = f"=IF(C{row}>=85,3,IF(C{row}>=75,2,IF(C{row}>=65,1,0)))"
 
         # Generate the row with the CO-wise formula and the attainment level formula
         generate_CO_wise_table(worksheet, row, text1, text2, text3, False)
@@ -624,63 +689,44 @@ def generate_CO_wise_table(worksheet,row,text1,text2,text3,header):
     grey_fill = styles.PatternFill(start_color="c0c0c0", end_color="c0c0c0", fill_type="solid")
 
     # Merge cells for the first column (CO label) and set its value
+    worksheet.merge_cells(start_row=row, start_column=1, end_row=row, end_column=2)
     worksheet.cell(row, column=1).value = text1
     worksheet.cell(row, column=1).alignment =styles.Alignment(horizontal='center', vertical='center')
-    worksheet.cell(row, column=1).border = bold_border  
 
     # Merge cells for the second column (CO-wise formula) and set its value
-    worksheet.merge_cells(start_row=row, start_column=2, end_row=row, end_column=3)
-    worksheet.cell(row, column=2).value = text2
-    worksheet.cell(row, column=2).alignment =styles.Alignment(horizontal='center', vertical='center')
+    worksheet.merge_cells(start_row=row, start_column=3, end_row=row, end_column=10)
+    worksheet.cell(row, column=3).value = text2
+    worksheet.cell(row, column=3).alignment =styles.Alignment(horizontal='center', vertical='center')
 
     # Merge cells for the third column (attainment level formula) and set its value
-    worksheet.merge_cells(start_row=row, start_column=4, end_row=row, end_column=11)
-    worksheet.cell(row, column=4).value = text3
-    worksheet.cell(row, column=4).alignment =styles.Alignment(horizontal='center', vertical='center')
+    worksheet.merge_cells(start_row=row, start_column=11, end_row=row, end_column=20)
+    worksheet.cell(row, column=11).value = text3
+    worksheet.cell(row, column=11).alignment =styles.Alignment(horizontal='center', vertical='center')
 
     # Apply bold font if this is a header row, otherwise apply regular font
     if header:
         worksheet.cell(row, column=1).font = font_bold
-        worksheet.cell(row, column=2).font = font_bold
-        worksheet.cell(row, column=4).font = font_bold
+        worksheet.cell(row, column=3).font = font_bold
+        worksheet.cell(row, column=11).font = font_bold
         worksheet.cell(row, column=1).fill = grey_fill
-        worksheet.cell(row, column=2).fill = grey_fill
-        worksheet.cell(row, column=4).fill = grey_fill
+        worksheet.cell(row, column=3).fill = grey_fill
+        worksheet.cell(row, column=11).fill = grey_fill
     else:
         worksheet.cell(row, column=1).font = font
-        worksheet.cell(row, column=2).font = font
-        worksheet.cell(row, column=4).font = font
+        worksheet.cell(row, column=3).font = font
+        worksheet.cell(row, column=11).font = font
         # Apply bold border to all the cells in the merged ranges
     
-    for col in range(2, 4):
+    for col in range(1, 3):
+        worksheet.cell(row, column=col).border = bold_border  # First column merged cells
+    for col in range(3, 11):
         worksheet.cell(row, column=col).border = bold_border  # Second column merged cells
-    for col in range(4, 12):
+    for col in range(11, 21):
         worksheet.cell(row, column=col).border = bold_border  # Third column merged cells
+    
+if __name__ == '__main__':
+    app.run(debug=True)
 
-"""
-import tabula
 
-def extract_data_from_pdf(pdf_path, question_numbers, marks, co_lists):
-# Extract tables using tabula-py
-tables = tabula.read_pdf(pdf_path, pages="all", multiple_tables=True)
 
-coGrouping = {}
 
-# Iterate through each extracted table
-for table in tables:
-    # Assuming the first table contains the relevant data
-    # You might need to adjust this logic based on your PDF structure
-    if len(table.columns) == 6:  # Check if there are at least 3 columns
-    for row in table.itertuples():
-        question_numbers.append(str(row[1]).strip())  # Assuming Q.no is in column 1
-        marks.append(int(row[3].split()[0]))  # Assuming marks are in column 3 (split to get first word)
-        co_lists.append(row[5].strip())  # Assuming COs are in column 5
-
-    # Get the CO grouping indices
-    for i in range(1,coCount+1):
-        co = get_matching_value_indices(co_lists,str(i))
-        if len(co) > 0:
-            coGrouping[i] = co
-    return coGrouping
-
-"""
