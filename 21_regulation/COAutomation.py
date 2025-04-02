@@ -43,7 +43,6 @@ def allowed_file(filename):
 def index():
     return render_template('index.html')
 
-
 @app.route('/upload1', methods=['POST'])
 def upload():
     if 'pdf_files' not in request.files:
@@ -75,8 +74,6 @@ def upload():
     "message": f"Successfully processed {len(saved_files)} file(s).",
     "download_url": "/download/result.xlsx"  # Adjust the download URL as needed
 }), 200
-
-
 
 
 @app.route("/generate_excel", methods=["POST"])
