@@ -185,7 +185,7 @@ class TLPMarkConverter:
             sheet.cell(row=row, column=3, value=total_marks).border = styles['border']
             
             # Calculate CO marks based on total marks and percentages
-            co_total = sum(co_splits.get(f'CO{i}', i) for i in range(1, 7))
+            co_total = sum(co_splits.get(f'CO{i}', 0) for i in range(1, 7))
             
             for col, co in enumerate(["CO1", "CO2", "CO3", "CO4", "CO5", "CO6"], 4):
                 # Calculate proportional marks for this CO
@@ -229,7 +229,7 @@ class TLPMarkConverter:
             summary_sheet.cell(row=4, column=2, value=processing_stats.get('failed_files', 0))
             
             summary_sheet.cell(row=5, column=1, value="Total Unique Entries:").font = styles['header_font']
-            summary_sheet.cell(row=5, column=2, value=processing_stats.get('total_entries', 0))
+            summary_sheet.cell(row=5, column=2, value=len(marks_data))
             
             # File details table headers
             headers = ["S.No", "Filename", "Status", "Entries Found", "Error (if any)"]
@@ -258,52 +258,8 @@ class TLPMarkConverter:
         workbook.save(file_path)
         logger.info(f"Excel sheet created: {file_path}")
 
-def create_excel_sheet(file_path, marks_data, co_splits):
-    workbook = Workbook()
-    sheet = workbook.active
-
-    
-    title_font = Font(bold=True, size=16, color="000000", name="Times New Roman")
-    header_font = Font(bold=True, color="000000", name="Times New Roman")
-    title_fill = PatternFill(start_color="92D050", end_color="92D050", fill_type="solid")
-    header_fill = PatternFill(start_color="FFFFFF", end_color="FFFFFF", fill_type="solid")
-    header_alignment = Alignment(horizontal="center", vertical="center")
-    border_style = Border(
-        left=Side(border_style="thin", color="000000"),
-        right=Side(border_style="thin", color="000000"),
-        top=Side(border_style="thin", color="000000"),
-        bottom=Side(border_style="thin", color="000000")
-    )
-
-    sheet.cell(row=1, column=1, value="CO Allocation").font = title_font
-    sheet.cell(row=1, column=1).fill = title_fill
-    sheet.cell(row=1, column=1).alignment = header_alignment
-    sheet.merge_cells(start_row=1, start_column=1, end_row=1, end_column=9)
-
-    headers = ["S.No", "Register No", "CO1", "CO2", "CO3", "CO4", "CO5", "CO6", "Total"]
-    for col_num, header in enumerate(headers, start=1):
-        cell = sheet.cell(row=2, column=col_num, value=header)
-        cell.font = header_font
-        cell.fill = header_fill
-        cell.alignment = header_alignment
-        cell.border = border_style
-
-    for index, (reg_no, total_marks) in enumerate(marks_data.items(), start=1):
-        row_index = index + 2
-        sheet.cell(row=row_index, column=1, value=index).border = border_style  # S.No
-        sheet.cell(row=row_index, column=2, value=reg_no).border = border_style  # Register No
-
-        co_total = 0
-        for col, co in enumerate(["CO1", "CO2", "CO3", "CO4", "CO5", "CO6"], start=3):
-            co_marks = round(total_marks * (co_splits.get(co, 0) / 100), 2)
-            cell = sheet.cell(row=row_index, column=col, value=co_marks)
-            cell.border = border_style
-            co_total += co_marks
-
-        sheet.cell(row=row_index, column=9, value=co_total).border = border_style  # Total
-
-    workbook.save(file_path)
-    print(f"Excel sheet created: {file_path}")
+# Remove the duplicate create_excel_sheet function
+# The standalone create_excel_sheet function has been removed as it was duplicating functionality
 
 @second_bp.route('/upload2', methods=['POST'])
 def upload_files():
@@ -356,12 +312,12 @@ def upload_files():
         total_conducted_max = 0.0
     
         # Access the file_stats dictionary in the returned data
-        file_stats = extraction_result.get('stats', {}).get('file_stats', {})
+        file_stats = stats.get('file_stats', {})
         
         # Iterate through each file's stats and sum up the conducted_max values
-        for file_name, stats in file_stats.items():
-            if stats.get('status') == 'success' and 'conducted_max' in stats:
-                file_conducted_max = stats['conducted_max']
+        for file_name, file_stat in file_stats.items():
+            if file_stat.get('status') == 'success' and 'conducted_max' in file_stat:
+                file_conducted_max = file_stat['conducted_max']
                 if file_conducted_max is not None:  # Check if the value was found
                     total_conducted_max += file_conducted_max
                     logger.info(f"Added {file_conducted_max} from {file_name} to total")
@@ -370,12 +326,12 @@ def upload_files():
         
         logger.info(f"Total Conducted Max across all files: {total_conducted_max}")
 
-        co_total = sum(co_splits.get(f'CO{i}', i) for i in range(1, 7))
+        co_total = sum(co_splits.values())
 
-        if co_total!=total_conducted_max:
+        if co_total != total_conducted_max and total_conducted_max > 0:
             return jsonify({
                 'success': False, 
-                'message': 'CO split is not proper.please enter correct splitup'
+                'message': f'CO split is not proper. Please enter correct splitup. CO total: {co_total}, Conducted Max: {total_conducted_max}'
             }), 400
         
         output_file = os.path.join(converter.config['results_dir'], 'co_allocation.xlsx')
@@ -408,6 +364,7 @@ def upload_files():
 
 @second_bp.route('/download/<filename>')
 def download_file(filename):
-    file_path = os.path.join(current_app.config['results_dir'], filename)
+    converter = TLPMarkConverter()  # Create a converter instance
+    file_path = os.path.join(converter.config['results_dir'], filename)
     return send_file(file_path, as_attachment=True) if os.path.exists(file_path) else ("File not found", 404)
 
