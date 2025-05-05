@@ -8,7 +8,7 @@ from typing import Dict, List, Optional
 import pdfplumber
 import pandas as pd
 from werkzeug.utils import secure_filename
-from openpyxl import Workbook
+from openpyxl import Workbook, load_workbook
 from openpyxl.styles import Font, Alignment, PatternFill, Border, Side
 from openpyxl.utils import get_column_letter
 import re
@@ -129,6 +129,7 @@ class TLPMarkConverter:
     def create_excel_sheet(
         self, 
         file_path: str, 
+        append_file_path: str,
         marks_data: Dict[str, float], 
         co_splits: Dict[str, int],
         processing_stats: Dict = None
@@ -136,16 +137,21 @@ class TLPMarkConverter:
         """
         Generate styled Excel spreadsheet with CO mark distribution
         """
-        workbook = Workbook()
-        sheet = workbook.active
-        sheet.title = "CO Mark Distribution"
+        workbook = None
+        sheet = None
         
-        # Create a summary sheet for file processing stats
-        summary_sheet = workbook.create_sheet(title="Processing Summary")
-        
+        if (append_file_path == "" or append_file_path is None):
+            workbook = Workbook()
+            sheet = workbook.active
+            sheet.title = "CO Mark Distribution"
+        else:
+            workbook = load_workbook(append_file_path)
+            sheet=workbook.create_sheet(title = "CO Mark Distribution")    
+                
         styles = {
-            'title_font': Font(bold=True, size=16, name="Arial"),
-            'header_font': Font(bold=True, name="Arial"),
+            'title_font': Font(bold=True, size=12, name="Times New Roman"),
+            'header_font': Font(bold=True, size=10, name="Times New Roman"),
+            'calculation_font': Font(size=10, name="Times New Roman"),
             'title_fill': PatternFill(start_color="92D050", fill_type="solid"),
             'header_fill': PatternFill(start_color="F0F0F0", fill_type="solid"),
             'border': Border(
@@ -162,10 +168,28 @@ class TLPMarkConverter:
         title_cell.font = styles['title_font']
         title_cell.fill = styles['title_fill']
         title_cell.alignment = Alignment(horizontal='center', vertical='center')
+        for col in range(1, 10):
+            sheet.cell(1, column=col).border = styles['border']  # First column merged cells
         
+        # Add total CO marks split up
+        sheet.merge_cells(start_row=2, start_column=1, end_row=2, end_column=2)
+        sheet.cell(row=2, column=1, value="Total CO Marks:").font = styles['header_font']
+        for col in range(1, 3):
+            sheet.cell(2, column=col).border = styles['border']  # First column merged cells
+
+        total = 0
+        for col, co in enumerate(["CO1", "CO2", "CO3", "CO4", "CO5", "CO6"], 4):
+            val = co_splits.get(co, 0)
+            total+=val
+            text=co_splits.get(co,'')
+            sheet.cell(row=2, column=col, value=text).font = styles['header_font']
+            sheet.cell(row=2, column=col).border = styles['border']
+            
+        sheet.cell(row=2, column=3, value=total).font = styles['header_font']
+
         headers = ["S.No", "Register No", "Total Marks", "CO1", "CO2", "CO3", "CO4", "CO5", "CO6"]
         for col, header in enumerate(headers, 1):
-            cell = sheet.cell(row=2, column=col, value=header)
+            cell = sheet.cell(row=3, column=col, value=header)
             cell.font = styles['header_font']
             cell.fill = styles['header_fill']
             cell.alignment = Alignment(horizontal='center')
@@ -173,13 +197,14 @@ class TLPMarkConverter:
 
         sheet.column_dimensions[get_column_letter(1)].width=6
         sheet.column_dimensions[get_column_letter(2)].width=20
+        sheet.column_dimensions[get_column_letter(3)].width=40
 
         # Sort marks data by register number
         sorted_marks = sorted(marks_data.items(), key=lambda x: x[0])
         
         # Populate data rows
         for index, (reg_no, total_marks) in enumerate(sorted_marks, 1):
-            row = index + 2
+            row = index + 3
             sheet.cell(row=row, column=1, value=index).border = styles['border']
             sheet.cell(row=row, column=2, value=reg_no).border = styles['border']
             sheet.cell(row=row, column=3, value=total_marks).border = styles['border']
@@ -190,80 +215,85 @@ class TLPMarkConverter:
             for col, co in enumerate(["CO1", "CO2", "CO3", "CO4", "CO5", "CO6"], 4):
                 # Calculate proportional marks for this CO
                 co_value = co_splits.get(co, 0)
-                if co_total > 0:
-                    co_marks = (co_value / co_total) * total_marks
-                else:
-                    co_marks = 0
+                mark_text = ''
+                if co_value > 0:
+                    if co_total > 0:
+                        co_marks = (co_value / co_total) * total_marks
+                    else:
+                        co_marks = 0
+                    mark_text = round(co_marks, 2)
+
+                cell = sheet.cell(row=row, column=col, value=mark_text)
+                cell.border = styles['border']
+                cell.alignment = Alignment(horizontal='center')
                 
-                cell = sheet.cell(row=row, column=col, value=round(co_marks, 2))
-                cell.border = styles['border']
-                cell.alignment = Alignment(horizontal='center')
+        # Generate the number of students who attempted 
+        sheet.merge_cells(start_row=64, start_column=1, end_row=64, end_column=3)
+        sheet.cell(64, column=1, value="Number of Students Attempted").font = styles['header_font']
+        for col in range(1, 4):
+            sheet.cell(64, column=col).border = styles['border']  # First column merged cells
         
-        # Add total CO marks summary at the bottom
-        total_row = len(sorted_marks) + 3
-        sheet.cell(row=total_row, column=1, value="Total CO Marks:").font = styles['header_font']
-        for col, co in enumerate(["CO1", "CO2", "CO3", "CO4", "CO5", "CO6"], 4):
-            sheet.cell(row=total_row, column=col, value=co_splits.get(co, 0)).font = styles['header_font']
+        for i in range(0,6):
+            colLetter=get_column_letter(4+i)  # Get the column letter
+            sheet.cell(64,4+i).value="=COUNTA({0}4:{0}63)".format(colLetter)   # Apply the formula
+            sheet.cell(64,4+i).font = styles['calculation_font']
+            sheet.cell(64,4+i).border = styles['border']
+            sheet.cell(64,4+i).alignment = Alignment(horizontal='center', vertical='center')
+
+        # Generate the number of students who scored more than 65% of marks
+        sheet.merge_cells(start_row=65, start_column=1, end_row=65, end_column=3)
+        sheet.cell(65, column=1, value="Number of students who got more than 65% of marks").font = styles['header_font']
+        for col in range(1, 4):
+            sheet.cell(65, column=col).border = styles['border']  # First column merged cells
         
+        for i in range(0,6):
+            colLetter=get_column_letter(4+i)  # Get the column letter
+            sheet.cell(65,4+i).value="=COUNTIF({0}4:{0}63,\">=\"&0.65*{0}2)".format(colLetter)   # Apply the formula            
+            sheet.cell(65,4+i).font = styles['calculation_font']
+            sheet.cell(65,4+i).border = styles['border']
+            sheet.cell(65,4+i).alignment = Alignment(horizontal='center', vertical='center')
+
+
+        # Generate the percentage of students who scored more than 65% 
+        sheet.merge_cells(start_row=66, start_column=1, end_row=66, end_column=3)
+        sheet.cell(66, column=1, value = "Percentage of students who got more than 65% of marks").font = styles['header_font']
+        for col in range(1, 4):
+            sheet.cell(66, column=col).border = styles['border']  # First column merged cells
+
+        for i in range(0,6):
+            colLetter=get_column_letter(4+i)  # Get the column letter
+            sheet.cell(66,4+i).value="=IF({0}64>0,ROUND({0}65/{0}64*100,2),\"-\")".format(colLetter)   # Apply the formula            
+            sheet.cell(66,4+i).font = styles['calculation_font']
+            sheet.cell(66,4+i).border = styles['border']
+            sheet.cell(66,4+i).alignment = Alignment(horizontal='center', vertical='center')
+
+        # Generate the Course Outcome (CO) attainment level based on predefined thresholds (>=85: 3, >=75: 2, >=65: 1, <65: 0)
+        sheet.merge_cells(start_row=67, start_column=1, end_row=67, end_column=3)
+        sheet.cell(67, column=1,value = " CO Attainment Level (>=85:3,>=75:2,>=65:1,<65:0)").font = styles['header_font']
+        for col in range(1, 4):
+            sheet.cell(67, column=col).border = styles['border']  # First column merged cells
+        
+        for i in range(0,6):
+            colLetter=get_column_letter(4+i)  # Get the column letter =IF(G64>0,(IF(G66>=85,3,IF(G66>=75,2,IF(G66>=65,1,0)))),"-")
+            sheet.cell(67,4+i).value="=IF({0}64>0,(IF({0}66>=85,3,IF({0}66>=75,2,IF({0}66>=65,1,0)))),\"-\")".format(colLetter)
+            sheet.cell(67,4+i).font = styles['calculation_font']
+            sheet.cell(67,4+i).border = styles['border']
+            sheet.cell(67,4+i).alignment = Alignment(horizontal='center', vertical='center')
+
         # Auto-adjust column widths
-        for col in range(1, 10):
+        for col in range(4, 10):
             sheet.column_dimensions[get_column_letter(col)].auto_size = True
-        
-        # Summary Sheet - Processing Statistics
-        if processing_stats:
-            # Title
-            summary_sheet.merge_cells('A1:E1')
-            summary_title = summary_sheet.cell(row=1, column=1, value="File Processing Summary")
-            summary_title.font = styles['title_font']
-            summary_title.fill = styles['title_fill']
-            summary_title.alignment = Alignment(horizontal='center', vertical='center')
-            
-            # Overall stats
-            summary_sheet.cell(row=2, column=1, value="Total Files:").font = styles['header_font']
-            summary_sheet.cell(row=2, column=2, value=processing_stats.get('total_files', 0))
-            
-            summary_sheet.cell(row=3, column=1, value="Successfully Processed:").font = styles['header_font']
-            summary_sheet.cell(row=3, column=2, value=processing_stats.get('processed_files', 0))
-            
-            summary_sheet.cell(row=4, column=1, value="Failed Files:").font = styles['header_font']
-            summary_sheet.cell(row=4, column=2, value=processing_stats.get('failed_files', 0))
-            
-            summary_sheet.cell(row=5, column=1, value="Total Unique Entries:").font = styles['header_font']
-            summary_sheet.cell(row=5, column=2, value=len(marks_data))
-            
-            # File details table headers
-            headers = ["S.No", "Filename", "Status", "Entries Found", "Error (if any)"]
-            for col, header in enumerate(headers, 1):
-                cell = summary_sheet.cell(row=7, column=col, value=header)
-                cell.font = styles['header_font']
-                cell.fill = styles['header_fill']
-                cell.alignment = Alignment(horizontal='center')
-                cell.border = styles['border']
-            
-            # File details
-            file_stats = processing_stats.get('file_stats', {})
-            row = 8
-            for idx, (filename, stats) in enumerate(file_stats.items(), 1):
-                summary_sheet.cell(row=row, column=1, value=idx).border = styles['border']
-                summary_sheet.cell(row=row, column=2, value=filename).border = styles['border']
-                summary_sheet.cell(row=row, column=3, value=stats.get('status', 'unknown')).border = styles['border']
-                summary_sheet.cell(row=row, column=4, value=stats.get('entries_found', 0)).border = styles['border']
-                summary_sheet.cell(row=row, column=5, value=stats.get('error', '')).border = styles['border']
-                row += 1
-            
-            # Auto-adjust column widths
-            for col in range(1, 6):
-                summary_sheet.column_dimensions[get_column_letter(col)].auto_size = True
-        
+
         workbook.save(file_path)
         logger.info(f"Excel sheet created: {file_path}")
 
-# Remove the duplicate create_excel_sheet function
-# The standalone create_excel_sheet function has been removed as it was duplicating functionality
 
 @second_bp.route('/upload2', methods=['POST'])
 def upload_files():
     try:
+        #co_filled_excel = request.files.get('co_filled_excel','')
+        co_filled_excel = "D:/Github_Projects/21_regulation-CO-PO-Automation/static/result_data.xlsx"
+
         uploaded_files = request.files.getlist('pdf_files')
         co_splits={}
         for i in range(1,7):
@@ -335,7 +365,7 @@ def upload_files():
             }), 400
         
         output_file = os.path.join(converter.config['results_dir'], 'co_allocation.xlsx')
-        converter.create_excel_sheet(output_file, marks_data, co_splits, stats)
+        converter.create_excel_sheet(output_file, co_filled_excel, marks_data, co_splits, stats)
         
         # Prepare response message
         success_message = (
@@ -344,7 +374,7 @@ def upload_files():
         )
         
         if stats['failed_files'] > 0:
-            success_message += f" {stats['failed_files']} files could not be processed. Check the Processing Summary sheet for details."
+            success_message += f" {stats['failed_files']} files could not be processed."
         
         if invalid_files:
             success_message += f" Ignored {len(invalid_files)} non-PDF files."
@@ -355,7 +385,7 @@ def upload_files():
             'processed_files': stats['processed_files'],
             'failed_files': stats['failed_files'],
             'total_entries': len(marks_data),
-            'download_url': '/download/co_allocation.xlsx'
+            'download_url': '/static/co_allocation.xlsx'
         })
     
     except Exception as e:

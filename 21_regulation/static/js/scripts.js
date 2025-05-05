@@ -117,5 +117,5 @@ async function downloadExcelFile(filePath) {
     }
 }
 
-downloadButton1.addEventListener("click", () => downloadExcelFile("/download/result.xlsx"));
-downloadButton2.addEventListener("click", () => downloadExcelFile("/download/co_allocation.xlsx"));
+downloadButton1.addEventListener("click", () => downloadExcelFile("/static/CT_Template.xlsx"));
+downloadButton2.addEventListener("click", () => downloadExcelFile("/static/co_allocation.xlsx"));

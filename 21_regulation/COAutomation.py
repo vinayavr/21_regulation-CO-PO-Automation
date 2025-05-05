@@ -72,7 +72,7 @@ def upload():
     return jsonify({
     "success": True,
     "message": f"Successfully processed {len(saved_files)} file(s).",
-    "download_url": "/download/result.xlsx"  # Adjust the download URL as needed
+    "download_url": "/static/CT_Template.xlsx"  # Adjust the download URL as needed
 }), 200
 
 
@@ -120,6 +120,7 @@ def generate_excel(pdf_paths):
     # Create a new workbook
     workbook = Workbook()
     worksheet = workbook.active
+    worksheet.title = "CT"
 
     # Calculate the length of question numbers for each question paper  
     ct1=len(ct1_QNos)
@@ -139,7 +140,7 @@ def generate_excel(pdf_paths):
     # Define the path for the output folder and file
     '''output_folder = os.path.join(os.getcwd(), "output")
     os.makedirs(output_folder, exist_ok=True)
-    file_path = os.path.join(output_folder, "result.xlsx")
+    file_path = os.path.join(output_folder, "CT_Template.xlsx")
 
     # Save the workbook
     workbook.save(file_path)
@@ -149,14 +150,22 @@ def generate_excel(pdf_paths):
     os.makedirs(static_folder, exist_ok=True)  # Ensure the folder exists
 
     # Save file to static folder
-    file_path = os.path.join(static_folder, "result.xlsx")
+    file_path = os.path.join(static_folder, "CT_Template.xlsx")
 
     # Save to disk before sending
     workbook.save(file_path)  
 
     # Send the file as a download
-    return send_file(file_path, as_attachment=True, download_name="result.xlsx",
+    response = send_file(file_path, as_attachment=True, download_name="CT_Template.xlsx",
                  mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
+
+    #If download successful delete the input files -- Commented for now
+    #if (response.status_code == 200):
+    #    for pdf in pdf_paths:
+    #        os.remove(pdf)
+
+    return response
+
 def apply_styles(worksheet):
     # Define colors
     light_green_fill = styles.PatternFill(start_color="92D050", end_color="92D050", fill_type="solid")
@@ -536,7 +545,7 @@ def generate_Formulas(worksheet,ct1,ct2,ct3, coColumns):
     generate_Rowwise_Formula(worksheet,68,"Number of students who got more than 65% of marks","=COUNTIF({0}7:{0}66,\">=\"&0.65*{0}4)",ct1,ct2,ct3)
     
      # Generate the average percentage of students who scored more than 65% across multiple columns (CT-wise)
-    generate_Rowwise_Formula(worksheet,69,"Percentage of students who got more than 65% of marks","=IF({0}67>0,{0}68/{0}67*100,\"-\")",ct1,ct2,ct3)
+    generate_Rowwise_Formula(worksheet,69,"Percentage of students who got more than 65% of marks","=IF({0}67>0,ROUND({0}68/{0}67*100,2),\"-\")",ct1,ct2,ct3)
     
     # Generate the Course Outcome (CO) attainment level based on predefined thresholds (>=85: 3, >=75: 2, >=65: 1, <65: 0)
     generate_CTwise_Formula(worksheet,70,"Average Percentage of students who got more than 65% of marks","=IFERROR(ROUND(SUMPRODUCT({0}69:{1}69,{0}4:{1}4)/SUM({0}4:{1}4), 2),\"-\")",ct1,ct2,ct3)
@@ -691,34 +700,34 @@ def generate_CO_wise_table(worksheet,row,text1,text2,text3,header):
     worksheet.cell(row, column=1).alignment =styles.Alignment(horizontal='center', vertical='center')
 
     # Merge cells for the second column (CO-wise formula) and set its value
-    worksheet.merge_cells(start_row=row, start_column=3, end_row=row, end_column=10)
+    worksheet.merge_cells(start_row=row, start_column=3, end_row=row, end_column=9)
     worksheet.cell(row, column=3).value = text2
     worksheet.cell(row, column=3).alignment =styles.Alignment(horizontal='center', vertical='center')
 
     # Merge cells for the third column (attainment level formula) and set its value
-    worksheet.merge_cells(start_row=row, start_column=11, end_row=row, end_column=20)
-    worksheet.cell(row, column=11).value = text3
-    worksheet.cell(row, column=11).alignment =styles.Alignment(horizontal='center', vertical='center')
+    worksheet.merge_cells(start_row=row, start_column=10, end_row=row, end_column=18)
+    worksheet.cell(row, column=10).value = text3
+    worksheet.cell(row, column=10).alignment =styles.Alignment(horizontal='center', vertical='center')
 
     # Apply bold font if this is a header row, otherwise apply regular font
     if header:
         worksheet.cell(row, column=1).font = font_bold
         worksheet.cell(row, column=3).font = font_bold
-        worksheet.cell(row, column=11).font = font_bold
+        worksheet.cell(row, column=10).font = font_bold
         worksheet.cell(row, column=1).fill = grey_fill
         worksheet.cell(row, column=3).fill = grey_fill
-        worksheet.cell(row, column=11).fill = grey_fill
+        worksheet.cell(row, column=10).fill = grey_fill
     else:
         worksheet.cell(row, column=1).font = font
         worksheet.cell(row, column=3).font = font
-        worksheet.cell(row, column=11).font = font
+        worksheet.cell(row, column=10).font = font
         # Apply bold border to all the cells in the merged ranges
     
     for col in range(1, 3):
         worksheet.cell(row, column=col).border = bold_border  # First column merged cells
-    for col in range(3, 11):
+    for col in range(3, 10):
         worksheet.cell(row, column=col).border = bold_border  # Second column merged cells
-    for col in range(11, 21):
+    for col in range(10, 19):
         worksheet.cell(row, column=col).border = bold_border  # Third column merged cells
     
 if __name__ == '__main__':
