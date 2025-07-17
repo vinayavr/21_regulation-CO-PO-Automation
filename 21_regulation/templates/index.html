@@ -10,34 +10,38 @@
   <div class="header">
     <img src="static/images/logo.png" alt="logo">
   </div>
-
+  
   <div class="topic">
     <h1>Department of Computer Science and Engineering</h1>
   </div>
-
+  
   <div class="container">
     <h1>Course Attainment Calculator</h1>
     <h2>2021 Regulation</h2>
+    
     <h3>Upload CT Question Papers</h3>
     <input type="file" id="fileInput1" accept=".pdf" multiple hidden>
     <button id="uploadButton1">Select PDFs</button>
     <div id="fileName1"></div>
     <br>
     <button id="generateButton1" disabled>Generate Excel for CT</button>
+    <br>
+    <div id="ctMessage" style="margin: 10px 0; padding: 10px; display: none; font-size: 16px; font-weight: bold; text-align: center; border-radius: 5px;"></div>
+    <button id="downloadButton1" style="display: none;">Download CT Excel Template</button>
     <br><br>
-
-    <div class="button-group">
-      <button id="downloadButton1" style="display: none;">Download CT Excel Template</button>
-    </div>
     
-    <div id="message"></div>
-
+    <h3>Upload Filled Excel Sheet</h3>
+    <input type="file" id="fileInput3" name="co_filled_excel" accept=".xlsx, .xls" hidden>
+    <button id="uploadButton3">Select Excel File</button>
+    <div id="fileName3"></div>
+    <br><br>
+    
     <h3>Upload TLP</h3>
-    <input type="file" id="fileInput2" accept=".pdf" multiple hidden>
+    <input type="file" id="fileInput2" accept=".pdf, .xlsx, .xls" multiple hidden>
     <button id="uploadButton2">Select PDFs</button>
     <div id="fileName2"></div>
     <br>
-
+    
     <h3>Enter CO Splits</h3>
     <div id="coInputs" class="co-inputs">
       <label>CO1:</label> <input type="number" id="co1" min="0" max="100" required>
@@ -50,25 +54,27 @@
     
     <button id="generateButton2" disabled>Generate Excel for TLP</button>
     <br><br>
-
+    
     <div class="button-group">
       <button id="downloadButton2" style="display: none;">Download TLP Excel Template</button>
     </div>
-
-
+    
+    <div id="message"></div>
   </div>
-
+  
   <div class="Note">
     <h3>Note</h3>
     <ul>
-        <li>Ensure that the uploaded files are in <b>PDF format</b>.</li>
-        <li>Make sure that the uploaded file is in proper format(proper alignment of CO).</li>
-        <li>Make sure to close the excel sheet generated from the previous uploads.</li>
-        <li>Do not refresh the page while the upload is in progress.</li>
+      <li>Ensure that the uploaded files are in <b>PDF format</b>.</li>
+      <li>For Excel upload, ensure the file is in <b>.xlsx or .xls format</b>.</li>
+      <li>Make sure that the uploaded file is in proper format (proper alignment of CO).</li>
+      <li>Make sure to close the excel sheet generated from the previous uploads.</li>
+      <li>Do not refresh the page while the upload is in progress.</li>
     </ul>
   </div>
-
+  
   <script src="static/js/scripts.js"></script>
 </body>
 </html>
+
 
