@@ -14,7 +14,6 @@ import re
 from openpyxl import workbook
 from FINALTEST import second_bp
 
-
 # Define a bold border  
 bold_border = styles.Border(left=styles.Side(border_style='thin', color='000000'),
                 right=styles.Side(border_style='thin', color='000000'),
@@ -65,16 +64,11 @@ def upload():
     # Pass the saved files to the generate_excel function
     excel_file_path = generate_excel(saved_files)
 
-    '''return jsonify({
-        "message": f"Successfully processed {len(saved_files)} file(s).",
-        "generated_excel": excel_file_path
-    }), 200'''
     return jsonify({
     "success": True,
     "message": f"Successfully processed {len(saved_files)} file(s).",
     "download_url": "/static/CT_Template.xlsx"  # Adjust the download URL as needed
 }), 200
-
 
 @app.route("/generate_excel", methods=["POST"])
 def generate_excel(pdf_paths):
@@ -137,14 +131,6 @@ def generate_excel(pdf_paths):
     generate_Formulas(worksheet,ct1,ct2,ct3, coColumns)
     apply_styles(worksheet)
 
-    # Define the path for the output folder and file
-    '''output_folder = os.path.join(os.getcwd(), "output")
-    os.makedirs(output_folder, exist_ok=True)
-    file_path = os.path.join(output_folder, "CT_Template.xlsx")
-
-    # Save the workbook
-    workbook.save(file_path)
-    return file_path'''
     # Define the static folder for downloads
     static_folder = os.path.join(os.getcwd(), "static")
     os.makedirs(static_folder, exist_ok=True)  # Ensure the folder exists
@@ -158,11 +144,6 @@ def generate_excel(pdf_paths):
     # Send the file as a download
     response = send_file(file_path, as_attachment=True, download_name="CT_Template.xlsx",
                  mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
-
-    #If download successful delete the input files -- Commented for now
-    #if (response.status_code == 200):
-    #    for pdf in pdf_paths:
-    #        os.remove(pdf)
 
     return response
 
@@ -201,16 +182,6 @@ def apply_styles(worksheet):
                     cell.alignment = styles.Alignment(horizontal='center', vertical='center')
 
 def extract_details_from_pdf(pdf_path, question_numbers, marks, co_lists):
-    """
-    Extracts question numbers (Q.no) from a question paper PDF.
-
-    Args:
-        pdf_path (str): Path to the PDF file.
-
-    Returns:
-        list: A list of extracted question numbers as integers.
-    """
-
     coGrouping = {}
 
     # Define a regex pattern to match question numbers (e.g., "1", "2", etc.)
@@ -253,10 +224,6 @@ def extract_details_from_pdf(pdf_path, question_numbers, marks, co_lists):
     return coGrouping
 
 def update_QuestionNo_Choices(qNos):
-    """
-    Finds two consecutive indices with the same value in a list,
-    appends 'A' to the first and 'B' to the second, and returns the updated list.
-    """
     updated_list = qNos.copy()  # Work with a copy of the list to avoid modifying the original
     
     for i in range(len(qNos) - 1):
@@ -266,18 +233,7 @@ def update_QuestionNo_Choices(qNos):
 
     return updated_list
 
-
 def get_matching_value_indices(lst, value):
-  """
-  Returns a list of indices where the specified value occurs in the given list.
-
-  Args:
-    lst: The input list.
-    value: The value to search for.
-
-  Returns:
-    A list of indices where the value occurs.
-  """
   return [i for i, v in enumerate(lst) if v == value]
     
 def generate_first_row(worksheet,ct1, ct2, ct3):
@@ -296,21 +252,6 @@ def generate_first_row(worksheet,ct1, ct2, ct3):
         worksheet.cell(row=1, column=4+ct1+ct2).value='FT-III'
 
 def generate_second_row(worksheet,coGrouping1, coGrouping2, coGrouping3):
-
-    """
-    Generates the second row of the worksheet to map Course Outcomes (COs)
-    to the corresponding question columns for each Course Test (CT).
-
-    Args:
-        worksheet: The Excel worksheet object.
-        coGrouping1, coGrouping2, coGrouping3: Dictionaries representing the CO groupings 
-                                               for CT1, CT2, and CT3. Each key is a CO number, 
-                                               and the value is a list of question indices.
-
-    Returns:
-        coColumns: A dictionary where each CO is mapped to a list of start and end column ranges 
-                   for all CTs (CT1, CT2, CT3).
-    """
     
     # Initialize a dictionary to store column mappings for each CO
     coColumns = {}
@@ -355,7 +296,6 @@ def generate_second_row(worksheet,coGrouping1, coGrouping2, coGrouping3):
             coColumns[key] = lstColNo
             col+=len(value)
 
-
     # Process CO groupings for CT3, if applicable (qpCount > 2)
     if qpCount > 2:
         for key,value in coGrouping3.items():
@@ -376,17 +316,6 @@ def generate_second_row(worksheet,coGrouping1, coGrouping2, coGrouping3):
 
 def generate_third_row(worksheet,ct1,ct2,ct3):    
 
-    """
-    Generates the third row of the worksheet to display the "THEORY" header
-    for question categories, organized by the number of Course Tests (CTs).
-
-    Args:
-        worksheet: The Excel worksheet object.
-        ct1, ct2, ct3: Column counts allocated for CT1, CT2, and CT3.
-
-    Returns:
-        None
-    """
     worksheet.merge_cells(start_row=3, start_column=1, end_row=3, end_column=3)
 
     # Merge the first three columns in row 3 (typically for Sl.No, Register Number, and Student Name)
@@ -404,20 +333,6 @@ def generate_third_row(worksheet,ct1,ct2,ct3):
         worksheet.cell(row=3, column=4+ct1+ct2).value='THEORY (for either/or Q, award marks for the attempted students only)'
     
 def generate_fourth_row(worksheet,marks1,marks2,marks3,coGrouping1,coGrouping2,coGrouping3):
-
-    """
-    Generates the fourth row of the worksheet to display the maximum marks 
-    for each question, organized by Course Test (CT) and Course Outcome (CO) groupings.
-
-    Args:
-        worksheet: The Excel worksheet object.
-        marks1, marks2, marks3: Lists containing the maximum marks for each question 
-                                in CT1, CT2, and CT3 respectively.
-        coGrouping1, coGrouping2, coGrouping3: CO groupings for CT1, CT2, and CT3 respectively.
-
-    Returns:
-        None
-    """
     
     # Merge the first three columns of row 4 and set the header for the "MAX. MARKS" description
     worksheet.merge_cells(start_row=4, start_column=1, end_row=4, end_column=3)
@@ -435,20 +350,6 @@ def generate_fourth_row(worksheet,marks1,marks2,marks3,coGrouping1,coGrouping2,c
         col=generate_Qno_marks(worksheet,4,col,coGrouping3, marks3)
 
 def generate_Qno_marks(worksheet,row, col, coGrouping, list):
-    """
-    Dynamically generates question number headers and adjusts column widths 
-    for the given row in the worksheet.
-
-    Args:
-        worksheet: The Excel worksheet object.
-        row: The row number where the headers will be written.
-        col: The starting column number where the question headers begin.
-        coGrouping: A dictionary mapping CO groupings to question indices.
-        list: A list of question numbers or descriptions.
-
-    Returns:
-        The next available column index after writing the question headers.
-    """
     
     # Create a flattened list of question indices from the CO grouping values
     indexList = []
@@ -464,19 +365,10 @@ def generate_Qno_marks(worksheet,row, col, coGrouping, list):
         # Write the question number or description at the specified row and column
         worksheet.cell(row=row, column=col+i).value = list[indexList[i]]
     
-    # Return the next available column index after processing all questions
+    
     return col+len(list)
 
 def generate_fifth_row(worksheet,ct1,ct2,ct3):
-
-    """
-    Generates the fifth row of the worksheet to display "Question numbers mapping" headers 
-    for each Course Test (CT) based on the number of columns allocated for CT1, CT2, and CT3.
-
-    Args:
-        worksheet: The Excel worksheet object.
-        ct1, ct2, ct3: Column counts allocated for CT1, CT2, and CT3.
-    """
 
     # Merge the first three columns in row 5 (sl.no, register number, and student name are grouped here)
     worksheet.merge_cells(start_row=5, start_column=1, end_row=5, end_column=3)
@@ -497,15 +389,6 @@ def generate_fifth_row(worksheet,ct1,ct2,ct3):
 
 def generate_sixth_row(worksheet,question_numbers1,question_numbers2,question_numbers3,coGrouping1, coGrouping2, coGrouping3):
     
-    """
-    Generates the sixth row of the worksheet with headers for student information and question numbers,
-    and dynamically assigns columns for question marks based on Course Outcome (CO) groupings.
-
-    Args:
-        worksheet: The Excel worksheet object.
-        question_numbers1, question_numbers2, question_numbers3: Lists of question numbers for CT1, CT2, and CT3.
-        coGrouping1, coGrouping2, coGrouping3: CO groupings corresponding to CT1, CT2, and CT3.
-    """
     # Add header for "Sl.No" in column 1 and set its width
     worksheet.cell(row=6,column=1).value="Sl.No"
     worksheet.column_dimensions[get_column_letter(1)].width=6
@@ -530,14 +413,7 @@ def generate_sixth_row(worksheet,question_numbers1,question_numbers2,question_nu
         col=generate_Qno_marks(worksheet,6,col,coGrouping3, question_numbers3)
 
 def generate_Formulas(worksheet,ct1,ct2,ct3, coColumns):
-    """
-    Generates various formulas for a worksheet to calculate and analyze student performance.
-
-    Args:
-        worksheet: The Excel worksheet object.
-        ct1, ct2, ct3: Column counts for CT1, CT2, and CT3 respectively.
-        coColumns: List or range of columns associated with Course Outcomes (COs).
-    """
+    
     # Generate the number of students who attempted the exam for each column set (CT1, CT2, CT3)
     generate_Rowwise_Formula(worksheet,67,"Number of Students Attempted","=COUNTA({0}7:{0}66)",ct1,ct2,ct3)
 
@@ -557,17 +433,7 @@ def generate_Formulas(worksheet,ct1,ct2,ct3, coColumns):
     generate_COWise_Formulas(worksheet,coColumns)
 
 def generate_Rowwise_Formula(worksheet,row, text, formula,ct1,ct2,ct3):   
-    """
-    Generates and populates a worksheet row with formulas applied to individual cells, customized for row-wise logic.
-
-    Args:
-        worksheet: The Excel worksheet object.
-        row: Row number to populate.
-        text: Text to be placed in the first set of merged cells.
-        formula: A format string for the formula to be applied to individual cells.
-        ct1, ct2, ct3: Column counts for CT1, CT2, and CT3 respectively.
-        qpCount: Number of CTs to include (1, 2, or 3).
-    """
+   
     # Merge cells in the first 3 columns and add the provided text 
     worksheet.merge_cells(start_row=row, start_column=1, end_row=row, end_column=3)
     worksheet.cell(row, column=1).value = text
@@ -595,17 +461,7 @@ def generate_Rowwise_Formula(worksheet,row, text, formula,ct1,ct2,ct3):
             worksheet.cell(row,column=col+i).value=formula.format(colLetter) # Apply the formula
 
 def generate_CTwise_Formula(worksheet,row,text,formula,ct1,ct2,ct3):    
-    """
-    Generates and populates a worksheet row with merged cells and formulas, customized for column-wise (CT-wise) logic.
-
-    Args:
-        worksheet: The Excel worksheet object.
-        row: Row number to populate.
-        text: Text to be placed in the first set of merged cells.
-        formula: A format string for the formula to be applied to merged cells.
-        ct1, ct2, ct3: Column counts for CT1, CT2, and CT3 respectively.
-        qpCount: Number of CTs to include (1, 2, or 3).
-    """
+    
     # Merge cells for the text column and add the text
     worksheet.merge_cells(start_row=row, start_column=1, end_row=row, end_column=3)
     worksheet.cell(row, column=1).value = text
@@ -629,14 +485,6 @@ def generate_CTwise_Formula(worksheet,row,text,formula,ct1,ct2,ct3):
         worksheet.cell(row,col).value=formula.format(get_column_letter(col), get_column_letter(col+ct3-1))
 
 def generate_COWise_Formulas(worksheet, coColumns):
-    """
-    Generates CO-wise formulas in an Excel worksheet using column *numbers*.
-
-    Args:
-        worksheet: The openpyxl worksheet object.
-        coColumns: A dictionary where keys are CO numbers and values are lists of column number pairs.
-            Example: {1: [[1, 2], [3, 4]], 2: [[5, 6]]} (1=A, 2=B, etc.)
-    """
     
     # Generate the CO-wise table header starting at row 73, with relevant titles
     generate_CO_wise_table(worksheet,73,"CO","CO Wise Average Percentage of students who got more than 65% of marks","Overall CO Attainment Level (>=85:3,>=75:2,>=65:1,<65:0)",True)
@@ -679,19 +527,7 @@ def generate_COWise_Formulas(worksheet, coColumns):
         row += 1
 
 def generate_CO_wise_table(worksheet,row,text1,text2,text3,header):
-    """
-    Generates a row in the worksheet with CO-wise data, merging cells for better readability.
 
-    Args:
-        worksheet: The openpyxl worksheet object where the table is generated.
-        row: The row number where the data should be placed.
-        text1: The content for the first column (CO label).
-        text2: The content for the second column (CO-wise formula).
-        text3: The content for the third column (attainment level formula).
-        header: Boolean value to determine if the row is a header.
-            - If True, the text is bolded.
-            - If False, the text uses regular font style.
-    """
     grey_fill = styles.PatternFill(start_color="c0c0c0", end_color="c0c0c0", fill_type="solid")
 
     # Merge cells for the first column (CO label) and set its value
@@ -732,6 +568,7 @@ def generate_CO_wise_table(worksheet,row,text1,text2,text3,header):
     
 if __name__ == '__main__':
     app.run(debug=True)
+
 
 
 
