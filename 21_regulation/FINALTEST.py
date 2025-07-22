@@ -17,6 +17,9 @@ import re
 from flask import Blueprint, request, abort, send_from_directory, render_template, jsonify, send_file, current_app, Flask
 
 second_bp = Blueprint('second', __name__)
+second_bp.config = {
+    'DOWNLOAD_FOLDER': os.path.join(os.path.dirname(__file__), '../download')
+    }
 
 logging.basicConfig(
     level=logging.INFO,
@@ -32,7 +35,7 @@ class TLPMarkConverter:
     def __init__(self, config: Dict = None):
         self.config = config or {
             'upload_dir': './uploads',
-            'results_dir': './static',
+            'results_dir': './download',
             'max_file_size': 50 * 1024 * 1024,
             'allowed_extensions': {'.pdf'},
             'allowed_excel_extensions': {'.xlsx', '.xls'}
@@ -506,8 +509,8 @@ def upload_files():
             'processed_files': stats['processed_files'],
             'failed_files': stats['failed_files'],
             'total_entries': len(marks_data),
-            'download_url': '/static/co_allocation.xlsx'
-        })
+            'download_url': '/download/co_allocation.xlsx'
+        }), 200
     
     except Exception as e:
         logger.error(f"Unexpected error: {e}", exc_info=True)
@@ -515,6 +518,5 @@ def upload_files():
 
 @second_bp.route('/download/<filename>')
 def download_file(filename):
-    converter = TLPMarkConverter()  # Create a converter instance
-    file_path = os.path.join(converter.config['results_dir'], filename)
+    file_path = os.path.abspath(os.path.join(second_bp.config['DOWNLOAD_FOLDER'], filename))
     return send_file(file_path, as_attachment=True) if os.path.exists(file_path) else ("File not found", 404)

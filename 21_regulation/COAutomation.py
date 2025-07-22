@@ -18,6 +18,7 @@ from FINALTEST import second_bp
 bold_border = styles.Border(left=styles.Side(border_style='thin', color='000000'),
                 right=styles.Side(border_style='thin', color='000000'),
                 top=styles.Side(border_style='thin', color='000000'),
+                
                 bottom=styles.Side(border_style='thin', color='000000'))
 
 # set font
@@ -67,8 +68,8 @@ def upload():
     return jsonify({
     "success": True,
     "message": f"Successfully processed {len(saved_files)} file(s).",
-    "download_url": "/static/CT_Template.xlsx"  # Adjust the download URL as needed
-}), 200
+    "download_url": "/download/CT_Template.xlsx"  # Adjust the download URL as needed
+    }), 200
 
 @app.route("/generate_excel", methods=["POST"])
 def generate_excel(pdf_paths):
@@ -132,7 +133,7 @@ def generate_excel(pdf_paths):
     apply_styles(worksheet)
 
     # Define the static folder for downloads
-    static_folder = os.path.join(os.getcwd(), "static")
+    static_folder = os.path.join(os.getcwd(), "download")
     os.makedirs(static_folder, exist_ok=True)  # Ensure the folder exists
 
     # Save file to static folder
@@ -140,6 +141,11 @@ def generate_excel(pdf_paths):
 
     # Save to disk before sending
     workbook.save(file_path)  
+
+    # Clean up uploaded files (optional - remove if you want to keep them)
+    for pdf_path in pdf_paths:
+        if os.path.exists(pdf_path):
+            os.remove(pdf_path)
 
     # Send the file as a download
     response = send_file(file_path, as_attachment=True, download_name="CT_Template.xlsx",
