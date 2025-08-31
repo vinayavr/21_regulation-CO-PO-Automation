@@ -21,6 +21,8 @@ const ctMessageDisplay = document.getElementById("ctMessage");
 let selectedFiles1 = new Set();
 let selectedFiles2 = new Set();
 let selectedExcelFile = null;
+let ctTemplate_File = null;
+let tlp_File = null;
 
 function handleFileSelection(fileInput, fileNameDisplay, selectedFiles, generateButton) {
     const files = Array.from(fileInput.files);
@@ -110,6 +112,7 @@ async function handleCTFileUpload(selectedFiles, url, messageElement, downloadBu
             messageElement.style.color = "green";
             downloadButton.style.display = "inline";
             selectedFiles.clear(); 
+            ctTemplate_File = data.download_url;
         } else {
             throw new Error(data.message || "Upload failed");
         }
@@ -198,7 +201,8 @@ async function handleTLPUpload(selectedFiles, selectedExcelFile, url, messageEle
             messageElement.textContent = sheetsText;
             messageElement.style.color = "green";
             downloadButton.style.display = "inline";
-
+            tlp_File = data.download_url;
+            
             selectedFiles.clear();
             if (selectedExcelFile) {
                 selectedExcelFile = null;
@@ -257,7 +261,7 @@ async function handleExcelFileUpload(selectedFile, url, messageElement, download
 generateButton1.addEventListener("click", () => handleCTFileUpload(selectedFiles1, "/upload1", ctMessageDisplay, downloadButton1));
 generateButton2.addEventListener("click", () => handleTLPUpload(selectedFiles2, selectedExcelFile, "/upload2", messageDisplay, downloadButton2));
 
-async function downloadExcelFile(filePath) {
+async function downloadExcelFile(filePath, fileNameDisplay) {
     try {
         const response = await fetch(filePath);
         
@@ -276,6 +280,9 @@ async function downloadExcelFile(filePath) {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
+        fileNameDisplay.innerHTML = '';
+        fileNameDisplay.textContent = '';
+
     } catch (error) {
         console.error("Download failed:", error);
         messageDisplay.textContent = "Download failed!";
@@ -283,5 +290,5 @@ async function downloadExcelFile(filePath) {
     }
 }
 
-downloadButton1.addEventListener("click", () => downloadExcelFile("/download/CT_Template.xlsx"));
-downloadButton2.addEventListener("click", () => downloadExcelFile("/download/co_allocation.xlsx"));
+downloadButton1.addEventListener("click", () => downloadExcelFile(ctTemplate_File, fileNameDisplay1));
+downloadButton2.addEventListener("click", () => downloadExcelFile(tlp_File, fileNameDisplay2));

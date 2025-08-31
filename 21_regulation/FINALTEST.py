@@ -204,36 +204,27 @@ class TLPMarkConverter:
         
         self.logger.info(f"Creating Excel sheet with append_file_path: {append_file_path}")
         
-        workbook = Workbook()
-        # Remove default sheet if it exists
-        if 'Sheet' in workbook.sheetnames:
-            workbook.remove(workbook['Sheet'])
-        
-        # First, create the TLP sheet (CO Mark Distribution)
-        sheet = workbook.create_sheet(title="TLP Sheet")
-        
+        workbook = None
+        file_name = None
+
         # Check if there's an uploaded Excel file to append
         has_uploaded_excel = append_file_path and append_file_path != "" and os.path.exists(append_file_path)
         
         if has_uploaded_excel:
-            try:
-                source_workbook = load_workbook(append_file_path)
-                self.logger.info(f"Loading existing Excel file with {len(source_workbook.sheetnames)} sheets")
-                
-                # Copy all existing sheets from uploaded file
-                self.copy_existing_sheets(source_workbook, workbook)
-                
-                # Close source workbook
-                source_workbook.close()
-                self.logger.info("Successfully copied existing sheets from uploaded Excel file")
-                
-            except Exception as e:
-                self.logger.error(f"Error loading existing Excel file: {e}", exc_info=True)
-                # Continue with just the TLP sheet
-                self.logger.info("Continuing with TLP sheet only due to error in uploaded file")
+            workbook = load_workbook(append_file_path)
+            sheet = workbook["CT4"]
+            if sheet is None:
+                sheet = workbook.create_sheet("CT4")
+            file_name = os.path.basename(append_file_path)
         else:
-            self.logger.info("No uploaded Excel file provided, creating TLP sheet only")
-                
+            workbook = Workbook()
+            # Remove the default sheet created by Workbook()
+            default_sheet = workbook.active
+            workbook.remove(default_sheet)  
+            # First, create the TLP sheet (CO Mark Distribution)
+            sheet = workbook.create_sheet(title="TLP Sheet")
+            file_name = "co_allocation.xlsx"
+        
         styles = {
             'title_font': Font(bold=True, size=12, name="Times New Roman"),
             'header_font': Font(bold=True, size=10, name="Times New Roman"),
@@ -314,63 +305,65 @@ class TLPMarkConverter:
                 cell.alignment = Alignment(horizontal='center')
                 
         # Generate the number of students who attempted 
-        sheet.merge_cells(start_row=64, start_column=1, end_row=64, end_column=3)
-        sheet.cell(64, column=1, value="Number of Students Attempted").font = styles['header_font']
+        sheet.merge_cells(start_row=72, start_column=1, end_row=72, end_column=3)
+        sheet.cell(72, column=1, value="Number of Students Attempted").font = styles['header_font']
         for col in range(1, 4):
-            sheet.cell(64, column=col).border = styles['border']  # First column merged cells
+            sheet.cell(72, column=col).border = styles['border']  # First column merged cells
         
         for i in range(0, 6):
             colLetter = get_column_letter(4 + i)  # Get the column letter
-            sheet.cell(64, 4 + i).value = "=COUNTA({0}4:{0}63)".format(colLetter)   # Apply the formula
-            sheet.cell(64, 4 + i).font = styles['calculation_font']
-            sheet.cell(64, 4 + i).border = styles['border']
-            sheet.cell(64, 4 + i).alignment = Alignment(horizontal='center', vertical='center')
+            sheet.cell(72, 4 + i).value = "=COUNTA({0}4:{0}71)".format(colLetter)   # Apply the formula
+            sheet.cell(72, 4 + i).font = styles['calculation_font']
+            sheet.cell(72, 4 + i).border = styles['border']
+            sheet.cell(72, 4 + i).alignment = Alignment(horizontal='center', vertical='center')
 
         # Generate the number of students who scored more than 65% of marks
-        sheet.merge_cells(start_row=65, start_column=1, end_row=65, end_column=3)
-        sheet.cell(65, column=1, value="Number of students who got more than 65% of marks").font = styles['header_font']
+        sheet.merge_cells(start_row=73, start_column=1, end_row=73, end_column=3)
+        sheet.cell(73, column=1, value="Number of students who got more than 65% of marks").font = styles['header_font']
         for col in range(1, 4):
-            sheet.cell(65, column=col).border = styles['border']  # First column merged cells
+            sheet.cell(73, column=col).border = styles['border']  # First column merged cells
         
         for i in range(0, 6):
             colLetter = get_column_letter(4 + i)  # Get the column letter
-            sheet.cell(65, 4 + i).value = "=COUNTIF({0}4:{0}63,\">=\"&0.65*{0}2)".format(colLetter)   # Apply the formula            
-            sheet.cell(65, 4 + i).font = styles['calculation_font']
-            sheet.cell(65, 4 + i).border = styles['border']
-            sheet.cell(65, 4 + i).alignment = Alignment(horizontal='center', vertical='center')
+            sheet.cell(73, 4 + i).value = "=COUNTIF({0}4:{0}71,\">=\"&0.65*{0}2)".format(colLetter)   # Apply the formula            
+            sheet.cell(73, 4 + i).font = styles['calculation_font']
+            sheet.cell(73, 4 + i).border = styles['border']
+            sheet.cell(73, 4 + i).alignment = Alignment(horizontal='center', vertical='center')
 
         # Generate the percentage of students who scored more than 65% 
-        sheet.merge_cells(start_row=66, start_column=1, end_row=66, end_column=3)
-        sheet.cell(66, column=1, value="Percentage of students who got more than 65% of marks").font = styles['header_font']
+        sheet.merge_cells(start_row=74, start_column=1, end_row=74, end_column=3)
+        sheet.cell(74, column=1, value="Percentage of students who got more than 65% of marks").font = styles['header_font']
         for col in range(1, 4):
-            sheet.cell(66, column=col).border = styles['border']  # First column merged cells
+            sheet.cell(74, column=col).border = styles['border']  # First column merged cells
 
         for i in range(0, 6):
             colLetter = get_column_letter(4 + i)  # Get the column letter
-            sheet.cell(66, 4 + i).value = "=IF({0}64>0,ROUND({0}65/{0}64*100,2),\"-\")".format(colLetter)   # Apply the formula            
-            sheet.cell(66, 4 + i).font = styles['calculation_font']
-            sheet.cell(66, 4 + i).border = styles['border']
-            sheet.cell(66, 4 + i).alignment = Alignment(horizontal='center', vertical='center')
+            sheet.cell(74, 4 + i).value = "=IF({0}72>0,ROUND({0}73/{0}72*100,2),\"-\")".format(colLetter)   # Apply the formula            
+            sheet.cell(74, 4 + i).font = styles['calculation_font']
+            sheet.cell(74, 4 + i).border = styles['border']
+            sheet.cell(74, 4 + i).alignment = Alignment(horizontal='center', vertical='center')
 
         # Generate the Course Outcome (CO) attainment level based on predefined thresholds (>=85: 3, >=75: 2, >=65: 1, <65: 0)
-        sheet.merge_cells(start_row=67, start_column=1, end_row=67, end_column=3)
-        sheet.cell(67, column=1, value=" CO Attainment Level (>=85:3,>=75:2,>=65:1,<65:0)").font = styles['header_font']
+        sheet.merge_cells(start_row=75, start_column=1, end_row=75, end_column=3)
+        sheet.cell(75, column=1, value=" CO Attainment Level (>=85:3,>=75:2,>=65:1,<65:0)").font = styles['header_font']
         for col in range(1, 4):
-            sheet.cell(67, column=col).border = styles['border']  # First column merged cells
+            sheet.cell(75, column=col).border = styles['border']  # First column merged cells
         
         for i in range(0, 6):
-            colLetter = get_column_letter(4 + i)  # Get the column letter =IF(G64>0,(IF(G66>=85,3,IF(G66>=75,2,IF(G66>=65,1,0)))),"-")
-            sheet.cell(67, 4 + i).value = "=IF({0}64>0,(IF({0}66>=85,3,IF({0}66>=75,2,IF({0}66>=65,1,0)))),\"-\")".format(colLetter)
-            sheet.cell(67, 4 + i).font = styles['calculation_font']
-            sheet.cell(67, 4 + i).border = styles['border']
-            sheet.cell(67, 4 + i).alignment = Alignment(horizontal='center', vertical='center')
+            colLetter = get_column_letter(4 + i)  # Get the column letter =IF(G72>0,(IF(G74>=85,3,IF(G74>=75,2,IF(G74>=65,1,0)))),"-")
+            sheet.cell(75, 4 + i).value = "=IF({0}72>0,(IF({0}74>=85,3,IF({0}74>=75,2,IF({0}74>=65,1,0)))),\"-\")".format(colLetter)
+            sheet.cell(75, 4 + i).font = styles['calculation_font']
+            sheet.cell(75, 4 + i).border = styles['border']
+            sheet.cell(75, 4 + i).alignment = Alignment(horizontal='center', vertical='center')
 
         # Auto-adjust column widths
         for col in range(4, 10):
             sheet.column_dimensions[get_column_letter(col)].auto_size = True
 
+        file_path = os.path.join(file_path, file_name)
         workbook.save(file_path)
         self.logger.info(f"Excel sheet created: {file_path}")
+        return file_path
 
 @second_bp.route('/upload2', methods=['POST'])
 def upload_files():
@@ -470,8 +463,8 @@ def upload_files():
             }), 400
         
         # Create output Excel file
-        output_file = os.path.join(converter.config['results_dir'], 'co_allocation.xlsx')
-        converter.create_excel_sheet(output_file, co_filled_excel_path, marks_data, co_splits, stats)
+        output_file = converter.config['results_dir']
+        output_file = converter.create_excel_sheet(output_file, co_filled_excel_path, marks_data, co_splits, stats)
         
         # Clean up uploaded files (optional - remove if you want to keep them)
         try:
@@ -509,7 +502,7 @@ def upload_files():
             'processed_files': stats['processed_files'],
             'failed_files': stats['failed_files'],
             'total_entries': len(marks_data),
-            'download_url': '/download/co_allocation.xlsx'
+            'download_url': output_file
         }), 200
     
     except Exception as e:

@@ -11,7 +11,7 @@ from openpyxl.styles import Font,Border
 from openpyxl.utils import get_column_letter
 import pdfplumber
 import re
-from openpyxl import workbook
+from openpyxl import workbook, load_workbook
 from FINALTEST import second_bp
 
 # Define a bold border  
@@ -27,7 +27,9 @@ font = Font(name="Times New Roman", size=10)
 
 qpCount = 0
 coCount = 6
-maxRows = 71
+maxRows = 75
+template_static_name = "template.xlsx"
+template_dynamic_name = ""
 
 app = Flask(__name__)
 app.register_blueprint(second_bp)
@@ -63,12 +65,12 @@ def upload():
             saved_files.append(file_path)
 
     # Pass the saved files to the generate_excel function
-    excel_file_path = generate_excel(saved_files)
+    generate_excel(saved_files)
 
     return jsonify({
     "success": True,
     "message": f"Successfully processed {len(saved_files)} file(s).",
-    "download_url": "/download/CT_Template.xlsx"  # Adjust the download URL as needed
+    "download_url": "/download/"+template_dynamic_name  # Adjust the download URL as needed
     }), 200
 
 @app.route("/generate_excel", methods=["POST"])
@@ -113,9 +115,12 @@ def generate_excel(pdf_paths):
         ct3_QNos = update_QuestionNo_Choices(ct3_QNos)
 
     # Create a new workbook
-    workbook = Workbook()
-    worksheet = workbook.active
-    worksheet.title = "CT"
+    workbook = load_workbook(os.path.join(os.path.join(os.getcwd(),"template"),template_static_name))
+
+    worksheet = workbook["CT1-3"]
+    if (worksheet is None):
+        worksheet = workbook.create_sheet("CT1-3")
+    workbook.active = workbook.index(worksheet)
 
     # Calculate the length of question numbers for each question paper  
     ct1=len(ct1_QNos)
@@ -135,9 +140,8 @@ def generate_excel(pdf_paths):
     # Define the static folder for downloads
     static_folder = os.path.join(os.getcwd(), "download")
     os.makedirs(static_folder, exist_ok=True)  # Ensure the folder exists
-
     # Save file to static folder
-    file_path = os.path.join(static_folder, "CT_Template.xlsx")
+    file_path = os.path.join(static_folder, template_dynamic_name)
 
     # Save to disk before sending
     workbook.save(file_path)  
@@ -147,11 +151,11 @@ def generate_excel(pdf_paths):
         if os.path.exists(pdf_path):
             os.remove(pdf_path)
 
-    # Send the file as a download
-    response = send_file(file_path, as_attachment=True, download_name="CT_Template.xlsx",
-                 mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
-
-    return response
+    return jsonify({
+        "success": True,
+        "message": "Excel file generated successfully.",
+        "download_url": "/download/"+template_dynamic_name  # Adjust the download URL as needed
+    }), 200
 
 def apply_styles(worksheet):
     # Define colors
@@ -175,10 +179,10 @@ def apply_styles(worksheet):
                     case 5:
                         if cell.column != 1:
                             cell.fill = grey_fill
-                    case 68:
+                    case 72:
                         cell.fill = yellow_fill
                 # Bold font for certain rows
-                if row_num <= 6 or (row_num >= 67 and cell.column < 4):
+                if row_num <= 6 or (row_num >= 71 and cell.column < 4):
                     cell.font = font_bold
                 else:
                     cell.font = font
@@ -193,6 +197,8 @@ def extract_details_from_pdf(pdf_path, question_numbers, marks, co_lists):
     # Define a regex pattern to match question numbers (e.g., "1", "2", etc.)
     flag=0
 
+    global template_dynamic_name
+
     with pdfplumber.open(pdf_path) as pdf:
         for page_num, page in enumerate(pdf.pages):
             # Extract all text from the page
@@ -205,6 +211,12 @@ def extract_details_from_pdf(pdf_path, question_numbers, marks, co_lists):
                 lines = text.split("\n")
 
                 for line in lines:
+                    if flag== 0 and not (template_dynamic_name.endswith('.xlsx')) and line.find('Course Code "&" Title:')!=-1:
+                        template_dynamic_name=(line.split('Course Code "&" Title:')[1]).split('Duration:')[0].strip()
+                        continue
+                    if flag== 0 and not (template_dynamic_name.endswith('.xlsx')) and line.find('Year "&" Sem:')!=-1:
+                        template_dynamic_name+="_" + (line.split('Year "&" Sem:')[1]).split('Max. Marks:')[0].strip().replace(" / ","_")
+                        continue
                     if flag==0 and line.find("Part")!=-1:
                         flag=1
                         continue
@@ -222,6 +234,9 @@ def extract_details_from_pdf(pdf_path, question_numbers, marks, co_lists):
                             except ValueError:
                                 pass  # Skip if the match isn't a valid integer
 
+    if not (template_dynamic_name.endswith('.xlsx')):
+        template_dynamic_name+='_'+template_static_name;
+    
     # Get the CO grouping indices
     for i in range(1,coCount+1):
         co = get_matching_value_indices(co_lists,str(i))
@@ -421,19 +436,19 @@ def generate_sixth_row(worksheet,question_numbers1,question_numbers2,question_nu
 def generate_Formulas(worksheet,ct1,ct2,ct3, coColumns):
     
     # Generate the number of students who attempted the exam for each column set (CT1, CT2, CT3)
-    generate_Rowwise_Formula(worksheet,67,"Number of Students Attempted","=COUNTA({0}7:{0}66)",ct1,ct2,ct3)
+    generate_Rowwise_Formula(worksheet,71,"Number of Students Attempted","=COUNTA({0}7:{0}70)",ct1,ct2,ct3)
 
     # Generate the number of students who scored more than 65% of marks for each column set
-    generate_Rowwise_Formula(worksheet,68,"Number of students who got more than 65% of marks","=COUNTIF({0}7:{0}66,\">=\"&0.65*{0}4)",ct1,ct2,ct3)
+    generate_Rowwise_Formula(worksheet,72,"Number of students who got more than 65% of marks","=COUNTIF({0}7:{0}70,\">=\"&0.65*{0}4)",ct1,ct2,ct3)
     
      # Generate the average percentage of students who scored more than 65% across multiple columns (CT-wise)
-    generate_Rowwise_Formula(worksheet,69,"Percentage of students who got more than 65% of marks","=IF({0}67>0,ROUND({0}68/{0}67*100,2),\"-\")",ct1,ct2,ct3)
+    generate_Rowwise_Formula(worksheet,73,"Percentage of students who got more than 65% of marks","=IF({0}71>0,ROUND({0}72/{0}71*100,2),\"-\")",ct1,ct2,ct3)
     
     # Generate the Course Outcome (CO) attainment level based on predefined thresholds (>=85: 3, >=75: 2, >=65: 1, <65: 0)
-    generate_CTwise_Formula(worksheet,70,"Average Percentage of students who got more than 65% of marks","=IFERROR(ROUND(SUMPRODUCT({0}69:{1}69,{0}4:{1}4)/SUM({0}4:{1}4), 2),\"-\")",ct1,ct2,ct3)
+    generate_CTwise_Formula(worksheet,74,"Average Percentage of students who got more than 65% of marks","=IFERROR(ROUND(SUMPRODUCT({0}73:{1}73,{0}4:{1}4)/SUM({0}4:{1}4), 2),\"-\")",ct1,ct2,ct3)
     
     # Generate the Course Outcome (CO) attainment level based on predefined thresholds (>=85: 3, >=75: 2, >=65: 1, <65: 0)
-    generate_CTwise_Formula(worksheet,71," CO Attainment Level (>=85:3,>=75:2,>=65:1,<65:0)","=IF({0}70>=85,3,IF({0}70>=75,2,IF({0}70>=65,1,0)))",ct1,ct2,ct3)
+    generate_CTwise_Formula(worksheet,75," CO Attainment Level (>=85:3,>=75:2,>=65:1,<65:0)","=IF({0}74>=85,3,IF({0}74>=75,2,IF({0}74>=65,1,0)))",ct1,ct2,ct3)
     
      # Generate formulas for Course Outcomes (COs) across specific columns
     generate_COWise_Formulas(worksheet,coColumns)
@@ -492,42 +507,47 @@ def generate_CTwise_Formula(worksheet,row,text,formula,ct1,ct2,ct3):
 
 def generate_COWise_Formulas(worksheet, coColumns):
     
-    # Generate the CO-wise table header starting at row 73, with relevant titles
-    generate_CO_wise_table(worksheet,73,"CO","CO Wise Average Percentage of students who got more than 65% of marks","Overall CO Attainment Level (>=85:3,>=75:2,>=65:1,<65:0)",True)
+    # Generate the CO-wise table header starting at row 77, with relevant titles
+    generate_CO_wise_table(worksheet,77,"CO","CO Wise Average Percentage of students who got more than 65% of marks","Overall CO Attainment Level (>=85:3,>=75:2,>=65:1,<65:0)",True)
     
     # Starting row for CO formulas
-    row = 74    
+    row = 78
     
-    # Iterate over the coColumns dictionary to generate formulas for each CO
-    for key, value in coColumns.items():
-        text1 = "CO" + str(key)# CO label, like CO1, CO2, etc.
+    for i in range(1,7):
+        if i not in coColumns:
+            # If a CO is missing, generate a row indicating "Not Applicable"
+            generate_CO_wise_table(worksheet, row, f"CO{i}", "0", "0", False)
+        else:
+            key = i
+            value = coColumns[i]        
+            text1 = "CO" + str(key)# CO label, like CO1, CO2, etc.
 
-        # Base of the formula for the CO-wise average calculation
-        text2 = "=IFERROR(ROUND(("
+            # Base of the formula for the CO-wise average calculation
+            text2 = "=IFERROR(ROUND(("
 
-        # Define the sub-formula structure for each pair of columns (like SUMPRODUCT)
-        sub_formula = "SUMPRODUCT({0}69:{1}69,{0}4:{1}4)/SUM({0}4:{1}4)"
-        num_subformulas = len(value) # Number of column pairs for the current CO
+            # Define the sub-formula structure for each pair of columns (like SUMPRODUCT)
+            sub_formula = "SUMPRODUCT({0}73:{1}73,{0}4:{1}4)/SUM({0}4:{1}4)"
+            num_subformulas = len(value) # Number of column pairs for the current CO
 
-        # Iterate through the column pairs and append them to the formula   
-        for i, col_pair in enumerate(value):
-            start_col_letter = get_column_letter(col_pair[0])# Convert column number to letter
-            end_col_letter = get_column_letter(col_pair[1])# Convert column number to letter
+            # Iterate through the column pairs and append them to the formula   
+            for i, col_pair in enumerate(value):
+                start_col_letter = get_column_letter(col_pair[0])# Convert column number to letter
+                end_col_letter = get_column_letter(col_pair[1])# Convert column number to letter
 
-            # Append sub-formula for this column pair
-            text2 += sub_formula.format(start_col_letter, end_col_letter)
+                # Append sub-formula for this column pair
+                text2 += sub_formula.format(start_col_letter, end_col_letter)
 
-            # Add '+' if not the last pair, else complete the formula structure
-            if i != num_subformulas - 1:
-                text2 += "+"
-            else:
-                text2 += f")/{num_subformulas},2),\"-\")"
-        
-        # Add the attainment level formula based on the CO value
-        text3 = f"=IF(C{row}>=85,3,IF(C{row}>=75,2,IF(C{row}>=65,1,0)))"
+                # Add '+' if not the last pair, else complete the formula structure
+                if i != num_subformulas - 1:
+                    text2 += "+"
+                else:
+                    text2 += f")/{num_subformulas},2),\"-\")"
+            
+            # Add the attainment level formula based on the CO value
+            text3 = f"=IF(C{row}>=85,3,IF(C{row}>=75,2,IF(C{row}>=65,1,0)))"
 
-        # Generate the row with the CO-wise formula and the attainment level formula
-        generate_CO_wise_table(worksheet, row, text1, text2, text3, False)
+            # Generate the row with the CO-wise formula and the attainment level formula
+            generate_CO_wise_table(worksheet, row, text1, text2, text3, False)
 
         # Move to the next row for the next CO formula
         row += 1
