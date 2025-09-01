@@ -28,13 +28,45 @@ body {
   
   .container {
     margin: 30px auto;
-    padding: 20px;
+    padding: 0;
     width: 500px;
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     text-align: center;
+    overflow: hidden;
   }
+
+  .section-header {
+    padding: 15px 20px;
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+  }
+
+  .ct-header {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+  }
+
+  .tlp-header {
+    background: linear-gradient(135deg, #28a745, #218838);
+  }
+
+  .container > *:not(.section-header) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .container > h3:first-of-type {
+    margin-top: 20px;
+  }
+
+  .container > *:last-child {
+    padding-bottom: 20px;
+  }
+
   ul {
     list-style-type: none; 
     padding: 0;  
@@ -48,8 +80,8 @@ body {
   }
   h2 {
     font-size: 20px;
-    margin-bottom: 15px;
-    color: #444;
+    margin: 0;
+    color: white;
   }
   h3 {
     font-size: 18px;
@@ -110,7 +142,7 @@ body {
     color: #333;
   }
   
-  #message {
+  #message, #ctMessage {
     margin-top: 15px;
     font-size: 16px;
     font-weight: bold;
@@ -183,6 +215,7 @@ body {
   
   .Note li {
     margin-bottom: 5px;
+    list-style-type: disc;
   }
   
   @media (max-width: 600px) {
@@ -200,4 +233,3 @@ body {
       width: 100%;
     }
   }
-

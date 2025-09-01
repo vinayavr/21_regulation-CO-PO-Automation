@@ -15,9 +15,11 @@
     <h1>Department of Computer Science and Engineering</h1>
   </div>
   
+  <!-- Container 1: CT Template Generator -->
   <div class="container">
-    <h1>Course Attainment Calculator</h1>
-    <h2>2021 Regulation</h2>
+    <div class="section-header ct-header">
+      <h2>CT Question Paper Template Generator</h2>
+    </div>
     
     <h3>Upload CT Question Papers</h3>
     <input type="file" id="fileInput1" accept=".pdf" multiple hidden>
@@ -28,7 +30,13 @@
     <br>
     <div id="ctMessage" style="margin: 10px 0; padding: 10px; display: none; font-size: 16px; font-weight: bold; text-align: center; border-radius: 5px;"></div>
     <button id="downloadButton1" style="display: none;">Download CT Excel Template</button>
-    <br><br>
+  </div>
+  
+  <!-- Container 2: CO-PO Allocation Calculator -->
+  <div class="container">
+    <div class="section-header tlp-header">
+      <h2>CO-PO Allocation Calculator</h2>
+    </div>
     
     <h3>Upload Filled Excel Sheet</h3>
     <input type="file" id="fileInput3" name="co_filled_excel" accept=".xlsx, .xls" hidden>
@@ -76,5 +84,3 @@
   <script src="static/js/scripts.js"></script>
 </body>
 </html>
-
-

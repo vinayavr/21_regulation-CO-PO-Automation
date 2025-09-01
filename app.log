@@ -3907,3 +3907,97 @@ PermissionError: [Errno 13] Permission denied: './download\\co_allocation.xlsx'
 2025-09-01 04:26:41,541 - INFO: Excel sheet created: ./download\co_allocation.xlsx
 2025-09-01 04:26:41,543 - INFO: 127.0.0.1 - - [01/Sep/2025 04:26:41] "POST /upload2 HTTP/1.1" 200 -
 2025-09-01 04:26:43,695 - INFO: 127.0.0.1 - - [01/Sep/2025 04:26:43] "GET /download/co_allocation.xlsx HTTP/1.1" 200 -
+2025-09-01 12:34:47,946 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-01 12:34:47,957 - INFO: [33mPress CTRL+C to quit[0m
+2025-09-01 12:34:47,971 - INFO:  * Restarting with stat
+2025-09-01 12:34:49,783 - WARNING:  * Debugger is active!
+2025-09-01 12:34:49,814 - INFO:  * Debugger PIN: 935-638-666
+2025-09-01 21:20:03,019 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-01 21:20:03,020 - INFO: [33mPress CTRL+C to quit[0m
+2025-09-01 21:20:03,070 - INFO:  * Restarting with stat
+2025-09-01 21:20:04,627 - WARNING:  * Debugger is active!
+2025-09-01 21:20:04,630 - INFO:  * Debugger PIN: 935-638-666
+2025-09-01 21:20:08,350 - INFO: 127.0.0.1 - - [01/Sep/2025 21:20:08] "GET / HTTP/1.1" 200 -
+2025-09-01 21:20:08,389 - INFO: 127.0.0.1 - - [01/Sep/2025 21:20:08] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-09-01 21:20:08,456 - INFO: 127.0.0.1 - - [01/Sep/2025 21:20:08] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-09-01 21:20:08,457 - INFO: 127.0.0.1 - - [01/Sep/2025 21:20:08] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-09-01 21:20:43,610 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-01 21:20:43,613 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-01 21:20:43,617 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-01 21:20:43,619 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-01 21:20:44,415 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-01 21:20:44,416 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-01 21:20:44,418 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-01 21:20:44,421 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-01 21:20:44,474 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-01 21:20:44,478 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-01 21:20:44,481 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-01 21:20:44,487 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-01 21:20:45,249 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-01 21:20:45,251 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-01 21:20:45,254 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-01 21:20:45,256 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-01 21:20:45,395 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-01 21:20:45,398 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-01 21:20:45,401 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-01 21:20:45,405 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-01 21:20:46,193 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-01 21:20:46,194 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-01 21:20:46,195 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-01 21:20:46,197 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-01 21:20:51,708 - INFO: 127.0.0.1 - - [01/Sep/2025 21:20:51] "POST /upload1 HTTP/1.1" 200 -
+2025-09-01 21:20:53,498 - INFO: 127.0.0.1 - - [01/Sep/2025 21:20:53] "GET /download/21CSC201-DATA%20STRUCTURES%20AND%20ALGORITHMS_II_3rd%20SEM_template.xlsx HTTP/1.1" 200 -
+2025-09-01 21:25:18,692 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-01 21:25:18,692 - INFO: [33mPress CTRL+C to quit[0m
+2025-09-01 21:25:18,693 - INFO:  * Restarting with stat
+2025-09-01 21:25:20,123 - WARNING:  * Debugger is active!
+2025-09-01 21:25:20,126 - INFO:  * Debugger PIN: 935-638-666
+2025-09-01 21:25:22,301 - INFO: 127.0.0.1 - - [01/Sep/2025 21:25:22] "GET / HTTP/1.1" 200 -
+2025-09-01 21:25:22,333 - INFO: 127.0.0.1 - - [01/Sep/2025 21:25:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-01 21:25:22,337 - INFO: 127.0.0.1 - - [01/Sep/2025 21:25:22] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-09-01 21:25:22,355 - INFO: 127.0.0.1 - - [01/Sep/2025 21:25:22] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-09-01 21:29:41,728 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-01 21:29:41,729 - INFO: [33mPress CTRL+C to quit[0m
+2025-09-01 21:29:41,731 - INFO:  * Restarting with stat
+2025-09-01 21:29:43,219 - WARNING:  * Debugger is active!
+2025-09-01 21:29:43,223 - INFO:  * Debugger PIN: 935-638-666
+2025-09-01 21:29:45,241 - INFO: 127.0.0.1 - - [01/Sep/2025 21:29:45] "GET / HTTP/1.1" 200 -
+2025-09-01 21:29:45,262 - INFO: 127.0.0.1 - - [01/Sep/2025 21:29:45] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-09-01 21:29:45,278 - INFO: 127.0.0.1 - - [01/Sep/2025 21:29:45] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-09-01 21:29:45,288 - INFO: 127.0.0.1 - - [01/Sep/2025 21:29:45] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-09-01 21:46:38,864 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-01 21:46:38,864 - INFO: [33mPress CTRL+C to quit[0m
+2025-09-01 21:46:38,866 - INFO:  * Restarting with stat
+2025-09-01 21:46:40,335 - WARNING:  * Debugger is active!
+2025-09-01 21:46:40,338 - INFO:  * Debugger PIN: 935-638-666
+2025-09-01 21:46:43,835 - INFO: 127.0.0.1 - - [01/Sep/2025 21:46:43] "GET / HTTP/1.1" 200 -
+2025-09-01 21:46:43,856 - INFO: 127.0.0.1 - - [01/Sep/2025 21:46:43] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-09-01 21:46:43,858 - INFO: 127.0.0.1 - - [01/Sep/2025 21:46:43] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-09-01 21:46:43,859 - INFO: 127.0.0.1 - - [01/Sep/2025 21:46:43] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-09-01 21:48:55,036 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-01 21:48:55,036 - INFO: [33mPress CTRL+C to quit[0m
+2025-09-01 21:48:55,038 - INFO:  * Restarting with stat
+2025-09-01 21:48:56,508 - WARNING:  * Debugger is active!
+2025-09-01 21:48:56,512 - INFO:  * Debugger PIN: 935-638-666
+2025-09-01 21:49:13,581 - INFO: 127.0.0.1 - - [01/Sep/2025 21:49:13] "GET / HTTP/1.1" 200 -
+2025-09-01 21:49:13,608 - INFO: 127.0.0.1 - - [01/Sep/2025 21:49:13] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-01 21:49:13,632 - INFO: 127.0.0.1 - - [01/Sep/2025 21:49:13] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-09-01 21:49:13,642 - INFO: 127.0.0.1 - - [01/Sep/2025 21:49:13] "GET /static/images/logo.png HTTP/1.1" 200 -
+2025-09-01 21:58:29,159 - INFO: 127.0.0.1 - - [01/Sep/2025 21:58:29] "GET / HTTP/1.1" 200 -
+2025-09-01 21:58:29,202 - INFO: 127.0.0.1 - - [01/Sep/2025 21:58:29] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-09-01 21:58:29,205 - INFO: 127.0.0.1 - - [01/Sep/2025 21:58:29] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-09-01 21:58:29,213 - INFO: 127.0.0.1 - - [01/Sep/2025 21:58:29] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-09-01 22:00:03,706 - INFO: 127.0.0.1 - - [01/Sep/2025 22:00:03] "GET / HTTP/1.1" 200 -
+2025-09-01 22:00:03,734 - INFO: 127.0.0.1 - - [01/Sep/2025 22:00:03] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-09-01 22:00:03,747 - INFO: 127.0.0.1 - - [01/Sep/2025 22:00:03] "GET /static/images/logo.png HTTP/1.1" 200 -
+2025-09-01 22:00:03,759 - INFO: 127.0.0.1 - - [01/Sep/2025 22:00:03] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-09-01 22:00:49,899 - INFO: 127.0.0.1 - - [01/Sep/2025 22:00:49] "GET / HTTP/1.1" 200 -
+2025-09-01 22:00:49,919 - INFO: 127.0.0.1 - - [01/Sep/2025 22:00:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-01 22:00:49,923 - INFO: 127.0.0.1 - - [01/Sep/2025 22:00:49] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-09-01 22:00:49,927 - INFO: 127.0.0.1 - - [01/Sep/2025 22:00:49] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
