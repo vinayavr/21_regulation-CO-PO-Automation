@@ -51,7 +51,7 @@ body {
   }
 
   .tlp-header {
-    background: linear-gradient(135deg, #28a745, #218838);
+    background: linear-gradient(135deg,#007bff, #0056b3);
   }
 
   .container > *:not(.section-header) {

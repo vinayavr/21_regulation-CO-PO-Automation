@@ -4001,3 +4001,253 @@ PermissionError: [Errno 13] Permission denied: './download\\co_allocation.xlsx'
 2025-09-01 22:00:49,919 - INFO: 127.0.0.1 - - [01/Sep/2025 22:00:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
 2025-09-01 22:00:49,923 - INFO: 127.0.0.1 - - [01/Sep/2025 22:00:49] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
 2025-09-01 22:00:49,927 - INFO: 127.0.0.1 - - [01/Sep/2025 22:00:49] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-09-02 18:19:22,382 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-02 18:19:22,393 - INFO: [33mPress CTRL+C to quit[0m
+2025-09-02 18:19:22,412 - INFO:  * Restarting with stat
+2025-09-02 18:19:24,113 - WARNING:  * Debugger is active!
+2025-09-02 18:19:24,120 - INFO:  * Debugger PIN: 935-638-666
+2025-09-02 18:19:37,122 - INFO: 127.0.0.1 - - [02/Sep/2025 18:19:37] "GET / HTTP/1.1" 200 -
+2025-09-02 18:19:37,177 - INFO: 127.0.0.1 - - [02/Sep/2025 18:19:37] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-09-02 18:19:37,186 - INFO: 127.0.0.1 - - [02/Sep/2025 18:19:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-02 18:19:37,267 - INFO: 127.0.0.1 - - [02/Sep/2025 18:19:37] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-09-02 18:19:55,359 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:19:55,363 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:19:55,366 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:19:55,371 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:19:56,131 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:19:56,132 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:19:56,133 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:19:56,134 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:19:56,174 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:19:56,178 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:19:56,183 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:19:56,186 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:19:56,910 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:19:56,912 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:19:56,913 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:19:56,915 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:19:56,960 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:19:56,964 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:19:56,967 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:19:56,974 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:19:57,867 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:19:57,868 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:19:57,869 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:19:57,871 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:20:03,206 - INFO: 127.0.0.1 - - [02/Sep/2025 18:20:03] "POST /upload1 HTTP/1.1" 200 -
+2025-09-02 18:20:42,109 - INFO: 127.0.0.1 - - [02/Sep/2025 18:20:42] "GET /download/21CSC201-DATA%20STRUCTURES%20AND%20ALGORITHMS_II_3rd%20SEM_template.xlsx HTTP/1.1" 200 -
+2025-09-02 18:26:17,777 - INFO: Excel file received: 21CSC201-DATA STRUCTURES AND ALGORITHMS_II_3rd SEM_template.xlsx
+2025-09-02 18:26:17,782 - INFO: Excel file saved: ./uploads\21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx
+2025-09-02 18:26:17,816 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:26:17,819 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:26:18,082 - INFO: Found Conducted Max value: 10.0 in TLP5-AI-CSE-B-LLTI.pdf
+2025-09-02 18:26:18,083 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:26:18,085 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:26:18,087 - INFO: Successfully processed TLP5-AI-CSE-B-LLTI.pdf: found 58 entries
+2025-09-02 18:26:18,088 - INFO: Total unique entries found across all files: 58
+2025-09-02 18:26:18,089 - INFO: Added 10.0 from TLP5-AI-CSE-B-LLTI.pdf to total
+2025-09-02 18:26:18,091 - INFO: Total Conducted Max across all files: 10.0
+2025-09-02 18:26:18,092 - INFO: Creating Excel sheet with append_file_path: ./uploads\21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx
+2025-09-02 18:26:23,246 - INFO: Excel sheet created: ./download\21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx
+2025-09-02 18:26:23,251 - INFO: 127.0.0.1 - - [02/Sep/2025 18:26:23] "POST /upload2 HTTP/1.1" 200 -
+2025-09-02 18:26:26,412 - INFO: 127.0.0.1 - - [02/Sep/2025 18:26:26] "GET /download/21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx HTTP/1.1" 200 -
+2025-09-02 18:30:09,486 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-02 18:30:09,488 - INFO: [33mPress CTRL+C to quit[0m
+2025-09-02 18:30:09,491 - INFO:  * Restarting with stat
+2025-09-02 18:30:10,939 - WARNING:  * Debugger is active!
+2025-09-02 18:30:10,942 - INFO:  * Debugger PIN: 935-638-666
+2025-09-02 18:30:13,593 - INFO: 127.0.0.1 - - [02/Sep/2025 18:30:13] "GET / HTTP/1.1" 200 -
+2025-09-02 18:30:13,631 - INFO: 127.0.0.1 - - [02/Sep/2025 18:30:13] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-09-02 18:30:13,641 - INFO: 127.0.0.1 - - [02/Sep/2025 18:30:13] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-09-02 18:30:13,642 - INFO: 127.0.0.1 - - [02/Sep/2025 18:30:13] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-09-02 18:35:02,008 - INFO: 127.0.0.1 - - [02/Sep/2025 18:35:02] "GET / HTTP/1.1" 200 -
+2025-09-02 18:35:02,040 - INFO: 127.0.0.1 - - [02/Sep/2025 18:35:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-02 18:35:02,047 - INFO: 127.0.0.1 - - [02/Sep/2025 18:35:02] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-09-02 18:35:02,048 - INFO: 127.0.0.1 - - [02/Sep/2025 18:35:02] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-09-02 18:35:38,642 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:35:38,644 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:35:38,646 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:35:38,649 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:35:39,372 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:35:39,373 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:35:39,374 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:35:39,375 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:35:39,421 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:35:39,424 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:35:39,426 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:35:39,430 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:35:40,181 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:35:40,182 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:35:40,184 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:35:40,186 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:35:40,233 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:35:40,236 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:35:40,240 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:35:40,246 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:35:41,119 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:35:41,120 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:35:41,121 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:35:41,123 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:35:46,847 - INFO: 127.0.0.1 - - [02/Sep/2025 18:35:46] "POST /upload1 HTTP/1.1" 200 -
+2025-09-02 18:36:12,437 - INFO: 127.0.0.1 - - [02/Sep/2025 18:36:12] "GET /download/21CSC201-DATA%20STRUCTURES%20AND%20ALGORITHMS_II_3rd%20SEM_template.xlsx HTTP/1.1" 200 -
+2025-09-02 18:39:49,243 - INFO: Excel file received: 21CSC201-DATA STRUCTURES AND ALGORITHMS_II_3rd SEM_template.xlsx
+2025-09-02 18:39:49,249 - INFO: Excel file saved: ./uploads\21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx
+2025-09-02 18:39:49,300 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:39:49,303 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:39:49,558 - INFO: Found Conducted Max value: 7.0 in TLP5-DAA-LLJI.pdf
+2025-09-02 18:39:49,561 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:39:49,563 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:39:49,565 - INFO: Successfully processed TLP5-DAA-LLJI.pdf: found 59 entries
+2025-09-02 18:39:49,602 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:39:49,605 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:39:49,864 - INFO: Found Conducted Max value: 8.0 in TLP5-DAA-LLJII.pdf
+2025-09-02 18:39:49,866 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:39:49,870 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:39:49,873 - INFO: Successfully processed TLP5-DAA-LLJII.pdf: found 59 entries
+2025-09-02 18:39:49,875 - INFO: Total unique entries found across all files: 59
+2025-09-02 18:39:49,877 - INFO: Added 7.0 from TLP5-DAA-LLJI.pdf to total
+2025-09-02 18:39:49,879 - INFO: Added 8.0 from TLP5-DAA-LLJII.pdf to total
+2025-09-02 18:39:49,881 - INFO: Total Conducted Max across all files: 15.0
+2025-09-02 18:39:49,883 - INFO: Creating Excel sheet with append_file_path: ./uploads\21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx
+2025-09-02 18:39:55,251 - INFO: Excel sheet created: ./download\21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx
+2025-09-02 18:39:55,255 - INFO: 127.0.0.1 - - [02/Sep/2025 18:39:55] "POST /upload2 HTTP/1.1" 200 -
+2025-09-02 18:40:07,875 - INFO: 127.0.0.1 - - [02/Sep/2025 18:40:07] "GET /download/21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx HTTP/1.1" 200 -
+2025-09-02 18:41:34,504 - INFO: 127.0.0.1 - - [02/Sep/2025 18:41:34] "GET / HTTP/1.1" 200 -
+2025-09-02 18:41:34,555 - INFO: 127.0.0.1 - - [02/Sep/2025 18:41:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-02 18:41:34,865 - INFO: 127.0.0.1 - - [02/Sep/2025 18:41:34] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-09-02 18:41:34,907 - INFO: 127.0.0.1 - - [02/Sep/2025 18:41:34] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-09-02 18:54:24,108 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-02 18:54:24,110 - INFO: [33mPress CTRL+C to quit[0m
+2025-09-02 18:54:24,114 - INFO:  * Restarting with stat
+2025-09-02 18:54:26,138 - WARNING:  * Debugger is active!
+2025-09-02 18:54:26,148 - INFO:  * Debugger PIN: 935-638-666
+2025-09-02 18:54:29,011 - INFO: 127.0.0.1 - - [02/Sep/2025 18:54:29] "GET / HTTP/1.1" 200 -
+2025-09-02 18:54:29,039 - INFO: 127.0.0.1 - - [02/Sep/2025 18:54:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-02 18:54:29,081 - INFO: 127.0.0.1 - - [02/Sep/2025 18:54:29] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-09-02 18:54:29,107 - INFO: 127.0.0.1 - - [02/Sep/2025 18:54:29] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-09-02 18:54:51,870 - INFO: 127.0.0.1 - - [02/Sep/2025 18:54:51] "GET / HTTP/1.1" 200 -
+2025-09-02 18:54:51,894 - INFO: 127.0.0.1 - - [02/Sep/2025 18:54:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-02 18:54:51,915 - INFO: 127.0.0.1 - - [02/Sep/2025 18:54:51] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-09-02 18:54:51,918 - INFO: 127.0.0.1 - - [02/Sep/2025 18:54:51] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-09-02 18:55:05,366 - INFO: Excel file received: None
+2025-09-02 18:55:05,368 - INFO: No Excel file uploaded - will create TLP sheet only
+2025-09-02 18:55:05,391 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:55:05,395 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:55:05,682 - INFO: Found Conducted Max value: 10.0 in TLP5-AI-CSE-B-LLTI.pdf
+2025-09-02 18:55:05,685 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:55:05,686 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:55:05,688 - INFO: Successfully processed TLP5-AI-CSE-B-LLTI.pdf: found 58 entries
+2025-09-02 18:55:05,692 - INFO: Total unique entries found across all files: 58
+2025-09-02 18:55:05,694 - INFO: Added 10.0 from TLP5-AI-CSE-B-LLTI.pdf to total
+2025-09-02 18:55:05,696 - INFO: Total Conducted Max across all files: 10.0
+2025-09-02 18:55:05,703 - INFO: Creating Excel sheet with append_file_path: None
+2025-09-02 18:55:45,314 - ERROR: Unexpected error: [Errno 22] Invalid argument: './download\\co_allocation2025-09-02 18:55:14.307349.xlsx'
+Traceback (most recent call last):
+  File "d:\Github_Projects\21_regulation-CO-PO-Automation\21_regulation\FINALTEST.py", line 405, in upload_files
+    output_file = converter.create_excel_sheet(output_file, co_filled_excel_path, marks_data, co_splits, stats)
+  File "d:\Github_Projects\21_regulation-CO-PO-Automation\21_regulation\FINALTEST.py", line 302, in create_excel_sheet
+    workbook.save(file_path)
+    ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "d:\Github_Projects\21_regulation-CO-PO-Automation\.venv\Lib\site-packages\openpyxl\workbook\workbook.py", line 386, in save
+    save_workbook(self, filename)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "d:\Github_Projects\21_regulation-CO-PO-Automation\.venv\Lib\site-packages\openpyxl\writer\excel.py", line 291, in save_workbook
+    archive = ZipFile(filename, 'w', ZIP_DEFLATED, allowZip64=True)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\zipfile\__init__.py", line 1367, in __init__
+    self.fp = io.open(file, filemode)
+              ~~~~~~~^^^^^^^^^^^^^^^^
+OSError: [Errno 22] Invalid argument: './download\\co_allocation2025-09-02 18:55:14.307349.xlsx'
+2025-09-02 18:55:45,379 - INFO:  * Detected change in 'd:\\Github_Projects\\21_regulation-CO-PO-Automation\\21_regulation\\FINALTEST.py', reloading
+2025-09-02 18:55:45,392 - INFO: 127.0.0.1 - - [02/Sep/2025 18:55:45] "[35m[1mPOST /upload2 HTTP/1.1[0m" 500 -
+2025-09-02 18:55:46,375 - INFO:  * Restarting with stat
+2025-09-02 18:55:48,473 - WARNING:  * Debugger is active!
+2025-09-02 18:55:48,479 - INFO:  * Debugger PIN: 935-638-666
+2025-09-02 18:56:05,975 - INFO: 127.0.0.1 - - [02/Sep/2025 18:56:05] "GET / HTTP/1.1" 200 -
+2025-09-02 18:56:06,007 - INFO: 127.0.0.1 - - [02/Sep/2025 18:56:06] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-02 18:56:06,011 - INFO: 127.0.0.1 - - [02/Sep/2025 18:56:06] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-09-02 18:56:06,024 - INFO: 127.0.0.1 - - [02/Sep/2025 18:56:06] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-09-02 18:56:23,564 - INFO: Excel file received: None
+2025-09-02 18:56:23,566 - INFO: No Excel file uploaded - will create TLP sheet only
+2025-09-02 18:56:23,589 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:56:23,593 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:56:23,939 - INFO: Found Conducted Max value: 10.0 in TLP5-AI-CSE-B-LLTI.pdf
+2025-09-02 18:56:23,940 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:56:23,941 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:56:23,943 - INFO: Successfully processed TLP5-AI-CSE-B-LLTI.pdf: found 58 entries
+2025-09-02 18:56:23,944 - INFO: Total unique entries found across all files: 58
+2025-09-02 18:56:23,945 - INFO: Added 10.0 from TLP5-AI-CSE-B-LLTI.pdf to total
+2025-09-02 18:56:23,946 - INFO: Total Conducted Max across all files: 10.0
+2025-09-02 18:56:23,949 - INFO: Creating Excel sheet with append_file_path: None
+2025-09-02 18:56:33,318 - ERROR: Unexpected error: [Errno 22] Invalid argument: './download\\co_allocation_2025-09-02 18:56:30.609928.xlsx'
+Traceback (most recent call last):
+  File "d:\Github_Projects\21_regulation-CO-PO-Automation\21_regulation\FINALTEST.py", line 405, in upload_files
+    output_file = converter.create_excel_sheet(output_file, co_filled_excel_path, marks_data, co_splits, stats)
+  File "d:\Github_Projects\21_regulation-CO-PO-Automation\21_regulation\FINALTEST.py", line 302, in create_excel_sheet
+    workbook.save(file_path)
+    ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "d:\Github_Projects\21_regulation-CO-PO-Automation\.venv\Lib\site-packages\openpyxl\workbook\workbook.py", line 386, in save
+    save_workbook(self, filename)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "d:\Github_Projects\21_regulation-CO-PO-Automation\.venv\Lib\site-packages\openpyxl\writer\excel.py", line 291, in save_workbook
+    archive = ZipFile(filename, 'w', ZIP_DEFLATED, allowZip64=True)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\zipfile\__init__.py", line 1367, in __init__
+    self.fp = io.open(file, filemode)
+              ~~~~~~~^^^^^^^^^^^^^^^^
+OSError: [Errno 22] Invalid argument: './download\\co_allocation_2025-09-02 18:56:30.609928.xlsx'
+2025-09-02 18:56:33,323 - INFO: 127.0.0.1 - - [02/Sep/2025 18:56:33] "[35m[1mPOST /upload2 HTTP/1.1[0m" 500 -
+2025-09-02 18:58:04,496 - INFO: Excel file received: None
+2025-09-02 18:58:04,498 - INFO: No Excel file uploaded - will create TLP sheet only
+2025-09-02 18:58:04,503 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:58:04,505 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:58:04,647 - INFO: Found Conducted Max value: 10.0 in TLP5-AI-CSE-B-LLTI.pdf
+2025-09-02 18:58:04,647 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:58:04,648 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 18:58:04,649 - INFO: Successfully processed TLP5-AI-CSE-B-LLTI.pdf: found 58 entries
+2025-09-02 18:58:04,649 - INFO: Total unique entries found across all files: 58
+2025-09-02 18:58:04,650 - INFO: Added 10.0 from TLP5-AI-CSE-B-LLTI.pdf to total
+2025-09-02 18:58:04,650 - INFO: Total Conducted Max across all files: 10.0
+2025-09-02 18:58:04,650 - INFO: Creating Excel sheet with append_file_path: None
+2025-09-02 18:58:51,556 - ERROR: Unexpected error: [Errno 22] Invalid argument: './download\\co_allocation_2025-09-02 18:58:10.590100.xlsx'
+Traceback (most recent call last):
+  File "d:\Github_Projects\21_regulation-CO-PO-Automation\21_regulation\FINALTEST.py", line 405, in upload_files
+    output_file = converter.create_excel_sheet(output_file, co_filled_excel_path, marks_data, co_splits, stats)
+  File "d:\Github_Projects\21_regulation-CO-PO-Automation\21_regulation\FINALTEST.py", line 302, in create_excel_sheet
+    workbook.save(file_path)
+    ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "d:\Github_Projects\21_regulation-CO-PO-Automation\.venv\Lib\site-packages\openpyxl\workbook\workbook.py", line 386, in save
+    save_workbook(self, filename)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "d:\Github_Projects\21_regulation-CO-PO-Automation\.venv\Lib\site-packages\openpyxl\writer\excel.py", line 291, in save_workbook
+    archive = ZipFile(filename, 'w', ZIP_DEFLATED, allowZip64=True)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python313\Lib\zipfile\__init__.py", line 1367, in __init__
+    self.fp = io.open(file, filemode)
+              ~~~~~~~^^^^^^^^^^^^^^^^
+OSError: [Errno 22] Invalid argument: './download\\co_allocation_2025-09-02 18:58:10.590100.xlsx'
+2025-09-02 18:58:52,397 - INFO: 127.0.0.1 - - [02/Sep/2025 18:58:52] "[35m[1mPOST /upload2 HTTP/1.1[0m" 500 -
+2025-09-02 19:00:58,819 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-02 19:00:58,820 - INFO: [33mPress CTRL+C to quit[0m
+2025-09-02 19:00:58,823 - INFO:  * Restarting with stat
+2025-09-02 19:01:00,920 - WARNING:  * Debugger is active!
+2025-09-02 19:01:00,928 - INFO:  * Debugger PIN: 935-638-666
+2025-09-02 19:01:04,625 - INFO: 127.0.0.1 - - [02/Sep/2025 19:01:04] "GET / HTTP/1.1" 200 -
+2025-09-02 19:01:04,660 - INFO: 127.0.0.1 - - [02/Sep/2025 19:01:04] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-09-02 19:01:04,664 - INFO: 127.0.0.1 - - [02/Sep/2025 19:01:04] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-09-02 19:01:04,671 - INFO: 127.0.0.1 - - [02/Sep/2025 19:01:04] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-09-02 19:01:19,460 - INFO: Excel file received: None
+2025-09-02 19:01:19,463 - INFO: No Excel file uploaded - will create TLP sheet only
+2025-09-02 19:01:19,481 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 19:01:19,485 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 19:01:19,810 - INFO: Found Conducted Max value: 10.0 in TLP5-AI-CSE-B-LLTI.pdf
+2025-09-02 19:01:19,812 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 19:01:19,813 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-09-02 19:01:19,817 - INFO: Successfully processed TLP5-AI-CSE-B-LLTI.pdf: found 58 entries
+2025-09-02 19:01:19,818 - INFO: Total unique entries found across all files: 58
+2025-09-02 19:01:19,820 - INFO: Added 10.0 from TLP5-AI-CSE-B-LLTI.pdf to total
+2025-09-02 19:01:19,823 - INFO: Total Conducted Max across all files: 10.0
+2025-09-02 19:01:19,828 - INFO: Creating Excel sheet with append_file_path: None
+2025-09-02 19:04:09,959 - INFO: Excel sheet created: ./download\co_allocation.xlsx
+2025-09-02 19:04:09,965 - INFO: 127.0.0.1 - - [02/Sep/2025 19:04:09] "POST /upload2 HTTP/1.1" 200 -

@@ -13,6 +13,7 @@ from openpyxl import Workbook, load_workbook
 from openpyxl.styles import Font, Alignment, PatternFill, Border, Side
 from openpyxl.utils import get_column_letter
 import re
+from datetime import datetime
 
 from flask import Blueprint, request, abort, send_from_directory, render_template, jsonify, send_file, current_app, Flask
 
@@ -130,69 +131,6 @@ class TLPMarkConverter:
             'stats': stats
         }
 
-    def copy_existing_sheets(self, source_workbook, target_workbook):
-        
-        try:
-            for sheet_name in source_workbook.sheetnames:
-                source_sheet = source_workbook[sheet_name]
-                target_sheet = target_workbook.create_sheet(title=sheet_name)
-                
-                # Copy cell values and styles safely
-                for row in source_sheet.iter_rows():
-                    for cell in row:
-                        target_cell = target_sheet.cell(
-                            row=cell.row, 
-                            column=cell.column, 
-                            value=cell.value
-                        )
-                        
-                        # Copy cell formatting safely using copy()
-                        try:
-                            if cell.has_style:
-                                if cell.font:
-                                    target_cell.font = copy(cell.font)
-                                if cell.border:
-                                    target_cell.border = copy(cell.border)
-                                if cell.fill:
-                                    target_cell.fill = copy(cell.fill)
-                                if cell.alignment:
-                                    target_cell.alignment = copy(cell.alignment)
-                                if cell.number_format:
-                                    target_cell.number_format = cell.number_format
-                                if cell.protection:
-                                    target_cell.protection = copy(cell.protection)
-                        except Exception as style_error:
-                            # If style copying fails, just log and continue
-                            self.logger.warning(f"Could not copy style for cell {cell.coordinate}: {style_error}")
-                            continue
-                
-                # Copy merged cells
-                try:
-                    for merged_cell_range in source_sheet.merged_cells.ranges:
-                        target_sheet.merge_cells(str(merged_cell_range))
-                except Exception as merge_error:
-                    self.logger.warning(f"Could not copy merged cells for sheet {sheet_name}: {merge_error}")
-                
-                # Copy column dimensions
-                try:
-                    for col_letter, col_dimension in source_sheet.column_dimensions.items():
-                        target_sheet.column_dimensions[col_letter].width = col_dimension.width
-                except Exception as col_error:
-                    self.logger.warning(f"Could not copy column dimensions for sheet {sheet_name}: {col_error}")
-                
-                # Copy row dimensions
-                try:
-                    for row_num, row_dimension in source_sheet.row_dimensions.items():
-                        target_sheet.row_dimensions[row_num].height = row_dimension.height
-                except Exception as row_error:
-                    self.logger.warning(f"Could not copy row dimensions for sheet {sheet_name}: {row_error}")
-                    
-            self.logger.info(f"Successfully copied {len(source_workbook.sheetnames)} sheets from source workbook")
-            
-        except Exception as e:
-            self.logger.error(f"Error copying sheets from source workbook: {e}", exc_info=True)
-            raise
-
     def create_excel_sheet(
         self, 
         file_path: str, 
@@ -223,7 +161,10 @@ class TLPMarkConverter:
             workbook.remove(default_sheet)  
             # First, create the TLP sheet (CO Mark Distribution)
             sheet = workbook.create_sheet(title="TLP Sheet")
-            file_name = "co_allocation.xlsx"
+            
+            # Generate dynamic filename with current date & time
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")  # e.g. 20250902_153045
+            file_name = f"co_allocation_{timestamp}.xlsx"
         
         styles = {
             'title_font': Font(bold=True, size=12, name="Times New Roman"),
