@@ -16,6 +16,8 @@ import re
 from openpyxl import workbook, load_workbook
 from FINALTEST import second_bp
 from datetime import datetime
+import warnings
+warnings.filterwarnings("ignore", message="CropBox missing from /Page")
 
 # Define a bold border  
 bold_border = styles.Border(left=styles.Side(border_style='thin', color='000000'),
@@ -252,7 +254,6 @@ def extract_details_from_pdf(pdf_path, question_numbers, marks, co_lists):
     if '&' in template_dynamic_name:
         template_dynamic_name = re.sub(r'[<>:"/\\|?*]', '', template_dynamic_name.replace('&', 'And'))                        
     if not (template_dynamic_name.endswith('.xlsx')):
-        template_dynamic_name+='_'+template_static_name;
         template_dynamic_name=f"{template_dynamic_name}_{datetime.now().strftime('%Y%m%d%H%M%S')}.xlsx"
     
     # Get the CO grouping indices

@@ -5119,3 +5119,573 @@ KeyError: 'Worksheet CT4 does not exist.'
 2025-10-11 00:53:44,031 - INFO: 127.0.0.1 - - [11/Oct/2025 00:53:44] "POST /upload2 HTTP/1.1" 200 -
 2025-10-11 00:53:45,842 - INFO: Accessed route: /download/21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx_20251011005237.xlsx
 2025-10-11 00:53:45,904 - INFO: 127.0.0.1 - - [11/Oct/2025 00:53:45] "GET /download/21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx_20251011005237.xlsx HTTP/1.1" 200 -
+2025-10-11 01:45:33,734 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-11 01:45:33,735 - INFO: [33mPress CTRL+C to quit[0m
+2025-10-11 01:45:33,738 - INFO:  * Restarting with stat
+2025-10-11 01:45:34,469 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-11 01:45:34,470 - INFO: [33mPress CTRL+C to quit[0m
+2025-10-11 01:45:34,473 - INFO:  * Restarting with stat
+2025-10-11 01:45:36,066 - WARNING:  * Debugger is active!
+2025-10-11 01:45:36,070 - INFO:  * Debugger PIN: 935-638-666
+2025-10-11 01:45:36,564 - WARNING:  * Debugger is active!
+2025-10-11 01:45:36,567 - INFO:  * Debugger PIN: 935-638-666
+2025-10-11 01:45:44,391 - INFO: Accessed route: /
+2025-10-11 01:45:44,402 - INFO: 127.0.0.1 - - [11/Oct/2025 01:45:44] "GET / HTTP/1.1" 200 -
+2025-10-11 01:45:44,436 - INFO: Accessed route: /static/css/style.css
+2025-10-11 01:45:44,441 - INFO: 127.0.0.1 - - [11/Oct/2025 01:45:44] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-10-11 01:45:44,451 - INFO: Accessed route: /static/js/scripts.js
+2025-10-11 01:45:44,456 - INFO: Accessed route: /static/images/logo.png
+2025-10-11 01:45:44,457 - INFO: 127.0.0.1 - - [11/Oct/2025 01:45:44] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-11 01:45:44,458 - INFO: 127.0.0.1 - - [11/Oct/2025 01:45:44] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-11 01:45:58,835 - INFO: Accessed route: /upload1
+2025-10-11 01:45:58,916 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:45:58,921 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:45:58,927 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:45:58,933 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:45:59,835 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:45:59,837 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:45:59,839 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:45:59,840 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:45:59,903 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:45:59,907 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:45:59,913 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:45:59,919 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:46:00,858 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:46:00,860 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:46:00,865 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:46:00,867 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:46:00,923 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:46:00,927 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:46:00,931 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:46:00,935 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:46:01,983 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:46:01,985 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:46:01,987 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:46:01,989 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:46:08,324 - INFO: 127.0.0.1 - - [11/Oct/2025 01:46:08] "POST /upload1 HTTP/1.1" 200 -
+2025-10-11 01:46:10,808 - INFO: Accessed route: /download/21CSC201-DATA STRUCTURES AND ALGORITHMS_II_3rd SEM_template.xlsx_20251011014559.xlsx
+2025-10-11 01:46:10,870 - INFO: 127.0.0.1 - - [11/Oct/2025 01:46:10] "GET /download/21CSC201-DATA%20STRUCTURES%20AND%20ALGORITHMS_II_3rd%20SEM_template.xlsx_20251011014559.xlsx HTTP/1.1" 200 -
+2025-10-11 01:47:03,934 - INFO: Accessed route: /upload2
+2025-10-11 01:47:03,942 - INFO: Excel file received: Template_With_Data.xlsx
+2025-10-11 01:47:03,981 - INFO: Excel file saved: ./uploads\Template_With_Data.xlsx
+2025-10-11 01:47:03,994 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:47:03,999 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:47:04,315 - INFO: Found Conducted Max value: 10.0 in TLP5-AI-CSE-B-LLTI.pdf
+2025-10-11 01:47:04,316 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:47:04,319 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:47:04,320 - INFO: Successfully processed TLP5-AI-CSE-B-LLTI.pdf: found 58 entries
+2025-10-11 01:47:04,322 - INFO: Total unique entries found across all files: 58
+2025-10-11 01:47:04,325 - INFO: Added 10.0 from TLP5-AI-CSE-B-LLTI.pdf to total
+2025-10-11 01:47:04,326 - INFO: Total Conducted Max across all files: 10.0
+2025-10-11 01:47:04,328 - INFO: Creating Excel sheet with append_file_path: ./uploads\Template_With_Data.xlsx
+2025-10-11 01:47:11,065 - INFO: Excel sheet created: ./download\Template_With_Data.xlsx
+2025-10-11 01:47:11,071 - INFO: 127.0.0.1 - - [11/Oct/2025 01:47:11] "POST /upload2 HTTP/1.1" 200 -
+2025-10-11 01:47:17,760 - INFO: Accessed route: /download/Template_With_Data.xlsx
+2025-10-11 01:47:17,821 - INFO: 127.0.0.1 - - [11/Oct/2025 01:47:17] "GET /download/Template_With_Data.xlsx HTTP/1.1" 200 -
+2025-10-11 01:49:34,424 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-11 01:49:34,424 - INFO: [33mPress CTRL+C to quit[0m
+2025-10-11 01:49:34,427 - INFO:  * Restarting with stat
+2025-10-11 01:49:36,193 - WARNING:  * Debugger is active!
+2025-10-11 01:49:36,198 - INFO:  * Debugger PIN: 935-638-666
+2025-10-11 01:49:38,894 - INFO: Accessed route: /
+2025-10-11 01:49:38,908 - INFO: 127.0.0.1 - - [11/Oct/2025 01:49:38] "GET / HTTP/1.1" 200 -
+2025-10-11 01:49:38,961 - INFO: Accessed route: /static/css/style.css
+2025-10-11 01:49:38,964 - INFO: 127.0.0.1 - - [11/Oct/2025 01:49:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-11 01:49:38,974 - INFO: Accessed route: /static/images/logo.png
+2025-10-11 01:49:38,979 - INFO: 127.0.0.1 - - [11/Oct/2025 01:49:38] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-11 01:49:38,982 - INFO: Accessed route: /static/js/scripts.js
+2025-10-11 01:49:38,992 - INFO: 127.0.0.1 - - [11/Oct/2025 01:49:38] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-11 01:49:52,310 - INFO: Accessed route: /upload1
+2025-10-11 01:49:52,400 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:49:52,404 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:49:52,409 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:49:52,414 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:49:53,303 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:49:53,309 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:49:53,311 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:49:53,313 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:49:53,382 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:49:53,385 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:49:53,396 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:49:53,401 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:49:54,457 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:49:54,459 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:49:54,461 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:49:54,465 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:49:54,529 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:49:54,533 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:49:54,540 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:49:54,545 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:49:55,875 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:49:55,877 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:49:55,878 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:49:55,880 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:50:03,638 - INFO: 127.0.0.1 - - [11/Oct/2025 01:50:03] "POST /upload1 HTTP/1.1" 200 -
+2025-10-11 01:50:33,985 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-11 01:50:33,986 - INFO: [33mPress CTRL+C to quit[0m
+2025-10-11 01:50:33,990 - INFO:  * Restarting with stat
+2025-10-11 01:50:36,004 - WARNING:  * Debugger is active!
+2025-10-11 01:50:36,008 - INFO:  * Debugger PIN: 935-638-666
+2025-10-11 01:50:39,293 - INFO: Accessed route: /
+2025-10-11 01:50:39,306 - INFO: 127.0.0.1 - - [11/Oct/2025 01:50:39] "GET / HTTP/1.1" 200 -
+2025-10-11 01:50:39,358 - INFO: Accessed route: /static/css/style.css
+2025-10-11 01:50:39,365 - INFO: 127.0.0.1 - - [11/Oct/2025 01:50:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-11 01:50:39,369 - INFO: Accessed route: /static/images/logo.png
+2025-10-11 01:50:39,373 - INFO: Accessed route: /static/js/scripts.js
+2025-10-11 01:50:39,380 - INFO: 127.0.0.1 - - [11/Oct/2025 01:50:39] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-11 01:50:39,389 - INFO: 127.0.0.1 - - [11/Oct/2025 01:50:39] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-11 01:50:50,439 - INFO: Accessed route: /upload1
+2025-10-11 01:50:50,529 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:50:50,532 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:50:50,538 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:50:50,542 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:50:51,475 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:50:51,476 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:50:51,479 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:50:51,481 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:50:51,547 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:50:51,553 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:50:51,561 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:50:51,565 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:50:52,509 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:50:52,511 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:50:52,517 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:50:52,521 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:50:52,610 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:50:52,615 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:50:52,622 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:50:52,628 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:50:53,718 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:50:53,720 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:50:53,722 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:50:53,724 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:51:00,042 - INFO: 127.0.0.1 - - [11/Oct/2025 01:51:00] "POST /upload1 HTTP/1.1" 200 -
+2025-10-11 01:51:02,019 - INFO: Accessed route: /download/21CSC201-DATA STRUCTURES AND ALGORITHMS_II_3rd SEM_template.xlsx_20251011015051.xlsx
+2025-10-11 01:51:02,079 - INFO: 127.0.0.1 - - [11/Oct/2025 01:51:02] "GET /download/21CSC201-DATA%20STRUCTURES%20AND%20ALGORITHMS_II_3rd%20SEM_template.xlsx_20251011015051.xlsx HTTP/1.1" 200 -
+2025-10-11 01:51:25,316 - INFO: Accessed route: /upload2
+2025-10-11 01:51:25,327 - INFO: Excel file received: Template_With_Data.xlsx
+2025-10-11 01:51:25,339 - INFO: Excel file saved: ./uploads\Template_With_Data.xlsx
+2025-10-11 01:51:25,362 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:51:25,365 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:51:25,703 - INFO: Found Conducted Max value: 10.0 in TLP5-AI-CSE-B-LLTI.pdf
+2025-10-11 01:51:25,704 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:51:25,706 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:51:25,709 - INFO: Successfully processed TLP5-AI-CSE-B-LLTI.pdf: found 58 entries
+2025-10-11 01:51:25,710 - INFO: Total unique entries found across all files: 58
+2025-10-11 01:51:25,712 - INFO: Added 10.0 from TLP5-AI-CSE-B-LLTI.pdf to total
+2025-10-11 01:51:25,713 - INFO: Total Conducted Max across all files: 10.0
+2025-10-11 01:51:25,715 - INFO: Creating Excel sheet with append_file_path: ./uploads\Template_With_Data.xlsx
+2025-10-11 01:51:32,131 - INFO: Excel sheet created: ./download\Template_With_Data.xlsx
+2025-10-11 01:51:32,136 - INFO: 127.0.0.1 - - [11/Oct/2025 01:51:32] "POST /upload2 HTTP/1.1" 200 -
+2025-10-11 01:51:35,508 - INFO: Accessed route: /download/Template_With_Data.xlsx
+2025-10-11 01:51:35,566 - INFO: 127.0.0.1 - - [11/Oct/2025 01:51:35] "GET /download/Template_With_Data.xlsx HTTP/1.1" 200 -
+2025-10-11 01:54:28,494 - INFO: Accessed route: /
+2025-10-11 01:54:28,497 - INFO: 127.0.0.1 - - [11/Oct/2025 01:54:28] "GET / HTTP/1.1" 200 -
+2025-10-11 01:54:28,547 - INFO: Accessed route: /static/css/style.css
+2025-10-11 01:54:28,552 - INFO: 127.0.0.1 - - [11/Oct/2025 01:54:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-11 01:54:28,558 - INFO: Accessed route: /static/js/scripts.js
+2025-10-11 01:54:28,577 - INFO: Accessed route: /static/images/logo.png
+2025-10-11 01:54:28,587 - INFO: 127.0.0.1 - - [11/Oct/2025 01:54:28] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-11 01:54:28,596 - INFO: 127.0.0.1 - - [11/Oct/2025 01:54:28] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-11 01:54:36,797 - INFO: Accessed route: /upload1
+2025-10-11 01:54:36,891 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:54:36,896 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:54:36,900 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:54:36,905 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:54:37,869 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:54:37,872 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:54:37,875 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:54:37,877 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:54:37,952 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:54:37,958 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:54:37,963 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:54:37,967 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:54:38,974 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:54:38,976 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:54:38,978 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:54:38,980 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:54:39,071 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:54:39,075 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:54:39,079 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:54:39,086 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:54:40,122 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:54:40,125 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:54:40,127 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:54:40,128 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:54:46,725 - INFO: 127.0.0.1 - - [11/Oct/2025 01:54:46] "POST /upload1 HTTP/1.1" 200 -
+2025-10-11 01:54:48,547 - INFO: Accessed route: /download/21CSC201-DATA STRUCTURES AND ALGORITHMS_II_3rd SEM_template.xlsx_20251011015051.xlsx
+2025-10-11 01:54:48,608 - INFO: 127.0.0.1 - - [11/Oct/2025 01:54:48] "GET /download/21CSC201-DATA%20STRUCTURES%20AND%20ALGORITHMS_II_3rd%20SEM_template.xlsx_20251011015051.xlsx HTTP/1.1" 200 -
+2025-10-11 01:57:58,648 - INFO: Accessed route: /
+2025-10-11 01:57:58,651 - INFO: 127.0.0.1 - - [11/Oct/2025 01:57:58] "GET / HTTP/1.1" 200 -
+2025-10-11 01:57:58,691 - INFO: Accessed route: /static/css/style.css
+2025-10-11 01:57:58,696 - INFO: 127.0.0.1 - - [11/Oct/2025 01:57:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-11 01:57:58,705 - INFO: Accessed route: /static/js/scripts.js
+2025-10-11 01:57:58,712 - INFO: Accessed route: /static/images/logo.png
+2025-10-11 01:57:58,713 - INFO: 127.0.0.1 - - [11/Oct/2025 01:57:58] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-11 01:57:58,719 - INFO: 127.0.0.1 - - [11/Oct/2025 01:57:58] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-11 01:58:32,222 - INFO: Accessed route: /upload2
+2025-10-11 01:58:32,230 - INFO: Excel file received: template-with-data.xlsx
+2025-10-11 01:58:32,239 - INFO: Excel file saved: ./uploads\template-with-data.xlsx
+2025-10-11 01:58:32,247 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:58:32,251 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:58:32,413 - INFO: Found Conducted Max value: 10.0 in TLP5-AI-CSE-B-LLTI.pdf
+2025-10-11 01:58:32,413 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:58:32,414 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 01:58:32,415 - INFO: Successfully processed TLP5-AI-CSE-B-LLTI.pdf: found 58 entries
+2025-10-11 01:58:32,415 - INFO: Total unique entries found across all files: 58
+2025-10-11 01:58:32,416 - INFO: Added 10.0 from TLP5-AI-CSE-B-LLTI.pdf to total
+2025-10-11 01:58:32,418 - INFO: Total Conducted Max across all files: 10.0
+2025-10-11 01:58:32,425 - INFO: Creating Excel sheet with append_file_path: ./uploads\template-with-data.xlsx
+2025-10-11 01:58:34,868 - INFO: Excel sheet created: ./download\template-with-data.xlsx
+2025-10-11 01:58:34,870 - INFO: 127.0.0.1 - - [11/Oct/2025 01:58:34] "POST /upload2 HTTP/1.1" 200 -
+2025-10-11 01:58:36,692 - INFO: Accessed route: /download/template-with-data.xlsx
+2025-10-11 01:58:36,752 - INFO: 127.0.0.1 - - [11/Oct/2025 01:58:36] "GET /download/template-with-data.xlsx HTTP/1.1" 200 -
+2025-10-11 02:00:32,795 - INFO: Accessed route: /
+2025-10-11 02:00:32,798 - INFO: 127.0.0.1 - - [11/Oct/2025 02:00:32] "GET / HTTP/1.1" 200 -
+2025-10-11 02:00:32,846 - INFO: Accessed route: /static/css/style.css
+2025-10-11 02:00:32,849 - INFO: Accessed route: /static/images/logo.png
+2025-10-11 02:00:32,850 - INFO: 127.0.0.1 - - [11/Oct/2025 02:00:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-11 02:00:32,852 - INFO: Accessed route: /static/js/scripts.js
+2025-10-11 02:00:32,853 - INFO: 127.0.0.1 - - [11/Oct/2025 02:00:32] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-11 02:00:32,856 - INFO: 127.0.0.1 - - [11/Oct/2025 02:00:32] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-11 02:00:48,283 - INFO: Accessed route: /upload2
+2025-10-11 02:00:48,291 - INFO: Excel file received: template-with-data.xlsx
+2025-10-11 02:00:48,300 - INFO: Excel file saved: ./uploads\template-with-data.xlsx
+2025-10-11 02:00:48,312 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:00:48,316 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:00:48,736 - INFO: Found Conducted Max value: 10.0 in TLP5-AI-CSE-B-LLTI.pdf
+2025-10-11 02:00:48,737 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:00:48,738 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:00:48,739 - INFO: Successfully processed TLP5-AI-CSE-B-LLTI.pdf: found 58 entries
+2025-10-11 02:00:48,740 - INFO: Total unique entries found across all files: 58
+2025-10-11 02:00:48,741 - INFO: Added 10.0 from TLP5-AI-CSE-B-LLTI.pdf to total
+2025-10-11 02:00:48,747 - INFO: Total Conducted Max across all files: 10.0
+2025-10-11 02:00:48,748 - INFO: Creating Excel sheet with append_file_path: ./uploads\template-with-data.xlsx
+2025-10-11 02:00:51,323 - INFO: Excel sheet created: ./download\template-with-data.xlsx
+2025-10-11 02:00:51,324 - INFO: 127.0.0.1 - - [11/Oct/2025 02:00:51] "POST /upload2 HTTP/1.1" 200 -
+2025-10-11 02:00:53,196 - INFO: Accessed route: /download/template-with-data.xlsx
+2025-10-11 02:00:53,255 - INFO: 127.0.0.1 - - [11/Oct/2025 02:00:53] "GET /download/template-with-data.xlsx HTTP/1.1" 200 -
+2025-10-11 02:04:41,567 - INFO: Accessed route: /upload2
+2025-10-11 02:04:41,579 - INFO: Excel file received: 21CSC201-DATA STRUCTURES AND ALGORITHMS_II_3rd SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 02:04:41,584 - INFO: Excel file saved: ./uploads\21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 02:04:41,592 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:04:41,597 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:04:41,706 - INFO: Found Conducted Max value: 10.0 in TLP5-AI-CSE-B-LLTI.pdf
+2025-10-11 02:04:41,707 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:04:41,707 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:04:41,709 - INFO: Successfully processed TLP5-AI-CSE-B-LLTI.pdf: found 58 entries
+2025-10-11 02:04:41,711 - INFO: Total unique entries found across all files: 58
+2025-10-11 02:04:41,716 - INFO: Added 10.0 from TLP5-AI-CSE-B-LLTI.pdf to total
+2025-10-11 02:04:41,718 - INFO: Total Conducted Max across all files: 10.0
+2025-10-11 02:04:41,719 - INFO: Creating Excel sheet with append_file_path: ./uploads\21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 02:04:44,564 - INFO: Excel sheet created: ./download\21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 02:04:44,566 - INFO: 127.0.0.1 - - [11/Oct/2025 02:04:44] "POST /upload2 HTTP/1.1" 200 -
+2025-10-11 02:04:45,948 - INFO: Accessed route: /download/21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 02:04:46,007 - INFO: 127.0.0.1 - - [11/Oct/2025 02:04:46] "GET /download/21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx_20251011014953.xlsx HTTP/1.1" 200 -
+2025-10-11 02:08:56,027 - INFO:  * Detected change in 'd:\\Github_Projects\\21_regulation-CO-PO-Automation\\COAutomation.py', reloading
+2025-10-11 02:08:57,432 - INFO:  * Restarting with stat
+2025-10-11 02:08:59,803 - WARNING:  * Debugger is active!
+2025-10-11 02:08:59,806 - INFO:  * Debugger PIN: 935-638-666
+2025-10-11 02:09:13,929 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-11 02:09:13,930 - INFO: [33mPress CTRL+C to quit[0m
+2025-10-11 02:09:13,932 - INFO:  * Restarting with stat
+2025-10-11 02:09:15,662 - WARNING:  * Debugger is active!
+2025-10-11 02:09:15,667 - INFO:  * Debugger PIN: 935-638-666
+2025-10-11 02:09:24,469 - INFO: Accessed route: /
+2025-10-11 02:09:24,480 - INFO: 127.0.0.1 - - [11/Oct/2025 02:09:24] "GET / HTTP/1.1" 200 -
+2025-10-11 02:09:24,502 - INFO: Accessed route: /static/css/style.css
+2025-10-11 02:09:24,505 - INFO: 127.0.0.1 - - [11/Oct/2025 02:09:24] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-10-11 02:09:24,506 - INFO: Accessed route: /static/js/scripts.js
+2025-10-11 02:09:24,514 - INFO: 127.0.0.1 - - [11/Oct/2025 02:09:24] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-11 02:09:24,525 - INFO: Accessed route: /static/images/logo.png
+2025-10-11 02:09:24,539 - INFO: 127.0.0.1 - - [11/Oct/2025 02:09:24] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-11 02:09:40,104 - INFO: Accessed route: /upload2
+2025-10-11 02:09:40,116 - INFO: Excel file received: None
+2025-10-11 02:09:40,125 - INFO: No Excel file uploaded - will create TLP sheet only
+2025-10-11 02:09:40,143 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:09:40,150 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:09:40,476 - INFO: Found Conducted Max value: 10.0 in TLP5-AI-CSE-B-LLTI.pdf
+2025-10-11 02:09:40,479 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:09:40,480 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:09:40,483 - INFO: Successfully processed TLP5-AI-CSE-B-LLTI.pdf: found 58 entries
+2025-10-11 02:09:40,486 - INFO: Total unique entries found across all files: 58
+2025-10-11 02:09:40,488 - INFO: Added 10.0 from TLP5-AI-CSE-B-LLTI.pdf to total
+2025-10-11 02:09:40,489 - INFO: Total Conducted Max across all files: 10.0
+2025-10-11 02:09:40,495 - INFO: Creating Excel sheet with append_file_path: None
+2025-10-11 02:09:40,687 - INFO: Excel sheet created: ./download\co_allocation_20251011_020940.xlsx
+2025-10-11 02:09:40,690 - INFO: 127.0.0.1 - - [11/Oct/2025 02:09:40] "POST /upload2 HTTP/1.1" 200 -
+2025-10-11 02:09:43,941 - INFO: Accessed route: /download/co_allocation_20251011_020940.xlsx
+2025-10-11 02:09:43,997 - INFO: 127.0.0.1 - - [11/Oct/2025 02:09:43] "GET /download/co_allocation_20251011_020940.xlsx HTTP/1.1" 200 -
+2025-10-11 02:10:37,467 - INFO: Accessed route: /
+2025-10-11 02:10:37,473 - INFO: 127.0.0.1 - - [11/Oct/2025 02:10:37] "GET / HTTP/1.1" 200 -
+2025-10-11 02:10:37,509 - INFO: Accessed route: /static/css/style.css
+2025-10-11 02:10:37,515 - INFO: Accessed route: /static/js/scripts.js
+2025-10-11 02:10:37,517 - INFO: Accessed route: /static/images/logo.png
+2025-10-11 02:10:37,520 - INFO: 127.0.0.1 - - [11/Oct/2025 02:10:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-11 02:10:37,525 - INFO: 127.0.0.1 - - [11/Oct/2025 02:10:37] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-11 02:10:37,533 - INFO: 127.0.0.1 - - [11/Oct/2025 02:10:37] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-11 02:10:54,488 - INFO: Accessed route: /upload2
+2025-10-11 02:10:54,504 - INFO: Excel file received: 21CSC201-DATA STRUCTURES AND ALGORITHMS_II_3rd SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 02:10:54,516 - INFO: Excel file saved: ./uploads\21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 02:10:54,553 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:10:54,556 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:10:54,878 - INFO: Found Conducted Max value: 10.0 in TLP5-AI-CSE-B-LLTI.pdf
+2025-10-11 02:10:54,880 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:10:54,884 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:10:54,885 - INFO: Successfully processed TLP5-AI-CSE-B-LLTI.pdf: found 58 entries
+2025-10-11 02:10:54,888 - INFO: Total unique entries found across all files: 58
+2025-10-11 02:10:54,896 - INFO: Added 10.0 from TLP5-AI-CSE-B-LLTI.pdf to total
+2025-10-11 02:10:54,900 - INFO: Total Conducted Max across all files: 10.0
+2025-10-11 02:10:54,902 - INFO: Creating Excel sheet with append_file_path: ./uploads\21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 02:11:01,030 - INFO: Excel sheet created: ./download\21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 02:11:01,034 - INFO: 127.0.0.1 - - [11/Oct/2025 02:11:01] "POST /upload2 HTTP/1.1" 200 -
+2025-10-11 02:11:02,432 - INFO: Accessed route: /download/21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 02:11:02,490 - INFO: 127.0.0.1 - - [11/Oct/2025 02:11:02] "GET /download/21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx_20251011014953.xlsx HTTP/1.1" 200 -
+2025-10-11 02:13:27,108 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-11 02:13:27,108 - INFO: [33mPress CTRL+C to quit[0m
+2025-10-11 02:13:27,110 - INFO:  * Restarting with stat
+2025-10-11 02:14:03,874 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-11 02:14:03,874 - INFO: [33mPress CTRL+C to quit[0m
+2025-10-11 02:14:03,877 - INFO:  * Restarting with stat
+2025-10-11 02:14:06,206 - WARNING:  * Debugger is active!
+2025-10-11 02:14:06,210 - INFO:  * Debugger PIN: 935-638-666
+2025-10-11 02:14:12,482 - INFO: Accessed route: /
+2025-10-11 02:14:12,490 - INFO: 127.0.0.1 - - [11/Oct/2025 02:14:12] "GET / HTTP/1.1" 200 -
+2025-10-11 02:14:12,516 - INFO: Accessed route: /static/css/style.css
+2025-10-11 02:14:12,518 - INFO: 127.0.0.1 - - [11/Oct/2025 02:14:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-11 02:14:12,519 - INFO: Accessed route: /static/js/scripts.js
+2025-10-11 02:14:12,531 - INFO: Accessed route: /static/images/logo.png
+2025-10-11 02:14:12,532 - INFO: 127.0.0.1 - - [11/Oct/2025 02:14:12] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-11 02:14:12,538 - INFO: 127.0.0.1 - - [11/Oct/2025 02:14:12] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-11 02:14:20,687 - INFO: Accessed route: /upload1
+2025-10-11 02:14:20,777 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:14:20,781 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:14:20,787 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:14:20,793 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:14:21,742 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:14:21,744 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:14:21,744 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:14:21,748 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:14:21,821 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:14:21,824 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:14:21,828 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:14:21,835 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:14:22,812 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:14:22,814 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:14:22,819 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:14:22,823 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:14:22,890 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:14:22,895 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:14:22,902 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:14:22,907 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:14:24,008 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:14:24,010 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:14:24,011 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:14:24,016 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:14:30,428 - INFO: 127.0.0.1 - - [11/Oct/2025 02:14:30] "POST /upload1 HTTP/1.1" 200 -
+2025-10-11 02:14:34,890 - INFO: Accessed route: /download/21CSC201-DATA STRUCTURES AND ALGORITHMS_II_3rd SEM_template.xlsx_20251011021421.xlsx
+2025-10-11 02:14:34,949 - INFO: 127.0.0.1 - - [11/Oct/2025 02:14:34] "GET /download/21CSC201-DATA%20STRUCTURES%20AND%20ALGORITHMS_II_3rd%20SEM_template.xlsx_20251011021421.xlsx HTTP/1.1" 200 -
+2025-10-11 02:15:29,473 - INFO: Accessed route: /
+2025-10-11 02:15:29,476 - INFO: 127.0.0.1 - - [11/Oct/2025 02:15:29] "GET / HTTP/1.1" 200 -
+2025-10-11 02:15:29,519 - INFO: Accessed route: /static/css/style.css
+2025-10-11 02:15:29,524 - INFO: 127.0.0.1 - - [11/Oct/2025 02:15:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-11 02:15:29,527 - INFO: Accessed route: /static/images/logo.png
+2025-10-11 02:15:29,533 - INFO: Accessed route: /static/js/scripts.js
+2025-10-11 02:15:29,535 - INFO: 127.0.0.1 - - [11/Oct/2025 02:15:29] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-11 02:15:29,538 - INFO: 127.0.0.1 - - [11/Oct/2025 02:15:29] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-11 02:15:35,815 - INFO: Accessed route: /upload1
+2025-10-11 02:15:35,868 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:15:35,869 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:15:35,870 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:15:35,872 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:15:36,166 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:15:36,166 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:15:36,167 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:15:36,167 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:15:36,196 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:15:36,201 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:15:36,203 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:15:36,204 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:15:36,578 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:15:36,578 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:15:36,582 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:15:36,582 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:15:36,620 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:15:36,622 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:15:36,624 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:15:36,625 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:15:36,966 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:15:36,967 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:15:36,969 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:15:36,971 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:15:39,565 - INFO: 127.0.0.1 - - [11/Oct/2025 02:15:39] "POST /upload1 HTTP/1.1" 200 -
+2025-10-11 02:15:44,523 - INFO: Accessed route: /download/21CSC201-DATA STRUCTURES AND ALGORITHMS_II_3rd SEM_template.xlsx_20251011021421.xlsx
+2025-10-11 02:15:44,583 - INFO: 127.0.0.1 - - [11/Oct/2025 02:15:44] "GET /download/21CSC201-DATA%20STRUCTURES%20AND%20ALGORITHMS_II_3rd%20SEM_template.xlsx_20251011021421.xlsx HTTP/1.1" 200 -
+2025-10-11 02:16:23,060 - INFO: Accessed route: /upload2
+2025-10-11 02:16:23,074 - INFO: Excel file received: 21CSC201-DATA STRUCTURES AND ALGORITHMS_II_3rd SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 02:16:23,078 - INFO: Excel file saved: ./uploads\21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 02:16:23,089 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:16:23,092 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:16:23,194 - INFO: Found Conducted Max value: 10.0 in TLP5-AI-CSE-B-LLTI.pdf
+2025-10-11 02:16:23,196 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:16:23,197 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:16:23,197 - INFO: Successfully processed TLP5-AI-CSE-B-LLTI.pdf: found 58 entries
+2025-10-11 02:16:23,198 - INFO: Total unique entries found across all files: 58
+2025-10-11 02:16:23,199 - INFO: Added 10.0 from TLP5-AI-CSE-B-LLTI.pdf to total
+2025-10-11 02:16:23,200 - INFO: Total Conducted Max across all files: 10.0
+2025-10-11 02:16:23,202 - INFO: Creating Excel sheet with append_file_path: ./uploads\21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 02:16:25,912 - INFO: Excel sheet created: ./download\21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 02:16:25,915 - INFO: 127.0.0.1 - - [11/Oct/2025 02:16:25] "POST /upload2 HTTP/1.1" 200 -
+2025-10-11 02:16:27,287 - INFO: Accessed route: /download/21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 02:16:27,346 - INFO: 127.0.0.1 - - [11/Oct/2025 02:16:27] "GET /download/21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx_20251011014953.xlsx HTTP/1.1" 200 -
+2025-10-11 02:18:38,583 - INFO: Accessed route: /
+2025-10-11 02:18:38,599 - INFO: 127.0.0.1 - - [11/Oct/2025 02:18:38] "GET / HTTP/1.1" 200 -
+2025-10-11 02:18:38,642 - INFO: Accessed route: /static/css/style.css
+2025-10-11 02:18:38,649 - INFO: 127.0.0.1 - - [11/Oct/2025 02:18:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-11 02:18:38,653 - INFO: Accessed route: /static/js/scripts.js
+2025-10-11 02:18:38,656 - INFO: Accessed route: /static/images/logo.png
+2025-10-11 02:18:38,656 - INFO: 127.0.0.1 - - [11/Oct/2025 02:18:38] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-11 02:18:38,661 - INFO: 127.0.0.1 - - [11/Oct/2025 02:18:38] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-11 02:18:46,369 - INFO: Accessed route: /upload1
+2025-10-11 02:18:46,461 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:18:46,467 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:18:46,475 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:18:46,481 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:18:47,375 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:18:47,377 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:18:47,379 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:18:47,382 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:18:47,437 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:18:47,442 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:18:47,445 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:18:47,449 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:18:48,366 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:18:48,370 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:18:48,372 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:18:48,375 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:18:48,434 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:18:48,441 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:18:48,447 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:18:48,451 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:18:49,434 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:18:49,437 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:18:49,439 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:18:49,441 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:18:55,871 - INFO: 127.0.0.1 - - [11/Oct/2025 02:18:55] "POST /upload1 HTTP/1.1" 200 -
+2025-10-11 02:19:18,073 - INFO: Accessed route: /download/21CSC201-DATA STRUCTURES AND ALGORITHMS_II_3rd SEM_template.xlsx_20251011021421.xlsx
+2025-10-11 02:19:18,153 - INFO: 127.0.0.1 - - [11/Oct/2025 02:19:18] "GET /download/21CSC201-DATA%20STRUCTURES%20AND%20ALGORITHMS_II_3rd%20SEM_template.xlsx_20251011021421.xlsx HTTP/1.1" 200 -
+2025-10-11 02:21:32,772 - INFO:  * Detected change in 'd:\\Github_Projects\\21_regulation-CO-PO-Automation\\FINALTEST.py', reloading
+2025-10-11 02:21:34,103 - INFO:  * Restarting with stat
+2025-10-11 02:21:36,084 - WARNING:  * Debugger is active!
+2025-10-11 02:21:36,089 - INFO:  * Debugger PIN: 935-638-666
+2025-10-11 02:21:37,373 - INFO:  * Detected change in 'd:\\Github_Projects\\21_regulation-CO-PO-Automation\\FINALTEST.py', reloading
+2025-10-11 02:21:38,402 - INFO:  * Restarting with stat
+2025-10-11 02:21:40,716 - WARNING:  * Debugger is active!
+2025-10-11 02:21:40,720 - INFO:  * Debugger PIN: 935-638-666
+2025-10-11 02:21:58,898 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-11 02:21:58,898 - INFO: [33mPress CTRL+C to quit[0m
+2025-10-11 02:21:58,903 - INFO:  * Restarting with stat
+2025-10-11 02:22:00,679 - WARNING:  * Debugger is active!
+2025-10-11 02:22:00,683 - INFO:  * Debugger PIN: 935-638-666
+2025-10-11 02:22:05,897 - INFO: Accessed route: /
+2025-10-11 02:22:05,993 - INFO: 127.0.0.1 - - [11/Oct/2025 02:22:05] "GET / HTTP/1.1" 200 -
+2025-10-11 02:22:06,013 - INFO: Accessed route: /static/css/style.css
+2025-10-11 02:22:06,016 - INFO: 127.0.0.1 - - [11/Oct/2025 02:22:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-11 02:22:06,023 - INFO: Accessed route: /static/js/scripts.js
+2025-10-11 02:22:06,042 - INFO: 127.0.0.1 - - [11/Oct/2025 02:22:06] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-11 02:22:06,082 - INFO: Accessed route: /static/images/logo.png
+2025-10-11 02:22:06,092 - INFO: 127.0.0.1 - - [11/Oct/2025 02:22:06] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-11 02:22:25,055 - INFO: Accessed route: /upload1
+2025-10-11 02:22:25,159 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:22:25,170 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:22:25,179 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:22:25,186 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:22:26,114 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:22:26,117 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:22:26,121 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:22:26,125 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:22:26,205 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:22:26,208 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:22:26,212 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:22:26,217 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:22:27,416 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:22:27,417 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:22:27,419 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:22:27,421 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:22:27,495 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:22:27,500 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:22:27,506 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:22:27,511 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:22:28,533 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:22:28,535 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:22:28,536 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:22:28,538 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:22:32,947 - INFO: 127.0.0.1 - - [11/Oct/2025 02:22:32] "POST /upload1 HTTP/1.1" 200 -
+2025-10-11 02:22:39,201 - INFO: Accessed route: /download/21CSC201-DATA STRUCTURES AND ALGORITHMS_II_3rd SEM_template.xlsx_20251011022226.xlsx
+2025-10-11 02:22:39,263 - INFO: 127.0.0.1 - - [11/Oct/2025 02:22:39] "GET /download/21CSC201-DATA%20STRUCTURES%20AND%20ALGORITHMS_II_3rd%20SEM_template.xlsx_20251011022226.xlsx HTTP/1.1" 200 -
+2025-10-11 02:24:12,109 - INFO:  * Detected change in 'd:\\Github_Projects\\21_regulation-CO-PO-Automation\\COAutomation.py', reloading
+2025-10-11 02:24:13,534 - INFO:  * Restarting with stat
+2025-10-11 02:24:15,525 - WARNING:  * Debugger is active!
+2025-10-11 02:24:15,529 - INFO:  * Debugger PIN: 935-638-666
+2025-10-11 02:24:15,799 - INFO:  * Detected change in 'd:\\Github_Projects\\21_regulation-CO-PO-Automation\\COAutomation.py', reloading
+2025-10-11 02:24:16,787 - INFO:  * Restarting with stat
+2025-10-11 02:24:18,777 - WARNING:  * Debugger is active!
+2025-10-11 02:24:18,781 - INFO:  * Debugger PIN: 935-638-666
+2025-10-11 02:24:29,947 - INFO:  * Detected change in 'd:\\Github_Projects\\21_regulation-CO-PO-Automation\\COAutomation.py', reloading
+2025-10-11 02:24:30,839 - INFO:  * Restarting with stat
+2025-10-11 02:24:33,089 - WARNING:  * Debugger is active!
+2025-10-11 02:24:33,092 - INFO:  * Debugger PIN: 935-638-666
+2025-10-11 02:24:36,591 - INFO:  * Detected change in 'd:\\Github_Projects\\21_regulation-CO-PO-Automation\\COAutomation.py', reloading
+2025-10-11 02:24:37,806 - INFO:  * Restarting with stat
+2025-10-11 02:24:39,810 - WARNING:  * Debugger is active!
+2025-10-11 02:24:39,814 - INFO:  * Debugger PIN: 935-638-666
+2025-10-11 02:25:28,588 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-11 02:25:28,588 - INFO: [33mPress CTRL+C to quit[0m
+2025-10-11 02:25:28,591 - INFO:  * Restarting with stat
+2025-10-11 02:25:30,596 - WARNING:  * Debugger is active!
+2025-10-11 02:25:30,600 - INFO:  * Debugger PIN: 935-638-666
+2025-10-11 02:25:33,631 - INFO: Accessed route: /
+2025-10-11 02:25:33,638 - INFO: 127.0.0.1 - - [11/Oct/2025 02:25:33] "GET / HTTP/1.1" 200 -
+2025-10-11 02:25:33,662 - INFO: Accessed route: /static/css/style.css
+2025-10-11 02:25:33,665 - INFO: 127.0.0.1 - - [11/Oct/2025 02:25:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-11 02:25:33,667 - INFO: Accessed route: /static/images/logo.png
+2025-10-11 02:25:33,680 - INFO: Accessed route: /static/js/scripts.js
+2025-10-11 02:25:33,684 - INFO: 127.0.0.1 - - [11/Oct/2025 02:25:33] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-11 02:25:33,688 - INFO: 127.0.0.1 - - [11/Oct/2025 02:25:33] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-11 02:25:41,650 - INFO: Accessed route: /upload1
+2025-10-11 02:25:41,738 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:25:41,742 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:25:41,745 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:25:41,751 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:25:42,694 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:25:42,695 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:25:42,704 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:25:42,707 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:25:42,796 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:25:42,801 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:25:42,806 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:25:42,809 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:25:43,708 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:25:43,711 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:25:43,713 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:25:43,717 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:25:43,790 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:25:43,794 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:25:43,796 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:25:43,801 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:25:44,857 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:25:44,859 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:25:44,860 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:25:44,865 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 02:25:51,108 - INFO: 127.0.0.1 - - [11/Oct/2025 02:25:51] "POST /upload1 HTTP/1.1" 200 -
+2025-10-11 02:25:54,971 - INFO: Accessed route: /download/21CSC201-DATA STRUCTURES AND ALGORITHMS_II_3rd SEM_20251011022542.xlsx
+2025-10-11 02:25:55,030 - INFO: 127.0.0.1 - - [11/Oct/2025 02:25:55] "GET /download/21CSC201-DATA%20STRUCTURES%20AND%20ALGORITHMS_II_3rd%20SEM_20251011022542.xlsx HTTP/1.1" 200 -

@@ -16,6 +16,8 @@ import re
 from datetime import datetime
 
 from flask import Blueprint, request, abort, send_from_directory, render_template, jsonify, send_file, current_app, Flask
+import warnings
+warnings.filterwarnings("ignore", message="CropBox missing from /Page")
 
 second_bp = Blueprint('second', __name__)
 logger = logging.getLogger(__name__)
