@@ -33,7 +33,7 @@ python -m flask --version
 ```
 3.5 Create the flask app 
 ```bash
-set FLASK_APP=FINALTEST  
+set FLASK_APP=COAutomation 
 ```
 4. Running the project:
 ```bash
