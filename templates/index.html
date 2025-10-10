@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Course Outcome</title>
-  <link rel="stylesheet" href="static/css/styles.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
   <div class="header">
-    <img src="static/images/logo.png" alt="logo">
+    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo">
   </div>
   
   <div class="topic">
@@ -85,6 +85,6 @@
     </ul>
   </div>
   
-  <script src="static/js/scripts.js"></script>
+  <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 </body>
 </html>

@@ -18,18 +18,6 @@ from datetime import datetime
 from flask import Blueprint, request, abort, send_from_directory, render_template, jsonify, send_file, current_app, Flask
 
 second_bp = Blueprint('second', __name__)
-second_bp.config = {
-    'DOWNLOAD_FOLDER': os.path.join(os.path.dirname(__file__), '../download')
-    }
-
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s: %(message)s',
-    handlers=[
-        logging.FileHandler('app.log'),
-        logging.StreamHandler(sys.stdout)
-    ]
-)
 logger = logging.getLogger(__name__)
 
 class TLPMarkConverter:
@@ -454,7 +442,28 @@ def upload_files():
         logger.error(f"Unexpected error: {e}", exc_info=True)
         return jsonify({'success': False, 'message': f'Unexpected error: {str(e)}'}), 500
 
-@second_bp.route('/download/<filename>')
+@second_bp.route('/download/<filename>', methods=['GET'])
 def download_file(filename):
-    file_path = os.path.abspath(os.path.join(second_bp.config['DOWNLOAD_FOLDER'], filename))
-    return send_file(file_path, as_attachment=True) if os.path.exists(file_path) else ("File not found", 404)
+    """
+    Serves the generated Excel file stored in the 'download' folder.
+    Ensures the file exists and returns a proper JSON error if not found.
+    """
+    try:
+        # Locate the download directory (same as used in coautomation.py)
+        download_dir = os.path.join(os.getcwd(), 'download')
+        file_path = os.path.join(download_dir, filename)
+
+        if not os.path.exists(file_path):
+            return jsonify({
+                'success': False,
+                'message': f'File "{filename}" not found on server.'
+            }), 404
+
+        # Send the file for download
+        return send_file(file_path, as_attachment=True)
+
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'message': f'Error while serving file: {str(e)}'
+        }), 500

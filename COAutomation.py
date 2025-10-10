@@ -1,3 +1,4 @@
+import sys
 from flask import Flask, render_template, make_response,request, jsonify, send_file
 from openpyxl import Workbook, styles,load_workbook
 from openpyxl.styles import Side,PatternFill
@@ -7,6 +8,7 @@ import io
 from io import BytesIO
 import os.path
 from flask import send_file
+import logging
 from openpyxl.styles import Font,Border
 from openpyxl.utils import get_column_letter
 import pdfplumber
@@ -33,14 +35,26 @@ template_static_name = "template.xlsx"
 template_dynamic_name = ""
 
 app = Flask(__name__)
-app.register_blueprint(second_bp)
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s: %(message)s',
+    handlers=[
+        logging.FileHandler('app.log'),
+        logging.StreamHandler(sys.stdout)
+    ]
+)
 
-app.config['UPLOAD_FOLDER'] = 'uploads'
-app.config['ALLOWED_EXTENSIONS'] = {'pdf'}
+logging.basicConfig(level=logging.INFO)
+
+@app.before_request
+def log_request_info():
+    logging.info(f"Accessed route: {request.path}")
+
+app.register_blueprint(second_bp)
 
 # Function to check if the file type is allowed
 def allowed_file(filename):
-    return '.' in filename and filename.rsplit('.', 1)[1].lower() in app.config['ALLOWED_EXTENSIONS']
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in {'pdf'}
 
 @app.route('/')
 def index():
@@ -71,7 +85,7 @@ def upload():
     return jsonify({
     "success": True,
     "message": f"Successfully processed {len(saved_files)} file(s).",
-    "download_url": "/download/"+template_dynamic_name  # Adjust the download URL as needed
+    "download_url": f"/download/{template_dynamic_name}"
     }), 200
 
 @app.route("/generate_excel", methods=["POST"])
@@ -239,6 +253,7 @@ def extract_details_from_pdf(pdf_path, question_numbers, marks, co_lists):
         template_dynamic_name = re.sub(r'[<>:"/\\|?*]', '', template_dynamic_name.replace('&', 'And'))                        
     if not (template_dynamic_name.endswith('.xlsx')):
         template_dynamic_name+='_'+template_static_name;
+        template_dynamic_name=f"{template_dynamic_name}_{datetime.now().strftime('%Y%m%d%H%M%S')}.xlsx"
     
     # Get the CO grouping indices
     for i in range(1,coCount+1):
@@ -594,11 +609,14 @@ def generate_CO_wise_table(worksheet,row,text1,text2,text3,header):
         worksheet.cell(row, column=col).border = bold_border  # Second column merged cells
     for col in range(10, 19):
         worksheet.cell(row, column=col).border = bold_border  # Third column merged cells
-    
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
+@app.errorhandler(500)
+def server_error(e):
+    return render_template('500.html'), 500
+
 if __name__ == '__main__':
     app.run(debug=True)
-
-
-
-
-
