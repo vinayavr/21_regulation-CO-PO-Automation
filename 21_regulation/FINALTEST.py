@@ -244,7 +244,11 @@ class TLPMarkConverter:
                 cell = sheet.cell(row=row, column=col, value=mark_text)
                 cell.border = styles['border']
                 cell.alignment = Alignment(horizontal='center')
-                
+    
+        #add border to all cells
+        for row in sheet.iter_rows(min_row=row+1, max_row=71, min_col=1, max_col=9):
+            for cell in row:
+                cell.border = styles['border']        
         # Generate the number of students who attempted 
         sheet.merge_cells(start_row=72, start_column=1, end_row=72, end_column=3)
         sheet.cell(72, column=1, value="Number of Students Attempted").font = styles['header_font']
