@@ -5689,3 +5689,380 @@ KeyError: 'Worksheet CT4 does not exist.'
 2025-10-11 02:25:51,108 - INFO: 127.0.0.1 - - [11/Oct/2025 02:25:51] "POST /upload1 HTTP/1.1" 200 -
 2025-10-11 02:25:54,971 - INFO: Accessed route: /download/21CSC201-DATA STRUCTURES AND ALGORITHMS_II_3rd SEM_20251011022542.xlsx
 2025-10-11 02:25:55,030 - INFO: 127.0.0.1 - - [11/Oct/2025 02:25:55] "GET /download/21CSC201-DATA%20STRUCTURES%20AND%20ALGORITHMS_II_3rd%20SEM_20251011022542.xlsx HTTP/1.1" 200 -
+2025-10-11 15:34:53,125 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-11 15:34:53,126 - INFO: [33mPress CTRL+C to quit[0m
+2025-10-11 15:34:53,140 - INFO:  * Restarting with stat
+2025-10-11 15:34:55,186 - WARNING:  * Debugger is active!
+2025-10-11 15:34:55,196 - INFO:  * Debugger PIN: 935-638-666
+2025-10-11 15:34:58,941 - INFO: Accessed route: /
+2025-10-11 15:34:58,960 - INFO: 127.0.0.1 - - [11/Oct/2025 15:34:58] "GET / HTTP/1.1" 200 -
+2025-10-11 15:34:58,979 - INFO: Accessed route: /static/images/logo.png
+2025-10-11 15:34:58,996 - INFO: 127.0.0.1 - - [11/Oct/2025 15:34:58] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-11 15:34:59,005 - INFO: Accessed route: /static/css/style.css
+2025-10-11 15:34:59,007 - INFO: Accessed route: /static/js/scripts.js
+2025-10-11 15:34:59,009 - INFO: 127.0.0.1 - - [11/Oct/2025 15:34:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-11 15:34:59,010 - INFO: 127.0.0.1 - - [11/Oct/2025 15:34:59] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-11 15:35:07,210 - INFO: Accessed route: /upload1
+2025-10-11 15:35:07,405 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:35:07,409 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:35:07,411 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:35:07,417 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:35:07,812 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:35:07,813 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:35:07,813 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:35:07,814 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:35:07,840 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:35:07,842 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:35:07,844 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:35:07,846 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:35:08,246 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:35:08,246 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:35:08,247 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:35:08,248 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:35:08,268 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:35:08,269 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:35:08,270 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:35:08,271 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:35:08,603 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:35:08,604 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:35:08,608 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:35:08,608 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:35:11,319 - INFO: 127.0.0.1 - - [11/Oct/2025 15:35:11] "POST /upload1 HTTP/1.1" 200 -
+2025-10-11 15:35:13,640 - INFO: Accessed route: /download/21CSC201-DATA STRUCTURES AND ALGORITHMS_II_3rd SEM_20251011153507.xlsx
+2025-10-11 15:35:13,682 - INFO: 127.0.0.1 - - [11/Oct/2025 15:35:13] "GET /download/21CSC201-DATA%20STRUCTURES%20AND%20ALGORITHMS_II_3rd%20SEM_20251011153507.xlsx HTTP/1.1" 200 -
+2025-10-11 15:37:29,752 - INFO: Accessed route: /upload2
+2025-10-11 15:37:30,072 - INFO: Excel file received: 21CSC201-DATA STRUCTURES AND ALGORITHMS_II_3rd SEM_20251011153507.xlsx
+2025-10-11 15:37:30,077 - INFO: Excel file saved: ./uploads\21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_20251011153507.xlsx
+2025-10-11 15:37:30,121 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:37:30,125 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:37:30,264 - INFO: Found Conducted Max value: 10.0 in TLP5-AI-CSE-B-LLTI.pdf
+2025-10-11 15:37:30,264 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:37:30,265 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:37:30,265 - INFO: Successfully processed TLP5-AI-CSE-B-LLTI.pdf: found 58 entries
+2025-10-11 15:37:30,266 - INFO: Total unique entries found across all files: 58
+2025-10-11 15:37:30,267 - INFO: Added 10.0 from TLP5-AI-CSE-B-LLTI.pdf to total
+2025-10-11 15:37:30,267 - INFO: Total Conducted Max across all files: 10.0
+2025-10-11 15:38:42,895 - WARNING: Register numbers in PDFs but not found in Excel: RA2211003040015, RA2211003040019, RA2211003040022, RA2211003040027, RA2211003040030, RA2211003040031, RA2211003040032, RA2211003040034, RA2211003040036, RA2211003040040, RA2211003040041, RA2211003040042, RA2211003040043, RA2211003040051, RA2211003040052, RA2211003040053, RA2211003040054, RA2211003040055, RA2211003040056, RA2211003040057, RA2211003040058, RA2211003040059, RA2211003040060, RA2211003040061, RA2211003040063, RA2211003040064, RA2211003040065, RA2211003040069, RA2211003040077, RA2211003040079, RA2211003040081, RA2211003040082, RA2211003040083, RA2211003040086, RA2211003040087, RA2211003040088, RA2211003040089, RA2211003040090, RA2211003040091, RA2211003040092, RA2211003040093, RA2211003040099, RA2211003040100, RA2211003040101, RA2211003040105, RA2211003040106, RA2211003040107, RA2211003040108, RA2211003040110, RA2211003040111, RA2211003040112, RA2211003040113, RA2211003040114, RA2211003040115, RA2211003040117, RA2211003040120, RA2211003040121, RA2211003040122
+2025-10-11 15:38:42,897 - INFO: 127.0.0.1 - - [11/Oct/2025 15:38:42] "[31m[1mPOST /upload2 HTTP/1.1[0m" 400 -
+2025-10-11 15:38:42,914 - INFO:  * Detected change in 'd:\\Github_Projects\\21_regulation-CO-PO-Automation\\FINALTEST.py', reloading
+2025-10-11 15:38:44,015 - INFO:  * Restarting with stat
+2025-10-11 15:38:46,196 - WARNING:  * Debugger is active!
+2025-10-11 15:38:46,204 - INFO:  * Debugger PIN: 935-638-666
+2025-10-11 15:39:05,122 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-11 15:39:05,123 - INFO: [33mPress CTRL+C to quit[0m
+2025-10-11 15:39:05,126 - INFO:  * Restarting with stat
+2025-10-11 15:39:07,153 - WARNING:  * Debugger is active!
+2025-10-11 15:39:07,159 - INFO:  * Debugger PIN: 935-638-666
+2025-10-11 15:39:10,206 - INFO: Accessed route: /
+2025-10-11 15:39:10,225 - INFO: 127.0.0.1 - - [11/Oct/2025 15:39:10] "GET / HTTP/1.1" 200 -
+2025-10-11 15:39:10,259 - INFO: Accessed route: /static/css/style.css
+2025-10-11 15:39:10,268 - INFO: 127.0.0.1 - - [11/Oct/2025 15:39:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-11 15:39:10,270 - INFO: Accessed route: /static/images/logo.png
+2025-10-11 15:39:10,271 - INFO: Accessed route: /static/js/scripts.js
+2025-10-11 15:39:10,304 - INFO: 127.0.0.1 - - [11/Oct/2025 15:39:10] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-11 15:39:10,306 - INFO: 127.0.0.1 - - [11/Oct/2025 15:39:10] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-11 15:39:47,276 - INFO: Accessed route: /upload2
+2025-10-11 15:39:47,282 - INFO: Excel file received: 21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_20251011153507.xlsx
+2025-10-11 15:39:47,292 - INFO: Excel file saved: ./uploads\21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_20251011153507.xlsx
+2025-10-11 15:39:47,305 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:39:47,306 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:39:47,441 - INFO: Found Conducted Max value: 10.0 in TLP5-AI-CSE-B-LLTI.pdf
+2025-10-11 15:39:47,442 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:39:47,442 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:39:47,443 - INFO: Successfully processed TLP5-AI-CSE-B-LLTI.pdf: found 58 entries
+2025-10-11 15:39:47,445 - INFO: Total unique entries found across all files: 58
+2025-10-11 15:39:47,446 - INFO: Added 10.0 from TLP5-AI-CSE-B-LLTI.pdf to total
+2025-10-11 15:39:47,446 - INFO: Total Conducted Max across all files: 10.0
+2025-10-11 15:40:13,670 - ERROR: Unexpected error: TLPMarkConverter.create_excel_sheet() takes 5 positional arguments but 6 were given
+Traceback (most recent call last):
+  File "d:\Github_Projects\21_regulation-CO-PO-Automation\FINALTEST.py", line 450, in upload_files
+    output_file = converter.create_excel_sheet(output_file, co_filled_excel_path, marks_data, co_splits, stats)
+TypeError: TLPMarkConverter.create_excel_sheet() takes 5 positional arguments but 6 were given
+2025-10-11 15:40:13,686 - INFO: 127.0.0.1 - - [11/Oct/2025 15:40:13] "[35m[1mPOST /upload2 HTTP/1.1[0m" 500 -
+2025-10-11 15:40:54,814 - INFO:  * Detected change in 'd:\\Github_Projects\\21_regulation-CO-PO-Automation\\FINALTEST.py', reloading
+2025-10-11 15:40:55,775 - INFO:  * Restarting with stat
+2025-10-11 15:40:57,837 - WARNING:  * Debugger is active!
+2025-10-11 15:40:57,843 - INFO:  * Debugger PIN: 935-638-666
+2025-10-11 15:41:04,310 - INFO:  * Detected change in 'd:\\Github_Projects\\21_regulation-CO-PO-Automation\\FINALTEST.py', reloading
+2025-10-11 15:41:05,185 - INFO:  * Restarting with stat
+2025-10-11 15:41:07,405 - WARNING:  * Debugger is active!
+2025-10-11 15:41:07,412 - INFO:  * Debugger PIN: 935-638-666
+2025-10-11 15:41:08,555 - INFO:  * Detected change in 'd:\\Github_Projects\\21_regulation-CO-PO-Automation\\FINALTEST.py', reloading
+2025-10-11 15:41:09,448 - INFO:  * Restarting with stat
+2025-10-11 15:41:11,533 - WARNING:  * Debugger is active!
+2025-10-11 15:41:11,538 - INFO:  * Debugger PIN: 935-638-666
+2025-10-11 15:42:08,837 - INFO:  * Detected change in 'd:\\Github_Projects\\21_regulation-CO-PO-Automation\\FINALTEST.py', reloading
+2025-10-11 15:42:09,587 - INFO:  * Restarting with stat
+2025-10-11 15:42:12,096 - WARNING:  * Debugger is active!
+2025-10-11 15:42:12,103 - INFO:  * Debugger PIN: 935-638-666
+2025-10-11 15:42:13,252 - INFO:  * Detected change in 'd:\\Github_Projects\\21_regulation-CO-PO-Automation\\FINALTEST.py', reloading
+2025-10-11 15:42:14,283 - INFO:  * Restarting with stat
+2025-10-11 15:42:16,427 - WARNING:  * Debugger is active!
+2025-10-11 15:42:16,434 - INFO:  * Debugger PIN: 935-638-666
+2025-10-11 15:42:20,044 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-11 15:42:20,045 - INFO: [33mPress CTRL+C to quit[0m
+2025-10-11 15:42:20,047 - INFO:  * Restarting with stat
+2025-10-11 15:42:22,173 - WARNING:  * Debugger is active!
+2025-10-11 15:42:22,180 - INFO:  * Debugger PIN: 935-638-666
+2025-10-11 15:44:53,708 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-11 15:44:53,709 - INFO: [33mPress CTRL+C to quit[0m
+2025-10-11 15:44:53,713 - INFO:  * Restarting with stat
+2025-10-11 15:44:55,702 - WARNING:  * Debugger is active!
+2025-10-11 15:44:55,709 - INFO:  * Debugger PIN: 935-638-666
+2025-10-11 15:45:09,914 - INFO: Accessed route: /
+2025-10-11 15:45:09,937 - INFO: 127.0.0.1 - - [11/Oct/2025 15:45:09] "GET / HTTP/1.1" 200 -
+2025-10-11 15:45:09,959 - INFO: Accessed route: /static/css/style.css
+2025-10-11 15:45:09,969 - INFO: Accessed route: /static/images/logo.png
+2025-10-11 15:45:09,970 - INFO: 127.0.0.1 - - [11/Oct/2025 15:45:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-11 15:45:09,973 - INFO: Accessed route: /static/js/scripts.js
+2025-10-11 15:45:09,975 - INFO: 127.0.0.1 - - [11/Oct/2025 15:45:09] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-11 15:45:09,985 - INFO: 127.0.0.1 - - [11/Oct/2025 15:45:09] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-11 15:45:39,030 - INFO: Accessed route: /upload2
+2025-10-11 15:45:39,038 - INFO: Excel file received: 21CSC201-DATA STRUCTURES AND ALGORITHMS_II_3rd SEM_20251011153507.xlsx
+2025-10-11 15:45:39,042 - INFO: Excel file saved: ./uploads\21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_20251011153507.xlsx
+2025-10-11 15:45:39,058 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:45:39,060 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:45:39,202 - INFO: Found Conducted Max value: 10.0 in TLP5-AI-CSE-B-LLTI.pdf
+2025-10-11 15:45:39,203 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:45:39,203 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:45:39,204 - INFO: Successfully processed TLP5-AI-CSE-B-LLTI.pdf: found 58 entries
+2025-10-11 15:45:39,205 - INFO: Total unique entries found across all files: 58
+2025-10-11 15:45:39,206 - INFO: Added 10.0 from TLP5-AI-CSE-B-LLTI.pdf to total
+2025-10-11 15:45:39,206 - INFO: Total Conducted Max across all files: 10.0
+2025-10-11 15:46:08,100 - INFO: Creating Excel sheet with append_file_path: ./uploads\21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_20251011153507.xlsx
+2025-10-11 15:46:09,787 - INFO: Excel sheet created: ./download\21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_20251011153507.xlsx
+2025-10-11 15:46:09,790 - INFO: 127.0.0.1 - - [11/Oct/2025 15:46:09] "POST /upload2 HTTP/1.1" 200 -
+2025-10-11 15:46:15,251 - INFO: Accessed route: /download/21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_20251011153507.xlsx
+2025-10-11 15:46:15,276 - INFO: 127.0.0.1 - - [11/Oct/2025 15:46:15] "GET /download/21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_20251011153507.xlsx HTTP/1.1" 200 -
+2025-10-11 15:46:54,558 - INFO: Accessed route: /
+2025-10-11 15:46:54,560 - INFO: 127.0.0.1 - - [11/Oct/2025 15:46:54] "GET / HTTP/1.1" 200 -
+2025-10-11 15:46:54,597 - INFO: Accessed route: /static/css/style.css
+2025-10-11 15:46:54,601 - INFO: 127.0.0.1 - - [11/Oct/2025 15:46:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-11 15:46:54,605 - INFO: Accessed route: /static/js/scripts.js
+2025-10-11 15:46:54,607 - INFO: Accessed route: /static/images/logo.png
+2025-10-11 15:46:54,609 - INFO: 127.0.0.1 - - [11/Oct/2025 15:46:54] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-11 15:46:54,614 - INFO: 127.0.0.1 - - [11/Oct/2025 15:46:54] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-11 15:47:26,051 - INFO: Accessed route: /upload2
+2025-10-11 15:47:26,056 - INFO: Excel file received: 21CSC201-DATA STRUCTURES AND ALGORITHMS_II_3rd SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 15:47:26,060 - INFO: Excel file saved: ./uploads\21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 15:47:26,072 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:47:26,074 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:47:26,196 - INFO: Found Conducted Max value: 10.0 in TLP5-AI-CSE-B-LLTI.pdf
+2025-10-11 15:47:26,197 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:47:26,197 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:47:26,198 - INFO: Successfully processed TLP5-AI-CSE-B-LLTI.pdf: found 58 entries
+2025-10-11 15:47:26,199 - INFO: Total unique entries found across all files: 58
+2025-10-11 15:47:26,200 - INFO: Added 10.0 from TLP5-AI-CSE-B-LLTI.pdf to total
+2025-10-11 15:47:26,201 - INFO: Total Conducted Max across all files: 10.0
+2025-10-11 15:48:21,415 - INFO: Creating Excel sheet with append_file_path: ./uploads\21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 15:48:23,597 - INFO: Excel sheet created: ./download\21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 15:48:23,598 - INFO: 127.0.0.1 - - [11/Oct/2025 15:48:23] "POST /upload2 HTTP/1.1" 200 -
+2025-10-11 15:48:51,938 - INFO: Accessed route: /download/21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 15:48:51,963 - INFO: 127.0.0.1 - - [11/Oct/2025 15:48:51] "GET /download/21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx_20251011014953.xlsx HTTP/1.1" 200 -
+2025-10-11 15:49:44,847 - INFO: Accessed route: /
+2025-10-11 15:49:44,849 - INFO: 127.0.0.1 - - [11/Oct/2025 15:49:44] "GET / HTTP/1.1" 200 -
+2025-10-11 15:49:44,885 - INFO: Accessed route: /static/css/style.css
+2025-10-11 15:49:44,887 - INFO: Accessed route: /static/images/logo.png
+2025-10-11 15:49:44,890 - INFO: 127.0.0.1 - - [11/Oct/2025 15:49:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-11 15:49:44,891 - INFO: Accessed route: /static/js/scripts.js
+2025-10-11 15:49:44,891 - INFO: 127.0.0.1 - - [11/Oct/2025 15:49:44] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-11 15:49:44,898 - INFO: 127.0.0.1 - - [11/Oct/2025 15:49:44] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-11 15:50:28,180 - INFO: Accessed route: /
+2025-10-11 15:50:28,181 - INFO: 127.0.0.1 - - [11/Oct/2025 15:50:28] "GET / HTTP/1.1" 200 -
+2025-10-11 15:50:28,218 - INFO: Accessed route: /static/css/style.css
+2025-10-11 15:50:28,220 - INFO: Accessed route: /static/images/logo.png
+2025-10-11 15:50:28,221 - INFO: 127.0.0.1 - - [11/Oct/2025 15:50:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-11 15:50:28,222 - INFO: Accessed route: /static/js/scripts.js
+2025-10-11 15:50:28,225 - INFO: 127.0.0.1 - - [11/Oct/2025 15:50:28] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-11 15:50:28,227 - INFO: 127.0.0.1 - - [11/Oct/2025 15:50:28] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-11 15:50:47,563 - INFO: Accessed route: /upload2
+2025-10-11 15:50:47,568 - INFO: Excel file received: 21CSC201-DATA STRUCTURES AND ALGORITHMS_II_3rd SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 15:50:47,571 - INFO: Excel file saved: ./uploads\21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 15:50:47,577 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:50:47,579 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:50:47,661 - INFO: Found Conducted Max value: 7.0 in TLP5-DAA-LLJI.pdf
+2025-10-11 15:50:47,662 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:50:47,663 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:50:47,663 - INFO: Successfully processed TLP5-DAA-LLJI.pdf: found 59 entries
+2025-10-11 15:50:47,667 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:50:47,668 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:50:47,785 - INFO: Found Conducted Max value: 8.0 in TLP5-DAA-LLJII.pdf
+2025-10-11 15:50:47,785 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:50:47,823 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:50:47,823 - INFO: Successfully processed TLP5-DAA-LLJII.pdf: found 59 entries
+2025-10-11 15:50:47,825 - INFO: Total unique entries found across all files: 59
+2025-10-11 15:50:47,825 - INFO: Added 7.0 from TLP5-DAA-LLJI.pdf to total
+2025-10-11 15:50:47,826 - INFO: Added 8.0 from TLP5-DAA-LLJII.pdf to total
+2025-10-11 15:50:47,826 - INFO: Total Conducted Max across all files: 15.0
+2025-10-11 15:51:15,071 - WARNING: Register numbers in Excel but not found in PDFs: RA2211003040015, RA2211003040019, RA2211003040022, RA2211003040027, RA2211003040030, RA2211003040031, RA2211003040032, RA2211003040034, RA2211003040036, RA2211003040040, RA2211003040041, RA2211003040042, RA2211003040043, RA2211003040051, RA2211003040052, RA2211003040053, RA2211003040054, RA2211003040055, RA2211003040056, RA2211003040057, RA2211003040058, RA2211003040059, RA2211003040060, RA2211003040061, RA2211003040063, RA2211003040064, RA2211003040065, RA2211003040069, RA2211003040077, RA2211003040079, RA2211003040081, RA2211003040082, RA2211003040083, RA2211003040086, RA2211003040087, RA2211003040088, RA2211003040089, RA2211003040090, RA2211003040091, RA2211003040092, RA2211003040093, RA2211003040099, RA2211003040100, RA2211003040101, RA2211003040105, RA2211003040106, RA2211003040107, RA2211003040108, RA2211003040110, RA2211003040111, RA2211003040112, RA2211003040113, RA2211003040114, RA2211003040115, RA2211003040117, RA2211003040120, RA2211003040121, RA2211003040122. Register numbers in PDFs but not found in Excel: RA2211027040001, RA2211027040002, RA2211027040003, RA2211027040004, RA2211027040005, RA2211027040006, RA2211027040007, RA2211027040008, RA2211027040009, RA2211027040010, RA2211027040011, RA2211027040012, RA2211027040013, RA2211027040014, RA2211027040015, RA2211027040016, RA2211027040017, RA2211027040018, RA2211027040019, RA2211027040020, RA2211027040021, RA2211027040022, RA2211027040023, RA2211027040024, RA2211027040025, RA2211027040026, RA2211027040027, RA2211027040028, RA2211027040029, RA2211027040030, RA2211027040031, RA2211027040032, RA2211027040033, RA2211027040034, RA2211027040036, RA2211027040037, RA2211027040038, RA2211027040039, RA2211027040040, RA2211027040041, RA2211027040042, RA2211027040043, RA2211027040044, RA2211027040045, RA2211027040046, RA2211027040047, RA2211027040049, RA2211027040050, RA2211027040051, RA2211027040052, RA2211027040053, RA2211027040054, RA2211027040055, RA2211027040056, RA2211027040057, RA2211027040058, RA2211027040059, RA2211027040061, RA2211027040062
+2025-10-11 15:51:22,951 - INFO: 127.0.0.1 - - [11/Oct/2025 15:51:22] "[31m[1mPOST /upload2 HTTP/1.1[0m" 400 -
+2025-10-11 15:54:19,051 - INFO:  * Detected change in 'd:\\Github_Projects\\21_regulation-CO-PO-Automation\\FINALTEST.py', reloading
+2025-10-11 15:54:19,858 - INFO:  * Restarting with stat
+2025-10-11 15:54:22,043 - WARNING:  * Debugger is active!
+2025-10-11 15:54:22,049 - INFO:  * Debugger PIN: 935-638-666
+2025-10-11 15:54:27,490 - INFO:  * Detected change in 'd:\\Github_Projects\\21_regulation-CO-PO-Automation\\FINALTEST.py', reloading
+2025-10-11 15:54:28,288 - INFO:  * Restarting with stat
+2025-10-11 15:54:30,244 - WARNING:  * Debugger is active!
+2025-10-11 15:54:30,250 - INFO:  * Debugger PIN: 935-638-666
+2025-10-11 15:54:46,181 - INFO: Accessed route: /
+2025-10-11 15:54:46,203 - INFO: 127.0.0.1 - - [11/Oct/2025 15:54:46] "GET / HTTP/1.1" 200 -
+2025-10-11 15:54:46,226 - INFO: Accessed route: /static/css/style.css
+2025-10-11 15:54:46,237 - INFO: Accessed route: /static/images/logo.png
+2025-10-11 15:54:46,238 - INFO: Accessed route: /static/js/scripts.js
+2025-10-11 15:54:46,242 - INFO: 127.0.0.1 - - [11/Oct/2025 15:54:46] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-11 15:54:46,243 - INFO: 127.0.0.1 - - [11/Oct/2025 15:54:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-11 15:54:46,245 - INFO: 127.0.0.1 - - [11/Oct/2025 15:54:46] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-11 15:55:13,234 - INFO: Accessed route: /upload2
+2025-10-11 15:55:13,241 - INFO: Excel file received: 21CSC201-DATA STRUCTURES AND ALGORITHMS_II_3rd SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 15:55:13,245 - INFO: Excel file saved: ./uploads\21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 15:55:13,258 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:55:13,260 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:55:13,390 - INFO: Found Conducted Max value: 10.0 in TLP5-AI-CSE-B-LLTI.pdf
+2025-10-11 15:55:13,391 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:55:13,391 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:55:13,392 - INFO: Successfully processed TLP5-AI-CSE-B-LLTI.pdf: found 58 entries
+2025-10-11 15:55:13,392 - INFO: Total unique entries found across all files: 58
+2025-10-11 15:55:13,393 - INFO: Added 10.0 from TLP5-AI-CSE-B-LLTI.pdf to total
+2025-10-11 15:55:13,393 - INFO: Total Conducted Max across all files: 10.0
+2025-10-11 15:55:49,948 - INFO: Creating Excel sheet with append_file_path: ./uploads\21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 15:55:51,771 - INFO: Excel sheet created: ./download\21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 15:55:51,773 - INFO: 127.0.0.1 - - [11/Oct/2025 15:55:51] "POST /upload2 HTTP/1.1" 200 -
+2025-10-11 15:56:17,151 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-11 15:56:17,151 - INFO: [33mPress CTRL+C to quit[0m
+2025-10-11 15:56:17,153 - INFO:  * Restarting with stat
+2025-10-11 15:56:18,658 - WARNING:  * Debugger is active!
+2025-10-11 15:56:18,660 - INFO:  * Debugger PIN: 935-638-666
+2025-10-11 15:57:28,894 - INFO: Accessed route: /
+2025-10-11 15:57:28,904 - INFO: 127.0.0.1 - - [11/Oct/2025 15:57:28] "GET / HTTP/1.1" 200 -
+2025-10-11 15:57:28,930 - INFO: Accessed route: /static/css/style.css
+2025-10-11 15:57:28,932 - INFO: 127.0.0.1 - - [11/Oct/2025 15:57:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-11 15:57:28,936 - INFO: Accessed route: /static/images/logo.png
+2025-10-11 15:57:28,939 - INFO: 127.0.0.1 - - [11/Oct/2025 15:57:28] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-11 15:57:28,947 - INFO: Accessed route: /static/js/scripts.js
+2025-10-11 15:57:28,952 - INFO: 127.0.0.1 - - [11/Oct/2025 15:57:28] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-11 15:58:32,209 - INFO: Accessed route: /upload2
+2025-10-11 15:58:32,214 - INFO: Excel file received: 21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 15:58:32,217 - INFO: Excel file saved: ./uploads\21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 15:58:32,225 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:58:32,231 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:58:32,370 - INFO: Found Conducted Max value: 10.0 in TLP5-AI-CSE-B-LLTI.pdf
+2025-10-11 15:58:32,371 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:58:32,371 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:58:32,373 - INFO: Successfully processed TLP5-AI-CSE-B-LLTI.pdf: found 58 entries
+2025-10-11 15:58:32,374 - INFO: Total unique entries found across all files: 58
+2025-10-11 15:58:32,375 - INFO: Added 10.0 from TLP5-AI-CSE-B-LLTI.pdf to total
+2025-10-11 15:58:32,376 - INFO: Total Conducted Max across all files: 10.0
+2025-10-11 15:58:33,417 - INFO: Creating Excel sheet with append_file_path: ./uploads\21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 15:58:36,167 - INFO: Excel sheet created: ./download\21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 15:58:36,170 - INFO: 127.0.0.1 - - [11/Oct/2025 15:58:36] "POST /upload2 HTTP/1.1" 200 -
+2025-10-11 15:58:38,433 - INFO: Accessed route: /download/21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 15:58:38,454 - INFO: 127.0.0.1 - - [11/Oct/2025 15:58:38] "GET /download/21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx_20251011014953.xlsx HTTP/1.1" 200 -
+2025-10-11 15:59:01,992 - INFO: Accessed route: /
+2025-10-11 15:59:01,995 - INFO: 127.0.0.1 - - [11/Oct/2025 15:59:01] "GET / HTTP/1.1" 200 -
+2025-10-11 15:59:02,022 - INFO: Accessed route: /static/css/style.css
+2025-10-11 15:59:02,025 - INFO: 127.0.0.1 - - [11/Oct/2025 15:59:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-11 15:59:02,032 - INFO: Accessed route: /static/js/scripts.js
+2025-10-11 15:59:02,039 - INFO: Accessed route: /static/images/logo.png
+2025-10-11 15:59:02,041 - INFO: 127.0.0.1 - - [11/Oct/2025 15:59:02] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-11 15:59:02,043 - INFO: 127.0.0.1 - - [11/Oct/2025 15:59:02] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-11 15:59:31,336 - INFO: Accessed route: /upload2
+2025-10-11 15:59:31,344 - INFO: Excel file received: 21CSC201-DATA STRUCTURES AND ALGORITHMS_II_3rd SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 15:59:31,349 - INFO: Excel file saved: ./uploads\21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 15:59:31,361 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:59:31,362 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:59:31,526 - INFO: Found Conducted Max value: 7.0 in TLP5-DAA-LLJI.pdf
+2025-10-11 15:59:31,526 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:59:31,527 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 15:59:31,527 - INFO: Successfully processed TLP5-DAA-LLJI.pdf: found 59 entries
+2025-10-11 15:59:31,527 - INFO: Total unique entries found across all files: 59
+2025-10-11 15:59:31,528 - INFO: Added 7.0 from TLP5-DAA-LLJI.pdf to total
+2025-10-11 15:59:31,528 - INFO: Total Conducted Max across all files: 7.0
+2025-10-11 15:59:32,815 - WARNING: Register numbers present in Excel but not found in PDFs: RA2211003040015, RA2211003040019, RA2211003040022, RA2211003040027, RA2211003040030, RA2211003040031, RA2211003040032, RA2211003040034, RA2211003040036, RA2211003040040, RA2211003040041, RA2211003040042, RA2211003040043, RA2211003040051, RA2211003040052, RA2211003040053, RA2211003040054, RA2211003040055, RA2211003040056, RA2211003040057, RA2211003040058, RA2211003040059, RA2211003040060, RA2211003040061, RA2211003040063, RA2211003040064, RA2211003040065, RA2211003040069, RA2211003040077, RA2211003040079, RA2211003040081, RA2211003040082, RA2211003040083, RA2211003040086, RA2211003040087, RA2211003040088, RA2211003040089, RA2211003040090, RA2211003040091, RA2211003040092, RA2211003040093, RA2211003040099, RA2211003040100, RA2211003040101, RA2211003040105, RA2211003040106, RA2211003040107, RA2211003040108, RA2211003040110, RA2211003040111, RA2211003040112, RA2211003040113, RA2211003040114, RA2211003040115, RA2211003040117, RA2211003040120, RA2211003040121, RA2211003040122. Register numbers present in PDFs but not found in Excel: RA2211027040001, RA2211027040002, RA2211027040003, RA2211027040004, RA2211027040005, RA2211027040006, RA2211027040007, RA2211027040008, RA2211027040009, RA2211027040010, RA2211027040011, RA2211027040012, RA2211027040013, RA2211027040014, RA2211027040015, RA2211027040016, RA2211027040017, RA2211027040018, RA2211027040019, RA2211027040020, RA2211027040021, RA2211027040022, RA2211027040023, RA2211027040024, RA2211027040025, RA2211027040026, RA2211027040027, RA2211027040028, RA2211027040029, RA2211027040030, RA2211027040031, RA2211027040032, RA2211027040033, RA2211027040034, RA2211027040036, RA2211027040037, RA2211027040038, RA2211027040039, RA2211027040040, RA2211027040041, RA2211027040042, RA2211027040043, RA2211027040044, RA2211027040045, RA2211027040046, RA2211027040047, RA2211027040049, RA2211027040050, RA2211027040051, RA2211027040052, RA2211027040053, RA2211027040054, RA2211027040055, RA2211027040056, RA2211027040057, RA2211027040058, RA2211027040059, RA2211027040061, RA2211027040062
+2025-10-11 15:59:32,816 - INFO: 127.0.0.1 - - [11/Oct/2025 15:59:32] "[31m[1mPOST /upload2 HTTP/1.1[0m" 400 -
+2025-10-11 16:07:30,390 - INFO: Accessed route: /
+2025-10-11 16:07:30,393 - INFO: 127.0.0.1 - - [11/Oct/2025 16:07:30] "GET / HTTP/1.1" 200 -
+2025-10-11 16:07:30,424 - INFO: Accessed route: /static/css/style.css
+2025-10-11 16:07:30,432 - INFO: 127.0.0.1 - - [11/Oct/2025 16:07:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-11 16:07:30,438 - INFO: Accessed route: /static/js/scripts.js
+2025-10-11 16:07:30,444 - INFO: Accessed route: /static/images/logo.png
+2025-10-11 16:07:30,445 - INFO: 127.0.0.1 - - [11/Oct/2025 16:07:30] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-11 16:07:30,457 - INFO: 127.0.0.1 - - [11/Oct/2025 16:07:30] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-11 16:08:08,572 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-11 16:08:08,573 - INFO: [33mPress CTRL+C to quit[0m
+2025-10-11 16:08:08,575 - INFO:  * Restarting with stat
+2025-10-11 16:08:10,030 - WARNING:  * Debugger is active!
+2025-10-11 16:08:10,033 - INFO:  * Debugger PIN: 935-638-666
+2025-10-11 16:08:12,964 - INFO: Accessed route: /
+2025-10-11 16:08:12,973 - INFO: 127.0.0.1 - - [11/Oct/2025 16:08:12] "GET / HTTP/1.1" 200 -
+2025-10-11 16:08:12,991 - INFO: Accessed route: /static/css/style.css
+2025-10-11 16:08:12,993 - INFO: 127.0.0.1 - - [11/Oct/2025 16:08:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-11 16:08:13,000 - INFO: Accessed route: /static/images/logo.png
+2025-10-11 16:08:13,001 - INFO: Accessed route: /static/js/scripts.js
+2025-10-11 16:08:13,017 - INFO: 127.0.0.1 - - [11/Oct/2025 16:08:13] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-11 16:08:13,017 - INFO: 127.0.0.1 - - [11/Oct/2025 16:08:13] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-11 16:13:38,219 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-11 16:13:38,219 - INFO: [33mPress CTRL+C to quit[0m
+2025-10-11 16:13:38,222 - INFO:  * Restarting with stat
+2025-10-11 16:13:39,822 - WARNING:  * Debugger is active!
+2025-10-11 16:13:39,825 - INFO:  * Debugger PIN: 935-638-666
+2025-10-11 16:13:42,891 - INFO: Accessed route: /
+2025-10-11 16:13:42,903 - INFO: 127.0.0.1 - - [11/Oct/2025 16:13:42] "GET / HTTP/1.1" 200 -
+2025-10-11 16:13:42,938 - INFO: Accessed route: /static/css/style.css
+2025-10-11 16:13:42,947 - INFO: 127.0.0.1 - - [11/Oct/2025 16:13:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-11 16:13:42,951 - INFO: Accessed route: /static/images/logo.png
+2025-10-11 16:13:42,956 - INFO: Accessed route: /static/js/scripts.js
+2025-10-11 16:13:42,958 - INFO: 127.0.0.1 - - [11/Oct/2025 16:13:42] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-11 16:13:42,959 - INFO: 127.0.0.1 - - [11/Oct/2025 16:13:42] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-11 16:15:17,793 - INFO: Accessed route: /upload2
+2025-10-11 16:15:17,800 - INFO: Excel file received: 21CSC201-DATA STRUCTURES AND ALGORITHMS_II_3rd SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 16:15:17,803 - INFO: Excel file saved: ./uploads\21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 16:15:18,135 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 16:15:18,136 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 16:15:18,138 - WARNING: Conducted Max value not found in TLP5-LLJ1-IIA.pdf
+2025-10-11 16:15:18,139 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 16:15:18,139 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 16:15:18,140 - INFO: Successfully processed TLP5-LLJ1-IIA.pdf: found 0 entries
+2025-10-11 16:15:18,156 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 16:15:18,157 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 16:15:18,161 - WARNING: Conducted Max value not found in TLP5-LLJ2-IIA.pdf
+2025-10-11 16:15:18,162 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 16:15:18,163 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 16:15:18,163 - INFO: Successfully processed TLP5-LLJ2-IIA.pdf: found 0 entries
+2025-10-11 16:15:18,164 - INFO: Total unique entries found across all files: 0
+2025-10-11 16:15:18,165 - INFO: 127.0.0.1 - - [11/Oct/2025 16:15:18] "[31m[1mPOST /upload2 HTTP/1.1[0m" 400 -
+2025-10-11 16:16:10,151 - INFO: Accessed route: /
+2025-10-11 16:16:10,152 - INFO: 127.0.0.1 - - [11/Oct/2025 16:16:10] "GET / HTTP/1.1" 200 -
+2025-10-11 16:16:10,182 - INFO: Accessed route: /static/css/style.css
+2025-10-11 16:16:10,189 - INFO: 127.0.0.1 - - [11/Oct/2025 16:16:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-11 16:16:10,191 - INFO: Accessed route: /static/images/logo.png
+2025-10-11 16:16:10,192 - INFO: 127.0.0.1 - - [11/Oct/2025 16:16:10] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-11 16:16:10,193 - INFO: Accessed route: /static/js/scripts.js
+2025-10-11 16:16:10,204 - INFO: 127.0.0.1 - - [11/Oct/2025 16:16:10] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-11 16:16:33,490 - INFO: Accessed route: /upload2
+2025-10-11 16:16:33,496 - INFO: Excel file received: 21CSC201-DATA STRUCTURES AND ALGORITHMS_II_3rd SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 16:16:33,503 - INFO: Excel file saved: ./uploads\21CSC201-DATA_STRUCTURES_AND_ALGORITHMS_II_3rd_SEM_template.xlsx_20251011014953.xlsx
+2025-10-11 16:16:33,515 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 16:16:33,516 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 16:16:33,606 - INFO: Found Conducted Max value: 10.0 in TLP5-AI-CSE-B-LLTI.pdf
+2025-10-11 16:16:33,607 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 16:16:33,607 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 16:16:33,608 - INFO: Successfully processed TLP5-AI-CSE-B-LLTI.pdf: found 58 entries
+2025-10-11 16:16:33,610 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 16:16:33,611 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 16:16:33,689 - INFO: Found Conducted Max value: 7.0 in TLP5-DAA-LLJI.pdf
+2025-10-11 16:16:33,690 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 16:16:33,690 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-11 16:16:33,690 - INFO: Successfully processed TLP5-DAA-LLJI.pdf: found 59 entries
+2025-10-11 16:16:33,691 - INFO: Total unique entries found across all files: 117
+2025-10-11 16:16:33,691 - INFO: Added 10.0 from TLP5-AI-CSE-B-LLTI.pdf to total
+2025-10-11 16:16:33,691 - INFO: Added 7.0 from TLP5-DAA-LLJI.pdf to total
+2025-10-11 16:16:33,692 - INFO: Total Conducted Max across all files: 17.0
+2025-10-11 16:16:34,340 - WARNING: Register numbers present in PDFs but not found in Excel: RA2211027040001, RA2211027040002, RA2211027040003, RA2211027040004, RA2211027040005, RA2211027040006, RA2211027040007, RA2211027040008, RA2211027040009, RA2211027040010, RA2211027040011, RA2211027040012, RA2211027040013, RA2211027040014, RA2211027040015, RA2211027040016, RA2211027040017, RA2211027040018, RA2211027040019, RA2211027040020, RA2211027040021, RA2211027040022, RA2211027040023, RA2211027040024, RA2211027040025, RA2211027040026, RA2211027040027, RA2211027040028, RA2211027040029, RA2211027040030, RA2211027040031, RA2211027040032, RA2211027040033, RA2211027040034, RA2211027040036, RA2211027040037, RA2211027040038, RA2211027040039, RA2211027040040, RA2211027040041, RA2211027040042, RA2211027040043, RA2211027040044, RA2211027040045, RA2211027040046, RA2211027040047, RA2211027040049, RA2211027040050, RA2211027040051, RA2211027040052, RA2211027040053, RA2211027040054, RA2211027040055, RA2211027040056, RA2211027040057, RA2211027040058, RA2211027040059, RA2211027040061, RA2211027040062
+2025-10-11 16:16:34,340 - INFO: 127.0.0.1 - - [11/Oct/2025 16:16:34] "[31m[1mPOST /upload2 HTTP/1.1[0m" 400 -

@@ -134,7 +134,7 @@ class TLPMarkConverter:
         
         workbook = None
         file_name = None
-
+    
         # Check if there's an uploaded Excel file to append
         has_uploaded_excel = append_file_path and append_file_path != "" and os.path.exists(append_file_path)
         
@@ -300,6 +300,14 @@ class TLPMarkConverter:
         self.logger.info(f"Excel sheet created: {file_path}")
         return file_path
 
+def fetchRegisterNumbers(sheet) -> List[str]:
+    registerNumbers = []
+    for row in sheet.iter_rows(min_row=7, max_row=70, min_col=2, max_col=2):
+        for cell in row:
+            if cell.value and isinstance(cell.value, str) and re.match(r"RA\d{13}", cell.value):
+                registerNumbers.append(cell.value.strip())
+    return registerNumbers
+
 @second_bp.route('/upload2', methods=['POST'])
 def upload_files():
     try:
@@ -397,6 +405,41 @@ def upload_files():
                 'message': f'CO split is not proper. Please enter correct splitup. CO total: {co_total}, Conducted Max: {total_conducted_max}'
             }), 400
         
+        registerNumbers = []
+
+        #check if the input file has register numbers
+        if co_filled_excel_path:
+            workbook = load_workbook(co_filled_excel_path)
+
+            datasheet = workbook['CT1-3']
+            if datasheet is not None:
+                registerNumbers = fetchRegisterNumbers(datasheet)
+
+            # If register numbers were found, perform validation
+            if registerNumbers:
+                # Compare Excel register numbers with PDF marks_data keys
+                excel_regs = set(registerNumbers)
+                pdf_regs = set(marks_data.keys())
+
+                # Find mismatches
+                missing_in_pdfs = excel_regs - pdf_regs
+                missing_in_excel = pdf_regs - excel_regs
+                message=""
+
+                # Logging mismatches
+                if missing_in_pdfs:
+                    message += f"Register numbers present in Excel but not found in PDFs: {', '.join(sorted(missing_in_pdfs))}. "
+
+                if missing_in_excel:
+                    message += f"Register numbers present in PDFs but not found in Excel: {', '.join(sorted(missing_in_excel))}"
+
+                if message != "":
+                    logger.warning(message)
+                    return jsonify({
+                        'success': False, 
+                        'message': message
+                    }), 400
+
         # Create output Excel file
         output_file = converter.config['results_dir']
         output_file = converter.create_excel_sheet(output_file, co_filled_excel_path, marks_data, co_splits, stats)
