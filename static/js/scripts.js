@@ -274,9 +274,21 @@ async function downloadExcelFile(filePath, fileNameDisplay) {
         link.href = URL.createObjectURL(blob);
 
         const contentDisposition = response.headers.get("Content-Disposition");
-        const filename = contentDisposition ? contentDisposition.split("filename=")[1] : filePath.split("/").pop();
-        link.download = filename.replace(/["']/g, "");
+        let filename = filePath.split("/").pop(); // fallback
 
+        if (contentDisposition) {
+            // Try UTF-8 filename*= first
+            const utf8Match = contentDisposition.match(/filename\*\s*=\s*UTF-8''([^;]+)/i);
+            const asciiMatch = contentDisposition.match(/filename\s*=\s*["']?([^;"']+)/i);
+
+            if (utf8Match) {
+                filename = decodeURIComponent(utf8Match[1]);
+            } else if (asciiMatch) {
+                filename = asciiMatch[1];
+            }
+        }
+
+        link.download = filename;
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);

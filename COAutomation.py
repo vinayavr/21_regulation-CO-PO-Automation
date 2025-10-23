@@ -227,12 +227,17 @@ def extract_details_from_pdf(pdf_path, question_numbers, marks, co_lists):
                 # Split the text into lines
                 lines = text.split("\n")
 
+                prevLine=''
                 for line in lines:
-                    if flag== 0 and not (template_dynamic_name.endswith('.xlsx')) and line.find('Course Code "&" Title:')!=-1:
-                        template_dynamic_name=(line.split('Course Code "&" Title:')[1]).split('Duration:')[0].strip()
+                    if flag== 0 and not (template_dynamic_name.endswith('.xlsx')) and line.find('CYCLE TEST')!=-1:
+                        prevLine=line
                         continue
-                    if flag== 0 and not (template_dynamic_name.endswith('.xlsx')) and line.find('Year "&" Sem:')!=-1:
-                        template_dynamic_name+="_" + (line.split('Year "&" Sem:')[1]).split('Max. Marks:')[0].strip().replace(" / ","_")
+                    if flag== 0 and not (template_dynamic_name.endswith('.xlsx')) and prevLine != "":
+                        template_dynamic_name=line.strip()
+                        prevLine=""
+                        continue
+                    if flag== 0 and not (template_dynamic_name.endswith('.xlsx')) and line.find('For')!=-1:
+                        template_dynamic_name+="_" + line.replace('(For ','').replace(' / ','_').replace(".","_").replace(': ','_').replace(')','').strip()
                         continue
                     if flag==0 and line.find("Part")!=-1:
                         flag=1
@@ -246,7 +251,7 @@ def extract_details_from_pdf(pdf_path, question_numbers, marks, co_lists):
                                 qnum=question_no.group().strip()
                                 question_numbers.append("Q"+qnum)
                                 marks.append(int(match.group().strip().split()[0]))
-                                co_lists.append(match.group().strip().split()[2])
+                                co_lists.append(match.group().strip().split()[1])
 
                             except ValueError:
                                 pass  # Skip if the match isn't a valid integer
@@ -535,7 +540,7 @@ def generate_COWise_Formulas(worksheet, coColumns):
     for i in range(1,7):
         if i not in coColumns:
             # If a CO is missing, generate a row indicating "Not Applicable"
-            generate_CO_wise_table(worksheet, row, f"CO{i}", "0", "0", False)
+            generate_CO_wise_table(worksheet, row, f"CO{i}", 0, 0, False)
         else:
             key = i
             value = coColumns[i]        

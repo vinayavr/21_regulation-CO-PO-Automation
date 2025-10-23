@@ -6066,3 +6066,516 @@ TypeError: TLPMarkConverter.create_excel_sheet() takes 5 positional arguments bu
 2025-10-11 16:16:33,692 - INFO: Total Conducted Max across all files: 17.0
 2025-10-11 16:16:34,340 - WARNING: Register numbers present in PDFs but not found in Excel: RA2211027040001, RA2211027040002, RA2211027040003, RA2211027040004, RA2211027040005, RA2211027040006, RA2211027040007, RA2211027040008, RA2211027040009, RA2211027040010, RA2211027040011, RA2211027040012, RA2211027040013, RA2211027040014, RA2211027040015, RA2211027040016, RA2211027040017, RA2211027040018, RA2211027040019, RA2211027040020, RA2211027040021, RA2211027040022, RA2211027040023, RA2211027040024, RA2211027040025, RA2211027040026, RA2211027040027, RA2211027040028, RA2211027040029, RA2211027040030, RA2211027040031, RA2211027040032, RA2211027040033, RA2211027040034, RA2211027040036, RA2211027040037, RA2211027040038, RA2211027040039, RA2211027040040, RA2211027040041, RA2211027040042, RA2211027040043, RA2211027040044, RA2211027040045, RA2211027040046, RA2211027040047, RA2211027040049, RA2211027040050, RA2211027040051, RA2211027040052, RA2211027040053, RA2211027040054, RA2211027040055, RA2211027040056, RA2211027040057, RA2211027040058, RA2211027040059, RA2211027040061, RA2211027040062
 2025-10-11 16:16:34,340 - INFO: 127.0.0.1 - - [11/Oct/2025 16:16:34] "[31m[1mPOST /upload2 HTTP/1.1[0m" 400 -
+2025-10-24 00:18:16,233 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-24 00:18:16,251 - INFO: [33mPress CTRL+C to quit[0m
+2025-10-24 00:18:16,270 - INFO:  * Restarting with stat
+2025-10-24 00:18:19,424 - WARNING:  * Debugger is active!
+2025-10-24 00:18:19,439 - INFO:  * Debugger PIN: 935-638-666
+2025-10-24 00:18:25,763 - INFO: Accessed route: /
+2025-10-24 00:18:25,899 - INFO: 127.0.0.1 - - [24/Oct/2025 00:18:25] "GET / HTTP/1.1" 200 -
+2025-10-24 00:18:25,948 - INFO: Accessed route: /static/js/scripts.js
+2025-10-24 00:18:25,949 - INFO: Accessed route: /static/css/style.css
+2025-10-24 00:18:25,955 - INFO: Accessed route: /static/images/logo.png
+2025-10-24 00:18:26,005 - INFO: 127.0.0.1 - - [24/Oct/2025 00:18:26] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-24 00:18:26,020 - INFO: 127.0.0.1 - - [24/Oct/2025 00:18:26] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-24 00:18:26,033 - INFO: 127.0.0.1 - - [24/Oct/2025 00:18:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 00:18:26,131 - INFO: Accessed route: /favicon.ico
+2025-10-24 00:18:26,391 - INFO: 127.0.0.1 - - [24/Oct/2025 00:18:26] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-10-24 00:18:52,054 - INFO: Accessed route: /upload1
+2025-10-24 00:18:52,273 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 00:18:52,279 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 00:18:52,284 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 00:18:52,292 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 00:35:49,833 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 00:35:49,834 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 00:35:49,835 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 00:35:49,835 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 00:35:49,849 - INFO:  * Detected change in 'd:\\Github_Projects\\21_regulation-CO-PO-Automation\\COAutomation.py', reloading
+2025-10-24 00:35:51,918 - INFO:  * Restarting with stat
+2025-10-24 00:35:54,081 - WARNING:  * Debugger is active!
+2025-10-24 00:35:54,087 - INFO:  * Debugger PIN: 935-638-666
+2025-10-24 00:37:06,332 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-24 00:37:06,333 - INFO: [33mPress CTRL+C to quit[0m
+2025-10-24 00:37:06,335 - INFO:  * Restarting with stat
+2025-10-24 00:37:08,323 - WARNING:  * Debugger is active!
+2025-10-24 00:37:08,328 - INFO:  * Debugger PIN: 935-638-666
+2025-10-24 00:37:33,473 - INFO: Accessed route: /
+2025-10-24 00:37:33,492 - INFO: 127.0.0.1 - - [24/Oct/2025 00:37:33] "GET / HTTP/1.1" 200 -
+2025-10-24 00:37:33,539 - INFO: Accessed route: /static/css/style.css
+2025-10-24 00:37:33,550 - INFO: 127.0.0.1 - - [24/Oct/2025 00:37:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 00:37:33,556 - INFO: Accessed route: /static/images/logo.png
+2025-10-24 00:37:33,558 - INFO: Accessed route: /static/js/scripts.js
+2025-10-24 00:37:33,561 - INFO: 127.0.0.1 - - [24/Oct/2025 00:37:33] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-24 00:37:33,576 - INFO: 127.0.0.1 - - [24/Oct/2025 00:37:33] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-24 00:37:33,673 - INFO: Accessed route: /favicon.ico
+2025-10-24 00:37:33,739 - INFO: 127.0.0.1 - - [24/Oct/2025 00:37:33] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-10-24 00:37:40,397 - INFO: Accessed route: /upload1
+2025-10-24 00:37:40,508 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 00:37:40,511 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 00:37:40,512 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 00:37:40,515 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 00:41:01,296 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 00:41:01,297 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 00:41:01,298 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 00:41:01,298 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 00:41:02,179 - INFO:  * Detected change in 'd:\\Github_Projects\\21_regulation-CO-PO-Automation\\COAutomation.py', reloading
+2025-10-24 00:41:03,462 - INFO:  * Restarting with stat
+2025-10-24 00:41:05,608 - WARNING:  * Debugger is active!
+2025-10-24 00:41:05,614 - INFO:  * Debugger PIN: 935-638-666
+2025-10-24 00:41:53,816 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-24 00:41:53,817 - INFO: [33mPress CTRL+C to quit[0m
+2025-10-24 00:41:53,822 - INFO:  * Restarting with stat
+2025-10-24 00:41:56,050 - WARNING:  * Debugger is active!
+2025-10-24 00:41:56,058 - INFO:  * Debugger PIN: 935-638-666
+2025-10-24 00:42:00,295 - INFO: Accessed route: /
+2025-10-24 00:42:00,318 - INFO: 127.0.0.1 - - [24/Oct/2025 00:42:00] "GET / HTTP/1.1" 200 -
+2025-10-24 00:42:00,371 - INFO: Accessed route: /static/css/style.css
+2025-10-24 00:42:00,377 - INFO: Accessed route: /static/images/logo.png
+2025-10-24 00:42:00,379 - INFO: 127.0.0.1 - - [24/Oct/2025 00:42:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 00:42:00,388 - INFO: Accessed route: /static/js/scripts.js
+2025-10-24 00:42:00,390 - INFO: 127.0.0.1 - - [24/Oct/2025 00:42:00] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-24 00:42:00,392 - INFO: 127.0.0.1 - - [24/Oct/2025 00:42:00] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-24 00:42:00,463 - INFO: Accessed route: /favicon.ico
+2025-10-24 00:42:00,506 - INFO: 127.0.0.1 - - [24/Oct/2025 00:42:00] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-10-24 00:42:06,356 - INFO: Accessed route: /upload1
+2025-10-24 00:42:06,480 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 00:42:06,482 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 00:42:06,484 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 00:42:06,486 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 00:45:25,153 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 00:45:25,154 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 00:45:25,155 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 00:45:25,157 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 00:45:56,926 - INFO: 127.0.0.1 - - [24/Oct/2025 00:45:56] "POST /upload1 HTTP/1.1" 200 -
+2025-10-24 00:46:01,872 - INFO: Accessed route: /download/21CSE354T – FULL STACK DEVELOPMENT_III yr_05 sem B_Tech_CSE_20251024004532.xlsx
+2025-10-24 00:46:01,901 - INFO: 127.0.0.1 - - [24/Oct/2025 00:46:01] "GET /download/21CSE354T%20–%20FULL%20STACK%20DEVELOPMENT_III%20yr_05%20sem%20B_Tech_CSE_20251024004532.xlsx HTTP/1.1" 200 -
+2025-10-24 00:48:18,464 - INFO:  * Detected change in 'd:\\Github_Projects\\21_regulation-CO-PO-Automation\\COAutomation.py', reloading
+2025-10-24 00:48:19,490 - INFO:  * Restarting with stat
+2025-10-24 00:48:21,769 - WARNING:  * Debugger is active!
+2025-10-24 00:48:21,777 - INFO:  * Debugger PIN: 935-638-666
+2025-10-24 00:48:26,396 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-24 00:48:26,396 - INFO: [33mPress CTRL+C to quit[0m
+2025-10-24 00:48:26,399 - INFO:  * Restarting with stat
+2025-10-24 00:48:28,489 - WARNING:  * Debugger is active!
+2025-10-24 00:48:28,495 - INFO:  * Debugger PIN: 935-638-666
+2025-10-24 00:48:31,242 - INFO: Accessed route: /
+2025-10-24 00:48:31,261 - INFO: 127.0.0.1 - - [24/Oct/2025 00:48:31] "GET / HTTP/1.1" 200 -
+2025-10-24 00:48:31,307 - INFO: Accessed route: /static/css/style.css
+2025-10-24 00:48:31,308 - INFO: Accessed route: /static/images/logo.png
+2025-10-24 00:48:31,312 - INFO: 127.0.0.1 - - [24/Oct/2025 00:48:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 00:48:31,313 - INFO: Accessed route: /static/js/scripts.js
+2025-10-24 00:48:31,314 - INFO: 127.0.0.1 - - [24/Oct/2025 00:48:31] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-24 00:48:31,322 - INFO: 127.0.0.1 - - [24/Oct/2025 00:48:31] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-24 00:48:31,397 - INFO: Accessed route: /favicon.ico
+2025-10-24 00:48:31,442 - INFO: 127.0.0.1 - - [24/Oct/2025 00:48:31] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-10-24 00:48:37,116 - INFO: Accessed route: /upload1
+2025-10-24 00:48:37,263 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 00:48:37,269 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 00:48:37,273 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 00:48:37,277 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 00:49:01,872 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 00:49:01,873 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 00:49:01,874 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 00:49:01,875 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 00:49:03,931 - INFO: 127.0.0.1 - - [24/Oct/2025 00:49:03] "POST /upload1 HTTP/1.1" 200 -
+2025-10-24 00:49:05,736 - INFO: Accessed route: /download/21CSE354T – FULL STACK DEVELOPMENT_III yr_05 sem B_Tech_CSE_20251024004901.xlsx
+2025-10-24 00:49:05,788 - INFO: 127.0.0.1 - - [24/Oct/2025 00:49:05] "GET /download/21CSE354T%20–%20FULL%20STACK%20DEVELOPMENT_III%20yr_05%20sem%20B_Tech_CSE_20251024004901.xlsx HTTP/1.1" 200 -
+2025-10-24 01:12:54,725 - INFO: Accessed route: /
+2025-10-24 01:12:54,737 - INFO: 127.0.0.1 - - [24/Oct/2025 01:12:54] "GET / HTTP/1.1" 200 -
+2025-10-24 01:12:54,777 - INFO: Accessed route: /static/css/style.css
+2025-10-24 01:12:54,783 - INFO: 127.0.0.1 - - [24/Oct/2025 01:12:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 01:12:54,792 - INFO: Accessed route: /static/images/logo.png
+2025-10-24 01:12:54,794 - INFO: 127.0.0.1 - - [24/Oct/2025 01:12:54] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-24 01:12:54,795 - INFO: Accessed route: /static/js/scripts.js
+2025-10-24 01:12:54,809 - INFO: 127.0.0.1 - - [24/Oct/2025 01:12:54] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-24 01:12:54,826 - INFO: Accessed route: /favicon.ico
+2025-10-24 01:12:54,855 - INFO: 127.0.0.1 - - [24/Oct/2025 01:12:54] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-10-24 01:13:02,338 - INFO: Accessed route: /upload1
+2025-10-24 01:13:02,442 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:13:02,449 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:13:02,455 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:13:02,461 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:13:03,531 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:13:03,535 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:13:03,537 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:13:03,540 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:15:17,632 - INFO: 127.0.0.1 - - [24/Oct/2025 01:15:17] "POST /upload1 HTTP/1.1" 200 -
+2025-10-24 01:15:27,778 - INFO: Accessed route: /download/21CSE354T – FULL STACK DEVELOPMENT_III yr_05 sem B_Tech_CSE_20251024004901.xlsx
+2025-10-24 01:15:27,810 - INFO: 127.0.0.1 - - [24/Oct/2025 01:15:27] "GET /download/21CSE354T%20–%20FULL%20STACK%20DEVELOPMENT_III%20yr_05%20sem%20B_Tech_CSE_20251024004901.xlsx HTTP/1.1" 200 -
+2025-10-24 01:19:57,828 - INFO:  * Detected change in 'd:\\Github_Projects\\21_regulation-CO-PO-Automation\\COAutomation.py', reloading
+2025-10-24 01:19:59,016 - INFO:  * Restarting with stat
+2025-10-24 01:20:02,547 - WARNING:  * Debugger is active!
+2025-10-24 01:20:02,551 - INFO:  * Debugger PIN: 935-638-666
+2025-10-24 01:20:09,027 - INFO:  * Detected change in 'd:\\Github_Projects\\21_regulation-CO-PO-Automation\\COAutomation.py', reloading
+2025-10-24 01:20:10,260 - INFO:  * Restarting with stat
+2025-10-24 01:20:12,411 - WARNING:  * Debugger is active!
+2025-10-24 01:20:12,415 - INFO:  * Debugger PIN: 935-638-666
+2025-10-24 01:25:18,661 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-24 01:25:18,662 - INFO: [33mPress CTRL+C to quit[0m
+2025-10-24 01:25:18,664 - INFO:  * Restarting with stat
+2025-10-24 01:25:20,523 - WARNING:  * Debugger is active!
+2025-10-24 01:25:20,526 - INFO:  * Debugger PIN: 935-638-666
+2025-10-24 01:25:36,750 - INFO: Accessed route: /
+2025-10-24 01:25:36,763 - INFO: 127.0.0.1 - - [24/Oct/2025 01:25:36] "GET / HTTP/1.1" 200 -
+2025-10-24 01:25:36,808 - INFO: Accessed route: /static/css/style.css
+2025-10-24 01:25:36,816 - INFO: 127.0.0.1 - - [24/Oct/2025 01:25:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 01:25:36,828 - INFO: Accessed route: /static/js/scripts.js
+2025-10-24 01:25:36,831 - INFO: Accessed route: /static/images/logo.png
+2025-10-24 01:25:36,832 - INFO: 127.0.0.1 - - [24/Oct/2025 01:25:36] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-24 01:25:36,839 - INFO: 127.0.0.1 - - [24/Oct/2025 01:25:36] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-24 01:25:36,907 - INFO: Accessed route: /favicon.ico
+2025-10-24 01:25:36,946 - INFO: 127.0.0.1 - - [24/Oct/2025 01:25:36] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-10-24 01:26:04,312 - INFO: Accessed route: /upload1
+2025-10-24 01:26:04,430 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:26:04,453 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:26:04,475 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:26:04,490 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:26:05,976 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:26:05,978 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:26:05,983 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:26:05,985 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:26:11,988 - INFO: 127.0.0.1 - - [24/Oct/2025 01:26:11] "POST /upload1 HTTP/1.1" 200 -
+2025-10-24 01:26:13,517 - INFO: Accessed route: /download/21CSE354T – FULL STACK DEVELOPMENT_III yr_05 sem B_Tech_CSE_20251024012605.xlsx
+2025-10-24 01:26:13,574 - INFO: 127.0.0.1 - - [24/Oct/2025 01:26:13] "GET /download/21CSE354T%20–%20FULL%20STACK%20DEVELOPMENT_III%20yr_05%20sem%20B_Tech_CSE_20251024012605.xlsx HTTP/1.1" 200 -
+2025-10-24 01:28:32,191 - INFO:  * Detected change in 'd:\\Github_Projects\\21_regulation-CO-PO-Automation\\COAutomation.py', reloading
+2025-10-24 01:28:33,159 - INFO:  * Restarting with stat
+2025-10-24 01:28:35,267 - WARNING:  * Debugger is active!
+2025-10-24 01:28:35,272 - INFO:  * Debugger PIN: 935-638-666
+2025-10-24 01:31:46,288 - INFO:  * Detected change in 'd:\\Github_Projects\\21_regulation-CO-PO-Automation\\COAutomation.py', reloading
+2025-10-24 01:31:47,306 - INFO:  * Restarting with stat
+2025-10-24 01:31:49,615 - WARNING:  * Debugger is active!
+2025-10-24 01:31:49,619 - INFO:  * Debugger PIN: 935-638-666
+2025-10-24 01:44:03,192 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-24 01:44:03,194 - INFO: [33mPress CTRL+C to quit[0m
+2025-10-24 01:44:03,196 - INFO:  * Restarting with stat
+2025-10-24 01:44:05,307 - WARNING:  * Debugger is active!
+2025-10-24 01:44:05,312 - INFO:  * Debugger PIN: 935-638-666
+2025-10-24 01:44:08,307 - INFO: Accessed route: /
+2025-10-24 01:44:08,318 - INFO: 127.0.0.1 - - [24/Oct/2025 01:44:08] "GET / HTTP/1.1" 200 -
+2025-10-24 01:44:08,337 - INFO: Accessed route: /static/css/style.css
+2025-10-24 01:44:08,340 - INFO: 127.0.0.1 - - [24/Oct/2025 01:44:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 01:44:08,350 - INFO: Accessed route: /static/images/logo.png
+2025-10-24 01:44:08,357 - INFO: Accessed route: /static/js/scripts.js
+2025-10-24 01:44:08,359 - INFO: 127.0.0.1 - - [24/Oct/2025 01:44:08] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-24 01:44:08,439 - INFO: 127.0.0.1 - - [24/Oct/2025 01:44:08] "GET /static/js/scripts.js HTTP/1.1" 200 -
+2025-10-24 01:44:08,458 - INFO: Accessed route: /favicon.ico
+2025-10-24 01:44:08,489 - INFO: 127.0.0.1 - - [24/Oct/2025 01:44:08] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-10-24 01:44:14,548 - INFO: Accessed route: /upload1
+2025-10-24 01:44:14,709 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:44:14,713 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:44:14,718 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:44:14,727 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:44:16,126 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:44:16,128 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:44:16,129 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:44:16,130 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:44:22,232 - INFO: 127.0.0.1 - - [24/Oct/2025 01:44:22] "POST /upload1 HTTP/1.1" 200 -
+2025-10-24 01:44:25,993 - INFO: Accessed route: /download/21CSE354T – FULL STACK DEVELOPMENT_III yr_05 sem B_Tech_CSE_20251024014416.xlsx
+2025-10-24 01:44:26,057 - INFO: 127.0.0.1 - - [24/Oct/2025 01:44:26] "GET /download/21CSE354T%20–%20FULL%20STACK%20DEVELOPMENT_III%20yr_05%20sem%20B_Tech_CSE_20251024014416.xlsx HTTP/1.1" 200 -
+2025-10-24 01:47:11,221 - INFO: Accessed route: /
+2025-10-24 01:47:11,226 - INFO: 127.0.0.1 - - [24/Oct/2025 01:47:11] "GET / HTTP/1.1" 200 -
+2025-10-24 01:47:11,262 - INFO: Accessed route: /static/css/style.css
+2025-10-24 01:47:11,267 - INFO: 127.0.0.1 - - [24/Oct/2025 01:47:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 01:47:11,268 - INFO: Accessed route: /static/images/logo.png
+2025-10-24 01:47:11,272 - INFO: 127.0.0.1 - - [24/Oct/2025 01:47:11] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-24 01:47:11,272 - INFO: Accessed route: /static/js/scripts.js
+2025-10-24 01:47:11,362 - INFO: 127.0.0.1 - - [24/Oct/2025 01:47:11] "GET /static/js/scripts.js HTTP/1.1" 200 -
+2025-10-24 01:47:11,372 - INFO: Accessed route: /favicon.ico
+2025-10-24 01:47:11,389 - INFO: 127.0.0.1 - - [24/Oct/2025 01:47:11] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-10-24 01:47:17,656 - INFO: Accessed route: /upload1
+2025-10-24 01:47:17,744 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:47:17,745 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:47:17,746 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:47:17,748 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:47:18,152 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:47:18,153 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:47:18,154 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:47:18,155 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:47:20,615 - INFO: 127.0.0.1 - - [24/Oct/2025 01:47:20] "POST /upload1 HTTP/1.1" 200 -
+2025-10-24 01:47:22,304 - INFO: Accessed route: /download/21CSE354T – FULL STACK DEVELOPMENT_III yr_05 sem B_Tech_CSE_20251024014416.xlsx
+2025-10-24 01:47:22,348 - INFO: 127.0.0.1 - - [24/Oct/2025 01:47:22] "GET /download/21CSE354T%20–%20FULL%20STACK%20DEVELOPMENT_III%20yr_05%20sem%20B_Tech_CSE_20251024014416.xlsx HTTP/1.1" 200 -
+2025-10-24 01:49:02,783 - INFO: Accessed route: /
+2025-10-24 01:49:02,792 - INFO: 127.0.0.1 - - [24/Oct/2025 01:49:02] "GET / HTTP/1.1" 200 -
+2025-10-24 01:49:02,836 - INFO: Accessed route: /static/css/style.css
+2025-10-24 01:49:02,838 - INFO: 127.0.0.1 - - [24/Oct/2025 01:49:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 01:49:02,840 - INFO: Accessed route: /static/js/scripts.js
+2025-10-24 01:49:02,854 - INFO: Accessed route: /static/images/logo.png
+2025-10-24 01:49:02,864 - INFO: 127.0.0.1 - - [24/Oct/2025 01:49:02] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-24 01:49:02,917 - INFO: 127.0.0.1 - - [24/Oct/2025 01:49:02] "GET /static/js/scripts.js HTTP/1.1" 200 -
+2025-10-24 01:49:02,927 - INFO: Accessed route: /favicon.ico
+2025-10-24 01:49:02,945 - INFO: 127.0.0.1 - - [24/Oct/2025 01:49:02] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-10-24 01:49:08,932 - INFO: Accessed route: /upload1
+2025-10-24 01:49:09,022 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:49:09,023 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:49:09,024 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:49:09,026 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:49:09,565 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:49:09,567 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:49:09,567 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:49:09,569 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:49:12,031 - INFO: 127.0.0.1 - - [24/Oct/2025 01:49:12] "POST /upload1 HTTP/1.1" 200 -
+2025-10-24 01:49:14,210 - INFO: Accessed route: /download/21CSE354T – FULL STACK DEVELOPMENT_III yr_05 sem B_Tech_CSE_20251024014416.xlsx
+2025-10-24 01:49:14,272 - INFO: 127.0.0.1 - - [24/Oct/2025 01:49:14] "GET /download/21CSE354T%20–%20FULL%20STACK%20DEVELOPMENT_III%20yr_05%20sem%20B_Tech_CSE_20251024014416.xlsx HTTP/1.1" 200 -
+2025-10-24 01:49:50,082 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-24 01:49:50,083 - INFO: [33mPress CTRL+C to quit[0m
+2025-10-24 01:49:50,084 - INFO:  * Restarting with stat
+2025-10-24 01:49:51,798 - WARNING:  * Debugger is active!
+2025-10-24 01:49:51,802 - INFO:  * Debugger PIN: 935-638-666
+2025-10-24 01:49:56,116 - INFO: Accessed route: /
+2025-10-24 01:49:56,137 - INFO: 127.0.0.1 - - [24/Oct/2025 01:49:56] "GET / HTTP/1.1" 200 -
+2025-10-24 01:49:56,163 - INFO: Accessed route: /static/css/style.css
+2025-10-24 01:49:56,170 - INFO: 127.0.0.1 - - [24/Oct/2025 01:49:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 01:49:56,171 - INFO: Accessed route: /static/images/logo.png
+2025-10-24 01:49:56,188 - INFO: 127.0.0.1 - - [24/Oct/2025 01:49:56] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-24 01:49:56,193 - INFO: Accessed route: /static/js/scripts.js
+2025-10-24 01:49:56,294 - INFO: 127.0.0.1 - - [24/Oct/2025 01:49:56] "GET /static/js/scripts.js HTTP/1.1" 200 -
+2025-10-24 01:49:56,309 - INFO: Accessed route: /favicon.ico
+2025-10-24 01:49:56,334 - INFO: 127.0.0.1 - - [24/Oct/2025 01:49:56] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-10-24 01:50:03,398 - INFO: Accessed route: /upload1
+2025-10-24 01:50:03,508 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:50:03,513 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:50:03,518 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:50:03,525 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:50:04,877 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:50:04,879 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:50:04,883 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:50:04,890 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:50:11,061 - INFO: 127.0.0.1 - - [24/Oct/2025 01:50:11] "POST /upload1 HTTP/1.1" 200 -
+2025-10-24 01:50:12,703 - INFO: Accessed route: /download/21CSE354T – FULL STACK DEVELOPMENT_III yr_05 sem B_Tech_CSE_20251024015004.xlsx
+2025-10-24 01:50:12,765 - INFO: 127.0.0.1 - - [24/Oct/2025 01:50:12] "GET /download/21CSE354T%20–%20FULL%20STACK%20DEVELOPMENT_III%20yr_05%20sem%20B_Tech_CSE_20251024015004.xlsx HTTP/1.1" 200 -
+2025-10-24 01:51:08,795 - INFO: Accessed route: /
+2025-10-24 01:51:08,797 - INFO: 127.0.0.1 - - [24/Oct/2025 01:51:08] "GET / HTTP/1.1" 200 -
+2025-10-24 01:51:08,849 - INFO: Accessed route: /static/css/style.css
+2025-10-24 01:51:08,851 - INFO: 127.0.0.1 - - [24/Oct/2025 01:51:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 01:51:08,853 - INFO: Accessed route: /static/images/logo.png
+2025-10-24 01:51:08,866 - INFO: Accessed route: /static/js/scripts.js
+2025-10-24 01:51:08,867 - INFO: 127.0.0.1 - - [24/Oct/2025 01:51:08] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-24 01:51:08,949 - INFO: 127.0.0.1 - - [24/Oct/2025 01:51:08] "GET /static/js/scripts.js HTTP/1.1" 200 -
+2025-10-24 01:51:08,962 - INFO: Accessed route: /favicon.ico
+2025-10-24 01:51:08,981 - INFO: 127.0.0.1 - - [24/Oct/2025 01:51:08] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-10-24 01:51:14,707 - INFO: Accessed route: /upload1
+2025-10-24 01:51:14,802 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:51:14,808 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:51:14,815 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:51:14,823 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:51:16,196 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:51:16,199 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:51:16,203 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:51:16,206 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 01:51:22,110 - INFO: 127.0.0.1 - - [24/Oct/2025 01:51:22] "POST /upload1 HTTP/1.1" 200 -
+2025-10-24 01:51:23,949 - INFO: Accessed route: /download/21CSE354T – FULL STACK DEVELOPMENT_III yr_05 sem B_Tech_CSE_20251024015004.xlsx
+2025-10-24 01:51:24,009 - INFO: 127.0.0.1 - - [24/Oct/2025 01:51:24] "GET /download/21CSE354T%20–%20FULL%20STACK%20DEVELOPMENT_III%20yr_05%20sem%20B_Tech_CSE_20251024015004.xlsx HTTP/1.1" 200 -
+2025-10-24 01:59:17,859 - INFO:  * Detected change in 'd:\\Github_Projects\\21_regulation-CO-PO-Automation\\FINALTEST.py', reloading
+2025-10-24 01:59:19,005 - INFO:  * Restarting with stat
+2025-10-24 01:59:21,425 - WARNING:  * Debugger is active!
+2025-10-24 01:59:21,429 - INFO:  * Debugger PIN: 935-638-666
+2025-10-24 01:59:23,707 - INFO:  * Detected change in 'd:\\Github_Projects\\21_regulation-CO-PO-Automation\\FINALTEST.py', reloading
+2025-10-24 01:59:24,603 - INFO:  * Restarting with stat
+2025-10-24 01:59:26,685 - WARNING:  * Debugger is active!
+2025-10-24 01:59:26,690 - INFO:  * Debugger PIN: 935-638-666
+2025-10-24 01:59:30,041 - INFO:  * Detected change in 'd:\\Github_Projects\\21_regulation-CO-PO-Automation\\FINALTEST.py', reloading
+2025-10-24 01:59:31,245 - INFO:  * Restarting with stat
+2025-10-24 01:59:33,441 - WARNING:  * Debugger is active!
+2025-10-24 01:59:33,445 - INFO:  * Debugger PIN: 935-638-666
+2025-10-24 02:00:55,490 - INFO:  * Detected change in 'd:\\Github_Projects\\21_regulation-CO-PO-Automation\\FINALTEST.py', reloading
+2025-10-24 02:00:56,449 - INFO:  * Restarting with stat
+2025-10-24 02:00:59,082 - WARNING:  * Debugger is active!
+2025-10-24 02:00:59,088 - INFO:  * Debugger PIN: 935-638-666
+2025-10-24 02:01:02,418 - INFO:  * Detected change in 'd:\\Github_Projects\\21_regulation-CO-PO-Automation\\FINALTEST.py', reloading
+2025-10-24 02:01:03,273 - INFO:  * Restarting with stat
+2025-10-24 02:01:05,317 - WARNING:  * Debugger is active!
+2025-10-24 02:01:05,320 - INFO:  * Debugger PIN: 935-638-666
+2025-10-24 02:01:17,142 - INFO:  * Detected change in 'd:\\Github_Projects\\21_regulation-CO-PO-Automation\\FINALTEST.py', reloading
+2025-10-24 02:01:18,096 - INFO:  * Restarting with stat
+2025-10-24 02:01:20,415 - WARNING:  * Debugger is active!
+2025-10-24 02:01:20,419 - INFO:  * Debugger PIN: 935-638-666
+2025-10-24 02:03:22,430 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-24 02:03:22,431 - INFO: [33mPress CTRL+C to quit[0m
+2025-10-24 02:03:22,435 - INFO:  * Restarting with stat
+2025-10-24 02:03:24,240 - WARNING:  * Debugger is active!
+2025-10-24 02:03:24,244 - INFO:  * Debugger PIN: 935-638-666
+2025-10-24 02:03:42,971 - INFO: Accessed route: /
+2025-10-24 02:03:42,981 - INFO: 127.0.0.1 - - [24/Oct/2025 02:03:42] "GET / HTTP/1.1" 200 -
+2025-10-24 02:03:43,007 - INFO: Accessed route: /static/css/style.css
+2025-10-24 02:03:43,010 - INFO: 127.0.0.1 - - [24/Oct/2025 02:03:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 02:03:43,026 - INFO: Accessed route: /static/images/logo.png
+2025-10-24 02:03:43,030 - INFO: Accessed route: /static/js/scripts.js
+2025-10-24 02:03:43,031 - INFO: 127.0.0.1 - - [24/Oct/2025 02:03:43] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-24 02:03:43,111 - INFO: 127.0.0.1 - - [24/Oct/2025 02:03:43] "GET /static/js/scripts.js HTTP/1.1" 200 -
+2025-10-24 02:03:43,128 - INFO: Accessed route: /favicon.ico
+2025-10-24 02:03:43,160 - INFO: 127.0.0.1 - - [24/Oct/2025 02:03:43] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-10-24 02:03:48,416 - INFO: Accessed route: /upload1
+2025-10-24 02:03:48,564 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:03:48,570 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:03:48,575 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:03:48,580 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:03:50,013 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:03:50,015 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:03:50,017 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:03:50,019 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:03:56,021 - INFO: 127.0.0.1 - - [24/Oct/2025 02:03:56] "POST /upload1 HTTP/1.1" 200 -
+2025-10-24 02:03:57,687 - INFO: Accessed route: /download/21CSE354T – FULL STACK DEVELOPMENT_III yr_05 sem B_Tech_CSE_20251024020350.xlsx
+2025-10-24 02:03:57,748 - INFO: 127.0.0.1 - - [24/Oct/2025 02:03:57] "GET /download/21CSE354T%20–%20FULL%20STACK%20DEVELOPMENT_III%20yr_05%20sem%20B_Tech_CSE_20251024020350.xlsx HTTP/1.1" 200 -
+2025-10-24 02:04:03,549 - INFO: Accessed route: /download/21CSE354T – FULL STACK DEVELOPMENT_III yr_05 sem B_Tech_CSE_20251024020350.xlsx
+2025-10-24 02:04:03,556 - INFO: 127.0.0.1 - - [24/Oct/2025 02:04:03] "[36mGET /download/21CSE354T%20–%20FULL%20STACK%20DEVELOPMENT_III%20yr_05%20sem%20B_Tech_CSE_20251024020350.xlsx HTTP/1.1[0m" 304 -
+2025-10-24 02:04:32,656 - INFO: Accessed route: /download/21CSE354T – FULL STACK DEVELOPMENT_III yr_05 sem B_Tech_CSE_20251024020350.xlsx
+2025-10-24 02:04:32,662 - INFO: 127.0.0.1 - - [24/Oct/2025 02:04:32] "[36mGET /download/21CSE354T%20–%20FULL%20STACK%20DEVELOPMENT_III%20yr_05%20sem%20B_Tech_CSE_20251024020350.xlsx HTTP/1.1[0m" 304 -
+2025-10-24 02:06:46,276 - INFO: Accessed route: /
+2025-10-24 02:06:46,281 - INFO: 127.0.0.1 - - [24/Oct/2025 02:06:46] "GET / HTTP/1.1" 200 -
+2025-10-24 02:06:46,328 - INFO: Accessed route: /static/css/style.css
+2025-10-24 02:06:46,332 - INFO: 127.0.0.1 - - [24/Oct/2025 02:06:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 02:06:46,339 - INFO: Accessed route: /static/js/scripts.js
+2025-10-24 02:06:46,341 - INFO: Accessed route: /static/images/logo.png
+2025-10-24 02:06:46,354 - INFO: 127.0.0.1 - - [24/Oct/2025 02:06:46] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-24 02:06:46,436 - INFO: 127.0.0.1 - - [24/Oct/2025 02:06:46] "GET /static/js/scripts.js HTTP/1.1" 200 -
+2025-10-24 02:06:46,453 - INFO: Accessed route: /favicon.ico
+2025-10-24 02:06:46,499 - INFO: 127.0.0.1 - - [24/Oct/2025 02:06:46] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-10-24 02:06:51,227 - INFO: Accessed route: /upload1
+2025-10-24 02:06:51,336 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:06:51,339 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:06:51,347 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:06:51,356 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:06:52,695 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:06:52,697 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:06:52,701 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:06:52,702 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:06:58,666 - INFO: 127.0.0.1 - - [24/Oct/2025 02:06:58] "POST /upload1 HTTP/1.1" 200 -
+2025-10-24 02:07:00,880 - INFO: Accessed route: /download/21CSE354T – FULL STACK DEVELOPMENT_III yr_05 sem B_Tech_CSE_20251024020350.xlsx
+2025-10-24 02:07:00,944 - INFO: 127.0.0.1 - - [24/Oct/2025 02:07:00] "GET /download/21CSE354T%20–%20FULL%20STACK%20DEVELOPMENT_III%20yr_05%20sem%20B_Tech_CSE_20251024020350.xlsx HTTP/1.1" 200 -
+2025-10-24 02:18:48,434 - INFO:  * Detected change in 'd:\\Github_Projects\\21_regulation-CO-PO-Automation\\COAutomation.py', reloading
+2025-10-24 02:18:49,873 - INFO:  * Restarting with stat
+2025-10-24 02:18:58,842 - WARNING:  * Debugger is active!
+2025-10-24 02:18:58,848 - INFO:  * Debugger PIN: 935-638-666
+2025-10-24 02:19:06,447 - INFO:  * Detected change in 'd:\\Github_Projects\\21_regulation-CO-PO-Automation\\COAutomation.py', reloading
+2025-10-24 02:19:07,356 - INFO:  * Restarting with stat
+2025-10-24 02:19:13,298 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-24 02:19:13,300 - INFO: [33mPress CTRL+C to quit[0m
+2025-10-24 02:19:13,309 - INFO:  * Restarting with stat
+2025-10-24 02:19:15,014 - WARNING:  * Debugger is active!
+2025-10-24 02:19:15,017 - INFO:  * Debugger PIN: 935-638-666
+2025-10-24 02:19:22,646 - INFO: Accessed route: /
+2025-10-24 02:19:22,692 - INFO: 127.0.0.1 - - [24/Oct/2025 02:19:22] "GET / HTTP/1.1" 200 -
+2025-10-24 02:19:22,723 - INFO: Accessed route: /static/css/style.css
+2025-10-24 02:19:22,726 - INFO: Accessed route: /static/images/logo.png
+2025-10-24 02:19:22,727 - INFO: 127.0.0.1 - - [24/Oct/2025 02:19:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 02:19:22,728 - INFO: 127.0.0.1 - - [24/Oct/2025 02:19:22] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-24 02:19:22,735 - INFO: Accessed route: /static/js/scripts.js
+2025-10-24 02:19:22,760 - INFO: 127.0.0.1 - - [24/Oct/2025 02:19:22] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-24 02:19:22,850 - INFO: Accessed route: /favicon.ico
+2025-10-24 02:19:22,926 - INFO: 127.0.0.1 - - [24/Oct/2025 02:19:22] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-10-24 02:19:27,545 - INFO: Accessed route: /upload1
+2025-10-24 02:19:27,681 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:19:27,689 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:19:27,692 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:19:27,701 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:19:29,070 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:19:29,073 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:19:29,076 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:19:29,077 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:19:35,207 - INFO: 127.0.0.1 - - [24/Oct/2025 02:19:35] "POST /upload1 HTTP/1.1" 200 -
+2025-10-24 02:19:36,649 - INFO: Accessed route: /download/21CSE354T – FULL STACK DEVELOPMENT_III yr_05 sem B_Tech_CSE_20251024021929.xlsx
+2025-10-24 02:19:36,706 - INFO: 127.0.0.1 - - [24/Oct/2025 02:19:36] "GET /download/21CSE354T%20–%20FULL%20STACK%20DEVELOPMENT_III%20yr_05%20sem%20B_Tech_CSE_20251024021929.xlsx HTTP/1.1" 200 -
+2025-10-24 02:20:38,890 - INFO:  * Detected change in 'd:\\Github_Projects\\21_regulation-CO-PO-Automation\\COAutomation.py', reloading
+2025-10-24 02:20:39,997 - INFO:  * Restarting with stat
+2025-10-24 02:20:41,871 - WARNING:  * Debugger is active!
+2025-10-24 02:20:41,875 - INFO:  * Debugger PIN: 935-638-666
+2025-10-24 02:21:25,460 - INFO: Accessed route: /upload2
+2025-10-24 02:21:25,507 - INFO: Excel file received: Template_With_Data.xlsx
+2025-10-24 02:21:25,513 - INFO: Excel file saved: ./uploads\Template_With_Data.xlsx
+2025-10-24 02:21:25,569 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:21:25,577 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:21:26,031 - INFO: Found Conducted Max value: 10.0 in TLP5-AI-CSE-B-LLTI.pdf
+2025-10-24 02:21:26,032 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:21:26,034 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:21:26,036 - INFO: Successfully processed TLP5-AI-CSE-B-LLTI.pdf: found 58 entries
+2025-10-24 02:21:26,038 - INFO: Total unique entries found across all files: 58
+2025-10-24 02:21:26,040 - INFO: Added 10.0 from TLP5-AI-CSE-B-LLTI.pdf to total
+2025-10-24 02:21:26,045 - INFO: Total Conducted Max across all files: 10.0
+2025-10-24 02:21:28,969 - INFO: Creating Excel sheet with append_file_path: ./uploads\Template_With_Data.xlsx
+2025-10-24 02:21:35,311 - INFO: Excel sheet created: ./download\Template_With_Data.xlsx
+2025-10-24 02:21:35,318 - INFO: 127.0.0.1 - - [24/Oct/2025 02:21:35] "POST /upload2 HTTP/1.1" 200 -
+2025-10-24 02:21:37,024 - INFO: Accessed route: /download/Template_With_Data.xlsx
+2025-10-24 02:21:37,087 - INFO: 127.0.0.1 - - [24/Oct/2025 02:21:37] "GET /download/Template_With_Data.xlsx HTTP/1.1" 200 -
+2025-10-24 02:21:54,818 - INFO: Accessed route: /
+2025-10-24 02:21:54,840 - INFO: 127.0.0.1 - - [24/Oct/2025 02:21:54] "GET / HTTP/1.1" 200 -
+2025-10-24 02:21:54,872 - INFO: Accessed route: /static/css/style.css
+2025-10-24 02:21:54,881 - INFO: 127.0.0.1 - - [24/Oct/2025 02:21:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 02:21:54,882 - INFO: Accessed route: /static/images/logo.png
+2025-10-24 02:21:54,888 - INFO: Accessed route: /static/js/scripts.js
+2025-10-24 02:21:54,893 - INFO: 127.0.0.1 - - [24/Oct/2025 02:21:54] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-24 02:21:54,913 - INFO: 127.0.0.1 - - [24/Oct/2025 02:21:54] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-24 02:21:54,950 - INFO: Accessed route: /favicon.ico
+2025-10-24 02:21:55,003 - INFO: 127.0.0.1 - - [24/Oct/2025 02:21:55] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-10-24 02:22:48,591 - INFO: Accessed route: /
+2025-10-24 02:22:48,594 - INFO: 127.0.0.1 - - [24/Oct/2025 02:22:48] "GET / HTTP/1.1" 200 -
+2025-10-24 02:22:48,629 - INFO: Accessed route: /static/css/style.css
+2025-10-24 02:22:48,632 - INFO: 127.0.0.1 - - [24/Oct/2025 02:22:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 02:22:48,648 - INFO: Accessed route: /static/images/logo.png
+2025-10-24 02:22:48,660 - INFO: 127.0.0.1 - - [24/Oct/2025 02:22:48] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-24 02:22:48,663 - INFO: Accessed route: /static/js/scripts.js
+2025-10-24 02:22:48,668 - INFO: 127.0.0.1 - - [24/Oct/2025 02:22:48] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-24 02:22:48,686 - INFO: Accessed route: /favicon.ico
+2025-10-24 02:22:48,713 - INFO: 127.0.0.1 - - [24/Oct/2025 02:22:48] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-10-24 02:23:04,200 - INFO: Accessed route: /
+2025-10-24 02:23:04,208 - INFO: 127.0.0.1 - - [24/Oct/2025 02:23:04] "GET / HTTP/1.1" 200 -
+2025-10-24 02:23:04,266 - INFO: Accessed route: /static/css/style.css
+2025-10-24 02:23:04,268 - INFO: 127.0.0.1 - - [24/Oct/2025 02:23:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 02:23:04,271 - INFO: Accessed route: /static/images/logo.png
+2025-10-24 02:23:04,300 - INFO: 127.0.0.1 - - [24/Oct/2025 02:23:04] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-24 02:23:04,304 - INFO: Accessed route: /static/js/scripts.js
+2025-10-24 02:23:04,320 - INFO: 127.0.0.1 - - [24/Oct/2025 02:23:04] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-24 02:23:04,355 - INFO: Accessed route: /favicon.ico
+2025-10-24 02:23:04,380 - INFO: 127.0.0.1 - - [24/Oct/2025 02:23:04] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-10-24 02:24:17,872 - INFO: Accessed route: /upload2
+2025-10-24 02:24:18,075 - INFO: Excel file received: 21CSE354T – FULL STACK DEVELOPMENT_III yr_05 sem B_Tech_CSE_20251024021929.xlsx
+2025-10-24 02:24:18,078 - INFO: Excel file saved: ./uploads\21CSE354T_FULL_STACK_DEVELOPMENT_III_yr_05_sem_B_Tech_CSE_20251024021929.xlsx
+2025-10-24 02:24:18,092 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:24:18,093 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:24:18,395 - INFO: Found Conducted Max value: 10.0 in TLP5-AI-CSE-B-LLTI.pdf
+2025-10-24 02:24:18,396 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:24:18,397 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:24:18,398 - INFO: Successfully processed TLP5-AI-CSE-B-LLTI.pdf: found 58 entries
+2025-10-24 02:24:18,399 - INFO: Total unique entries found across all files: 58
+2025-10-24 02:24:18,399 - INFO: Added 10.0 from TLP5-AI-CSE-B-LLTI.pdf to total
+2025-10-24 02:24:18,400 - INFO: Total Conducted Max across all files: 10.0
+2025-10-24 02:24:19,107 - INFO: Creating Excel sheet with append_file_path: ./uploads\21CSE354T_FULL_STACK_DEVELOPMENT_III_yr_05_sem_B_Tech_CSE_20251024021929.xlsx
+2025-10-24 02:24:20,707 - INFO: Excel sheet created: ./download\21CSE354T_FULL_STACK_DEVELOPMENT_III_yr_05_sem_B_Tech_CSE_20251024021929.xlsx
+2025-10-24 02:24:20,710 - INFO: 127.0.0.1 - - [24/Oct/2025 02:24:20] "POST /upload2 HTTP/1.1" 200 -
+2025-10-24 02:24:23,621 - INFO: Accessed route: /download/21CSE354T_FULL_STACK_DEVELOPMENT_III_yr_05_sem_B_Tech_CSE_20251024021929.xlsx
+2025-10-24 02:24:23,639 - INFO: 127.0.0.1 - - [24/Oct/2025 02:24:23] "GET /download/21CSE354T_FULL_STACK_DEVELOPMENT_III_yr_05_sem_B_Tech_CSE_20251024021929.xlsx HTTP/1.1" 200 -
+2025-10-24 02:26:00,390 - INFO: Accessed route: /
+2025-10-24 02:26:00,396 - INFO: 127.0.0.1 - - [24/Oct/2025 02:26:00] "GET / HTTP/1.1" 200 -
+2025-10-24 02:26:00,434 - INFO: Accessed route: /static/css/style.css
+2025-10-24 02:26:00,437 - INFO: 127.0.0.1 - - [24/Oct/2025 02:26:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 02:26:00,440 - INFO: Accessed route: /static/js/scripts.js
+2025-10-24 02:26:00,456 - INFO: 127.0.0.1 - - [24/Oct/2025 02:26:00] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-10-24 02:26:00,457 - INFO: Accessed route: /static/images/logo.png
+2025-10-24 02:26:00,468 - INFO: 127.0.0.1 - - [24/Oct/2025 02:26:00] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-10-24 02:26:00,483 - INFO: Accessed route: /favicon.ico
+2025-10-24 02:26:00,508 - INFO: 127.0.0.1 - - [24/Oct/2025 02:26:00] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-10-24 02:26:14,409 - INFO: Accessed route: /upload2
+2025-10-24 02:26:14,412 - INFO: Excel file received: None
+2025-10-24 02:26:14,413 - INFO: No Excel file uploaded - will create TLP sheet only
+2025-10-24 02:26:14,419 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:26:14,420 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:26:14,503 - INFO: Found Conducted Max value: 10.0 in TLP5-AI-CSE-B-LLTI.pdf
+2025-10-24 02:26:14,504 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:26:14,504 - WARNING: CropBox missing from /Page, defaulting to MediaBox
+2025-10-24 02:26:14,505 - INFO: Successfully processed TLP5-AI-CSE-B-LLTI.pdf: found 58 entries
+2025-10-24 02:26:14,505 - INFO: Total unique entries found across all files: 58
+2025-10-24 02:26:14,506 - INFO: Added 10.0 from TLP5-AI-CSE-B-LLTI.pdf to total
+2025-10-24 02:26:14,507 - INFO: Total Conducted Max across all files: 10.0
+2025-10-24 02:26:14,507 - INFO: Creating Excel sheet with append_file_path: None
+2025-10-24 02:26:14,554 - INFO: Excel sheet created: ./download\co_allocation_20251024_022614.xlsx
+2025-10-24 02:26:14,555 - INFO: 127.0.0.1 - - [24/Oct/2025 02:26:14] "POST /upload2 HTTP/1.1" 200 -
+2025-10-24 02:26:16,075 - INFO: Accessed route: /download/co_allocation_20251024_022614.xlsx
+2025-10-24 02:26:16,098 - INFO: 127.0.0.1 - - [24/Oct/2025 02:26:16] "GET /download/co_allocation_20251024_022614.xlsx HTTP/1.1" 200 -

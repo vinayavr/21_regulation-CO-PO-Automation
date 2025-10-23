@@ -504,9 +504,20 @@ def download_file(filename):
                 'message': f'File "{filename}" not found on server.'
             }), 404
 
-        # Send the file for download
-        return send_file(file_path, as_attachment=True)
+       # Send the file for download
+        response = send_file(
+            file_path,
+            as_attachment=True,
+            download_name=filename,
+            mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        )
 
+        from urllib.parse import quote
+        filename_quoted = quote(filename)
+        response.headers["Content-Disposition"] = f"attachment; filename*=UTF-8''{filename_quoted}"
+    
+        return response
+    
     except Exception as e:
         return jsonify({
             'success': False,
