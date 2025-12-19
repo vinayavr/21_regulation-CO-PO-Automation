@@ -6579,3 +6579,130 @@ TypeError: TLPMarkConverter.create_excel_sheet() takes 5 positional arguments bu
 2025-10-24 02:26:14,555 - INFO: 127.0.0.1 - - [24/Oct/2025 02:26:14] "POST /upload2 HTTP/1.1" 200 -
 2025-10-24 02:26:16,075 - INFO: Accessed route: /download/co_allocation_20251024_022614.xlsx
 2025-10-24 02:26:16,098 - INFO: 127.0.0.1 - - [24/Oct/2025 02:26:16] "GET /download/co_allocation_20251024_022614.xlsx HTTP/1.1" 200 -
+2025-12-19 21:33:15,024 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-19 21:33:15,025 - INFO: [33mPress CTRL+C to quit[0m
+2025-12-19 21:33:15,071 - INFO:  * Restarting with watchdog (windowsapi)
+2025-12-19 21:33:17,508 - WARNING:  * Debugger is active!
+2025-12-19 21:33:17,531 - INFO:  * Debugger PIN: 413-605-735
+2025-12-19 21:33:23,868 - INFO: Accessed route: /
+2025-12-19 21:33:24,106 - INFO: 127.0.0.1 - - [19/Dec/2025 21:33:24] "GET / HTTP/1.1" 200 -
+2025-12-19 21:33:24,146 - INFO: Accessed route: /static/css/style.css
+2025-12-19 21:33:24,151 - INFO: Accessed route: /static/js/scripts.js
+2025-12-19 21:33:24,158 - INFO: Accessed route: /static/images/logo.png
+2025-12-19 21:33:24,159 - INFO: 127.0.0.1 - - [19/Dec/2025 21:33:24] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-12-19 21:33:24,193 - INFO: 127.0.0.1 - - [19/Dec/2025 21:33:24] "GET /static/images/logo.png HTTP/1.1" 200 -
+2025-12-19 21:33:24,359 - INFO: 127.0.0.1 - - [19/Dec/2025 21:33:24] "GET /static/js/scripts.js HTTP/1.1" 200 -
+2025-12-19 21:33:24,410 - INFO: Accessed route: /favicon.ico
+2025-12-19 21:33:24,529 - INFO:  * Detected change in 'C:\\Users\\AMBIKHA\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\routing\\map.py', reloading
+2025-12-19 21:33:24,584 - INFO:  * Detected change in 'C:\\Users\\AMBIKHA\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\routing\\matcher.py', reloading
+2025-12-19 21:33:24,785 - INFO: 127.0.0.1 - - [19/Dec/2025 21:33:24] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-19 21:33:25,210 - INFO:  * Restarting with watchdog (windowsapi)
+2025-12-19 21:33:29,571 - WARNING:  * Debugger is active!
+2025-12-19 21:33:29,614 - INFO:  * Debugger PIN: 413-605-735
+2025-12-19 21:33:50,418 - INFO: Accessed route: /upload1
+2025-12-19 21:33:58,655 - INFO: 127.0.0.1 - - [19/Dec/2025 21:33:58] "POST /upload1 HTTP/1.1" 200 -
+2025-12-19 21:34:12,542 - INFO: Accessed route: /download/_20251219213351.xlsx
+2025-12-19 21:34:12,628 - INFO: 127.0.0.1 - - [19/Dec/2025 21:34:12] "GET /download/_20251219213351.xlsx HTTP/1.1" 200 -
+2025-12-19 21:46:25,057 - INFO: Accessed route: /
+2025-12-19 21:46:25,468 - INFO: 127.0.0.1 - - [19/Dec/2025 21:46:25] "GET / HTTP/1.1" 200 -
+2025-12-19 21:46:25,535 - INFO: Accessed route: /static/css/style.css
+2025-12-19 21:46:25,549 - INFO: Accessed route: /static/images/logo.png
+2025-12-19 21:46:25,556 - INFO: 127.0.0.1 - - [19/Dec/2025 21:46:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-19 21:46:25,561 - INFO: Accessed route: /static/js/scripts.js
+2025-12-19 21:46:25,571 - INFO: 127.0.0.1 - - [19/Dec/2025 21:46:25] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-12-19 21:46:25,576 - INFO: 127.0.0.1 - - [19/Dec/2025 21:46:25] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-12-19 21:46:25,656 - INFO: Accessed route: /favicon.ico
+2025-12-19 21:46:25,983 - INFO: 127.0.0.1 - - [19/Dec/2025 21:46:25] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-19 21:48:04,759 - INFO: Accessed route: /upload1
+2025-12-19 21:48:14,538 - INFO: 127.0.0.1 - - [19/Dec/2025 21:48:14] "POST /upload1 HTTP/1.1" 200 -
+2025-12-19 21:52:44,666 - INFO: Accessed route: /
+2025-12-19 21:52:44,732 - INFO: 127.0.0.1 - - [19/Dec/2025 21:52:44] "GET / HTTP/1.1" 200 -
+2025-12-19 21:52:44,773 - INFO: Accessed route: /static/css/style.css
+2025-12-19 21:52:44,784 - INFO: 127.0.0.1 - - [19/Dec/2025 21:52:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-19 21:52:44,786 - INFO: Accessed route: /static/js/scripts.js
+2025-12-19 21:52:44,790 - INFO: Accessed route: /static/images/logo.png
+2025-12-19 21:52:44,799 - INFO: 127.0.0.1 - - [19/Dec/2025 21:52:44] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-12-19 21:52:44,810 - INFO: 127.0.0.1 - - [19/Dec/2025 21:52:44] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-12-19 21:52:44,842 - INFO: Accessed route: /favicon.ico
+2025-12-19 21:52:45,075 - INFO: 127.0.0.1 - - [19/Dec/2025 21:52:45] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-19 21:53:19,604 - INFO: Accessed route: /upload1
+2025-12-19 21:53:27,692 - INFO: 127.0.0.1 - - [19/Dec/2025 21:53:27] "POST /upload1 HTTP/1.1" 200 -
+2025-12-19 21:54:56,264 - INFO: Accessed route: /
+2025-12-19 21:54:56,486 - INFO: 127.0.0.1 - - [19/Dec/2025 21:54:56] "GET / HTTP/1.1" 200 -
+2025-12-19 21:54:56,531 - INFO: Accessed route: /static/css/style.css
+2025-12-19 21:54:56,535 - INFO: 127.0.0.1 - - [19/Dec/2025 21:54:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-19 21:54:56,556 - INFO: Accessed route: /static/js/scripts.js
+2025-12-19 21:54:56,563 - INFO: Accessed route: /static/images/logo.png
+2025-12-19 21:54:56,570 - INFO: 127.0.0.1 - - [19/Dec/2025 21:54:56] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-12-19 21:54:56,574 - INFO: 127.0.0.1 - - [19/Dec/2025 21:54:56] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-12-19 21:54:56,605 - INFO: Accessed route: /favicon.ico
+2025-12-19 21:54:56,801 - INFO: 127.0.0.1 - - [19/Dec/2025 21:54:56] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-19 21:58:13,636 - INFO: Accessed route: /upload1
+2025-12-19 21:58:21,666 - INFO: 127.0.0.1 - - [19/Dec/2025 21:58:21] "POST /upload1 HTTP/1.1" 200 -
+2025-12-19 22:03:00,511 - INFO: Accessed route: /
+2025-12-19 22:03:00,721 - INFO: 127.0.0.1 - - [19/Dec/2025 22:03:00] "GET / HTTP/1.1" 200 -
+2025-12-19 22:03:00,768 - INFO: Accessed route: /static/css/style.css
+2025-12-19 22:03:00,771 - INFO: 127.0.0.1 - - [19/Dec/2025 22:03:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-19 22:03:00,783 - INFO: Accessed route: /static/js/scripts.js
+2025-12-19 22:03:00,793 - INFO: Accessed route: /static/images/logo.png
+2025-12-19 22:03:00,797 - INFO: 127.0.0.1 - - [19/Dec/2025 22:03:00] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-12-19 22:03:00,818 - INFO: 127.0.0.1 - - [19/Dec/2025 22:03:00] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-12-19 22:03:00,860 - INFO: Accessed route: /favicon.ico
+2025-12-19 22:03:01,067 - INFO: 127.0.0.1 - - [19/Dec/2025 22:03:01] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-19 22:03:37,560 - INFO: Accessed route: /upload1
+2025-12-19 22:03:45,454 - INFO: 127.0.0.1 - - [19/Dec/2025 22:03:45] "POST /upload1 HTTP/1.1" 200 -
+2025-12-19 22:04:04,114 - INFO: Accessed route: /
+2025-12-19 22:04:04,116 - INFO: 127.0.0.1 - - [19/Dec/2025 22:04:04] "GET / HTTP/1.1" 200 -
+2025-12-19 22:04:04,160 - INFO: Accessed route: /static/css/style.css
+2025-12-19 22:04:04,162 - INFO: Accessed route: /static/images/logo.png
+2025-12-19 22:04:04,183 - INFO: Accessed route: /static/js/scripts.js
+2025-12-19 22:04:04,183 - INFO: 127.0.0.1 - - [19/Dec/2025 22:04:04] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-12-19 22:04:04,185 - INFO: 127.0.0.1 - - [19/Dec/2025 22:04:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-19 22:04:04,195 - INFO: 127.0.0.1 - - [19/Dec/2025 22:04:04] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-12-19 22:04:04,231 - INFO: Accessed route: /favicon.ico
+2025-12-19 22:04:04,459 - INFO: 127.0.0.1 - - [19/Dec/2025 22:04:04] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-19 22:05:40,489 - INFO: Accessed route: /upload1
+2025-12-19 22:05:48,745 - INFO: 127.0.0.1 - - [19/Dec/2025 22:05:48] "POST /upload1 HTTP/1.1" 200 -
+2025-12-19 22:08:53,009 - INFO: Accessed route: /
+2025-12-19 22:08:53,012 - INFO: 127.0.0.1 - - [19/Dec/2025 22:08:53] "GET / HTTP/1.1" 200 -
+2025-12-19 22:08:53,057 - INFO: Accessed route: /static/css/style.css
+2025-12-19 22:08:53,063 - INFO: 127.0.0.1 - - [19/Dec/2025 22:08:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-19 22:08:53,070 - INFO: Accessed route: /static/images/logo.png
+2025-12-19 22:08:53,079 - INFO: 127.0.0.1 - - [19/Dec/2025 22:08:53] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-12-19 22:08:53,093 - INFO: Accessed route: /static/js/scripts.js
+2025-12-19 22:08:53,102 - INFO: 127.0.0.1 - - [19/Dec/2025 22:08:53] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-12-19 22:08:53,150 - INFO: Accessed route: /favicon.ico
+2025-12-19 22:08:53,411 - INFO: 127.0.0.1 - - [19/Dec/2025 22:08:53] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-19 22:09:17,468 - INFO: Accessed route: /upload1
+2025-12-19 22:09:25,191 - INFO: 127.0.0.1 - - [19/Dec/2025 22:09:25] "POST /upload1 HTTP/1.1" 200 -
+2025-12-19 22:09:27,016 - INFO: Accessed route: /download/_20251219213351.xlsx
+2025-12-19 22:09:27,126 - INFO: 127.0.0.1 - - [19/Dec/2025 22:09:27] "GET /download/_20251219213351.xlsx HTTP/1.1" 200 -
+2025-12-19 22:11:47,054 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-19 22:11:47,055 - INFO: [33mPress CTRL+C to quit[0m
+2025-12-19 22:11:47,090 - INFO:  * Restarting with watchdog (windowsapi)
+2025-12-19 22:11:49,115 - WARNING:  * Debugger is active!
+2025-12-19 22:11:49,133 - INFO:  * Debugger PIN: 413-605-735
+2025-12-19 22:11:50,085 - INFO: Accessed route: /
+2025-12-19 22:11:50,145 - INFO: 127.0.0.1 - - [19/Dec/2025 22:11:50] "GET / HTTP/1.1" 200 -
+2025-12-19 22:11:50,229 - INFO: Accessed route: /
+2025-12-19 22:11:50,235 - INFO: 127.0.0.1 - - [19/Dec/2025 22:11:50] "GET / HTTP/1.1" 200 -
+2025-12-19 22:11:50,320 - INFO: Accessed route: /static/css/style.css
+2025-12-19 22:11:50,323 - INFO: Accessed route: /static/images/logo.png
+2025-12-19 22:11:50,327 - INFO: 127.0.0.1 - - [19/Dec/2025 22:11:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-19 22:11:50,329 - INFO: Accessed route: /static/js/scripts.js
+2025-12-19 22:11:50,335 - INFO: 127.0.0.1 - - [19/Dec/2025 22:11:50] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-12-19 22:11:50,340 - INFO: 127.0.0.1 - - [19/Dec/2025 22:11:50] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-12-19 22:11:50,504 - INFO: Accessed route: /favicon.ico
+2025-12-19 22:11:50,554 - INFO: Accessed route: /static/images/logo.png
+2025-12-19 22:11:50,563 - INFO: Accessed route: /static/js/scripts.js
+2025-12-19 22:11:50,569 - INFO: 127.0.0.1 - - [19/Dec/2025 22:11:50] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-12-19 22:11:50,571 - INFO: Accessed route: /static/css/style.css
+2025-12-19 22:11:50,575 - INFO: 127.0.0.1 - - [19/Dec/2025 22:11:50] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-12-19 22:11:50,581 - INFO: 127.0.0.1 - - [19/Dec/2025 22:11:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-19 22:11:50,880 - INFO: 127.0.0.1 - - [19/Dec/2025 22:11:50] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-19 22:11:50,905 - INFO: Accessed route: /favicon.ico
+2025-12-19 22:11:51,170 - INFO: 127.0.0.1 - - [19/Dec/2025 22:11:51] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-19 22:12:13,563 - INFO: Accessed route: /upload1
+2025-12-19 22:12:23,396 - INFO: 127.0.0.1 - - [19/Dec/2025 22:12:23] "POST /upload1 HTTP/1.1" 200 -
