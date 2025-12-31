@@ -6706,3 +6706,215 @@ TypeError: TLPMarkConverter.create_excel_sheet() takes 5 positional arguments bu
 2025-12-19 22:11:51,170 - INFO: 127.0.0.1 - - [19/Dec/2025 22:11:51] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
 2025-12-19 22:12:13,563 - INFO: Accessed route: /upload1
 2025-12-19 22:12:23,396 - INFO: 127.0.0.1 - - [19/Dec/2025 22:12:23] "POST /upload1 HTTP/1.1" 200 -
+2025-12-31 18:06:41,307 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-31 18:06:41,308 - INFO: [33mPress CTRL+C to quit[0m
+2025-12-31 18:06:41,347 - INFO:  * Restarting with watchdog (windowsapi)
+2025-12-31 18:06:43,381 - WARNING:  * Debugger is active!
+2025-12-31 18:06:43,408 - INFO:  * Debugger PIN: 124-327-691
+2025-12-31 18:06:47,058 - INFO: Accessed route: /
+2025-12-31 18:06:47,103 - INFO: 127.0.0.1 - - [31/Dec/2025 18:06:47] "GET / HTTP/1.1" 200 -
+2025-12-31 18:06:47,258 - INFO: Accessed route: /static/css/style.css
+2025-12-31 18:06:47,266 - INFO: 127.0.0.1 - - [31/Dec/2025 18:06:47] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-12-31 18:06:47,269 - INFO: Accessed route: /static/js/scripts.js
+2025-12-31 18:06:47,287 - INFO: Accessed route: /static/images/logo.png
+2025-12-31 18:06:47,305 - INFO: 127.0.0.1 - - [31/Dec/2025 18:06:47] "GET /static/images/logo.png HTTP/1.1" 200 -
+2025-12-31 18:06:47,629 - INFO: 127.0.0.1 - - [31/Dec/2025 18:06:47] "GET /static/js/scripts.js HTTP/1.1" 200 -
+2025-12-31 18:06:47,672 - INFO: Accessed route: /favicon.ico
+2025-12-31 18:06:47,741 - INFO:  * Detected change in 'C:\\Users\\AMBIKHA\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\app.py', reloading
+2025-12-31 18:06:47,797 - INFO:  * Detected change in 'C:\\Users\\AMBIKHA\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\templating.py', reloading
+2025-12-31 18:06:47,864 - INFO:  * Detected change in 'C:\\Users\\AMBIKHA\\AppData\\Roaming\\Python\\Python313\\site-packages\\jinja2\\environment.py', reloading
+2025-12-31 18:06:47,910 - INFO:  * Detected change in 'C:\\Users\\AMBIKHA\\AppData\\Roaming\\Python\\Python313\\site-packages\\jinja2\\loaders.py', reloading
+2025-12-31 18:06:47,942 - INFO:  * Detected change in 'C:\\Users\\AMBIKHA\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\ctx.py', reloading
+2025-12-31 18:06:48,015 - INFO:  * Detected change in 'C:\\Users\\AMBIKHA\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\routing\\map.py', reloading
+2025-12-31 18:06:48,085 - INFO:  * Detected change in 'C:\\Users\\AMBIKHA\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\routing\\matcher.py', reloading
+2025-12-31 18:06:48,293 - INFO: 127.0.0.1 - - [31/Dec/2025 18:06:48] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-31 18:06:49,074 - INFO:  * Restarting with watchdog (windowsapi)
+2025-12-31 18:06:51,558 - WARNING:  * Debugger is active!
+2025-12-31 18:06:51,576 - INFO:  * Debugger PIN: 124-327-691
+2025-12-31 18:07:21,554 - INFO: Accessed route: /upload1
+2025-12-31 18:07:28,038 - INFO: 127.0.0.1 - - [31/Dec/2025 18:07:28] "POST /upload1 HTTP/1.1" 200 -
+2025-12-31 18:07:55,324 - INFO: Accessed route: /download/_20251231180722.xlsx
+2025-12-31 18:07:55,398 - INFO: 127.0.0.1 - - [31/Dec/2025 18:07:55] "GET /download/_20251231180722.xlsx HTTP/1.1" 200 -
+2025-12-31 18:09:38,634 - INFO: Accessed route: /
+2025-12-31 18:09:38,655 - INFO: 127.0.0.1 - - [31/Dec/2025 18:09:38] "GET / HTTP/1.1" 200 -
+2025-12-31 18:09:38,700 - INFO: Accessed route: /static/css/style.css
+2025-12-31 18:09:38,704 - INFO: 127.0.0.1 - - [31/Dec/2025 18:09:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-31 18:09:38,717 - INFO: Accessed route: /static/js/scripts.js
+2025-12-31 18:09:38,726 - INFO: Accessed route: /static/images/logo.png
+2025-12-31 18:09:38,729 - INFO: 127.0.0.1 - - [31/Dec/2025 18:09:38] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-12-31 18:09:38,733 - INFO: 127.0.0.1 - - [31/Dec/2025 18:09:38] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-12-31 18:09:38,782 - INFO: Accessed route: /favicon.ico
+2025-12-31 18:09:39,036 - INFO: 127.0.0.1 - - [31/Dec/2025 18:09:39] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-31 18:10:47,138 - INFO: Accessed route: /upload1
+2025-12-31 18:10:56,196 - INFO: 127.0.0.1 - - [31/Dec/2025 18:10:56] "POST /upload1 HTTP/1.1" 200 -
+2025-12-31 18:40:58,150 - INFO: Accessed route: /
+2025-12-31 18:40:58,175 - INFO: 127.0.0.1 - - [31/Dec/2025 18:40:58] "GET / HTTP/1.1" 200 -
+2025-12-31 18:40:58,216 - INFO: Accessed route: /static/css/style.css
+2025-12-31 18:40:58,225 - INFO: 127.0.0.1 - - [31/Dec/2025 18:40:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-31 18:40:58,232 - INFO: Accessed route: /static/js/scripts.js
+2025-12-31 18:40:58,240 - INFO: Accessed route: /static/images/logo.png
+2025-12-31 18:40:58,248 - INFO: 127.0.0.1 - - [31/Dec/2025 18:40:58] "GET /static/js/scripts.js HTTP/1.1" 200 -
+2025-12-31 18:40:58,249 - INFO: 127.0.0.1 - - [31/Dec/2025 18:40:58] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-12-31 18:40:58,303 - INFO: Accessed route: /favicon.ico
+2025-12-31 18:40:58,443 - INFO: 127.0.0.1 - - [31/Dec/2025 18:40:58] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-31 18:42:38,694 - INFO: Accessed route: /
+2025-12-31 18:42:38,757 - INFO: 127.0.0.1 - - [31/Dec/2025 18:42:38] "GET / HTTP/1.1" 200 -
+2025-12-31 18:42:38,777 - INFO: Accessed route: /static/css/style.css
+2025-12-31 18:42:38,778 - INFO: Accessed route: /static/js/scripts.js
+2025-12-31 18:42:38,781 - INFO: 127.0.0.1 - - [31/Dec/2025 18:42:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-31 18:42:38,783 - INFO: Accessed route: /static/images/logo.png
+2025-12-31 18:42:38,789 - INFO: 127.0.0.1 - - [31/Dec/2025 18:42:38] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-12-31 18:42:38,791 - INFO: 127.0.0.1 - - [31/Dec/2025 18:42:38] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-12-31 18:42:38,838 - INFO: Accessed route: /favicon.ico
+2025-12-31 18:42:38,932 - INFO: 127.0.0.1 - - [31/Dec/2025 18:42:38] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-31 18:44:51,286 - INFO: Accessed route: /
+2025-12-31 18:44:51,289 - INFO: 127.0.0.1 - - [31/Dec/2025 18:44:51] "GET / HTTP/1.1" 200 -
+2025-12-31 18:44:51,320 - INFO: Accessed route: /static/css/style.css
+2025-12-31 18:44:51,324 - INFO: 127.0.0.1 - - [31/Dec/2025 18:44:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-31 18:44:51,345 - INFO: Accessed route: /static/js/scripts.js
+2025-12-31 18:44:51,350 - INFO: Accessed route: /static/images/logo.png
+2025-12-31 18:44:51,352 - INFO: 127.0.0.1 - - [31/Dec/2025 18:44:51] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-12-31 18:44:51,359 - INFO: 127.0.0.1 - - [31/Dec/2025 18:44:51] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-12-31 18:44:51,395 - INFO: Accessed route: /favicon.ico
+2025-12-31 18:44:51,527 - INFO: 127.0.0.1 - - [31/Dec/2025 18:44:51] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-31 18:45:44,076 - INFO: Accessed route: /
+2025-12-31 18:45:44,077 - INFO: 127.0.0.1 - - [31/Dec/2025 18:45:44] "GET / HTTP/1.1" 200 -
+2025-12-31 18:45:44,101 - INFO: Accessed route: /static/css/style.css
+2025-12-31 18:45:44,103 - INFO: 127.0.0.1 - - [31/Dec/2025 18:45:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-31 18:45:44,114 - INFO: Accessed route: /static/js/scripts.js
+2025-12-31 18:45:44,118 - INFO: Accessed route: /static/images/logo.png
+2025-12-31 18:45:44,122 - INFO: 127.0.0.1 - - [31/Dec/2025 18:45:44] "GET /static/js/scripts.js HTTP/1.1" 200 -
+2025-12-31 18:45:44,129 - INFO: 127.0.0.1 - - [31/Dec/2025 18:45:44] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-12-31 18:45:44,167 - INFO: Accessed route: /favicon.ico
+2025-12-31 18:45:44,292 - INFO: 127.0.0.1 - - [31/Dec/2025 18:45:44] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-31 18:51:31,414 - INFO: Accessed route: /
+2025-12-31 18:51:31,445 - INFO: 127.0.0.1 - - [31/Dec/2025 18:51:31] "GET / HTTP/1.1" 200 -
+2025-12-31 18:51:31,473 - INFO: Accessed route: /static/css/style.css
+2025-12-31 18:51:31,476 - INFO: 127.0.0.1 - - [31/Dec/2025 18:51:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-31 18:51:31,501 - INFO: Accessed route: /static/js/scripts.js
+2025-12-31 18:51:31,507 - INFO: 127.0.0.1 - - [31/Dec/2025 18:51:31] "GET /static/js/scripts.js HTTP/1.1" 200 -
+2025-12-31 18:51:31,510 - INFO: Accessed route: /static/images/logo.png
+2025-12-31 18:51:31,517 - INFO: 127.0.0.1 - - [31/Dec/2025 18:51:31] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-12-31 18:51:31,564 - INFO: Accessed route: /favicon.ico
+2025-12-31 18:51:31,658 - INFO: 127.0.0.1 - - [31/Dec/2025 18:51:31] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-31 18:53:03,229 - INFO: Accessed route: /
+2025-12-31 18:53:03,231 - INFO: 127.0.0.1 - - [31/Dec/2025 18:53:03] "GET / HTTP/1.1" 200 -
+2025-12-31 18:53:03,260 - INFO: Accessed route: /static/css/style.css
+2025-12-31 18:53:03,263 - INFO: 127.0.0.1 - - [31/Dec/2025 18:53:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-31 18:53:03,281 - INFO: Accessed route: /static/js/scripts.js
+2025-12-31 18:53:03,284 - INFO: Accessed route: /static/images/logo.png
+2025-12-31 18:53:03,287 - INFO: 127.0.0.1 - - [31/Dec/2025 18:53:03] "GET /static/js/scripts.js HTTP/1.1" 200 -
+2025-12-31 18:53:03,288 - INFO: 127.0.0.1 - - [31/Dec/2025 18:53:03] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-12-31 18:53:03,332 - INFO: Accessed route: /favicon.ico
+2025-12-31 18:53:03,432 - INFO: 127.0.0.1 - - [31/Dec/2025 18:53:03] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-31 18:53:20,102 - INFO: Accessed route: /upload1
+2025-12-31 18:53:22,796 - INFO:  * Detected change in 'C:\\Users\\AMBIKHA\\AppData\\Roaming\\Python\\Python313\\site-packages\\openpyxl\\worksheet\\worksheet.py', reloading
+2025-12-31 18:53:22,838 - INFO:  * Detected change in 'C:\\Users\\AMBIKHA\\AppData\\Roaming\\Python\\Python313\\site-packages\\openpyxl\\worksheet\\cell_range.py', reloading
+2025-12-31 18:53:22,895 - INFO: 127.0.0.1 - - [31/Dec/2025 18:53:22] "[35m[1mPOST /upload1 HTTP/1.1[0m" 500 -
+2025-12-31 18:53:24,569 - INFO:  * Restarting with watchdog (windowsapi)
+2025-12-31 18:53:28,195 - WARNING:  * Debugger is active!
+2025-12-31 18:53:28,232 - INFO:  * Debugger PIN: 124-327-691
+2025-12-31 18:53:29,688 - INFO: Accessed route: /
+2025-12-31 18:53:29,705 - INFO: 127.0.0.1 - - [31/Dec/2025 18:53:29] "GET / HTTP/1.1" 200 -
+2025-12-31 18:53:29,747 - INFO: Accessed route: /static/css/style.css
+2025-12-31 18:53:29,749 - INFO: Accessed route: /static/js/scripts.js
+2025-12-31 18:53:29,751 - INFO: 127.0.0.1 - - [31/Dec/2025 18:53:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-31 18:53:29,752 - INFO: Accessed route: /static/images/logo.png
+2025-12-31 18:53:29,754 - INFO: 127.0.0.1 - - [31/Dec/2025 18:53:29] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-12-31 18:53:29,760 - INFO: 127.0.0.1 - - [31/Dec/2025 18:53:29] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-12-31 18:53:29,784 - INFO: Accessed route: /favicon.ico
+2025-12-31 18:53:29,924 - INFO: 127.0.0.1 - - [31/Dec/2025 18:53:29] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-31 18:53:52,661 - INFO: Accessed route: /upload1
+2025-12-31 18:53:56,291 - INFO: 127.0.0.1 - - [31/Dec/2025 18:53:56] "POST /upload1 HTTP/1.1" 200 -
+2025-12-31 18:56:00,705 - INFO: Accessed route: /
+2025-12-31 18:56:00,707 - INFO: 127.0.0.1 - - [31/Dec/2025 18:56:00] "GET / HTTP/1.1" 200 -
+2025-12-31 18:56:00,736 - INFO: Accessed route: /static/css/style.css
+2025-12-31 18:56:00,738 - INFO: Accessed route: /static/js/scripts.js
+2025-12-31 18:56:00,743 - INFO: Accessed route: /static/images/logo.png
+2025-12-31 18:56:00,744 - INFO: 127.0.0.1 - - [31/Dec/2025 18:56:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-31 18:56:00,749 - INFO: 127.0.0.1 - - [31/Dec/2025 18:56:00] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-12-31 18:56:00,753 - INFO: 127.0.0.1 - - [31/Dec/2025 18:56:00] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-12-31 18:56:00,793 - INFO: Accessed route: /favicon.ico
+2025-12-31 18:56:00,916 - INFO: 127.0.0.1 - - [31/Dec/2025 18:56:00] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-31 18:56:23,382 - INFO: Accessed route: /upload1
+2025-12-31 18:56:27,066 - INFO: 127.0.0.1 - - [31/Dec/2025 18:56:27] "POST /upload1 HTTP/1.1" 200 -
+2025-12-31 18:56:28,867 - INFO: Accessed route: /download/_20251231185353.xlsx
+2025-12-31 18:56:28,935 - INFO: 127.0.0.1 - - [31/Dec/2025 18:56:28] "GET /download/_20251231185353.xlsx HTTP/1.1" 200 -
+2025-12-31 19:09:06,178 - INFO: Accessed route: /
+2025-12-31 19:09:06,197 - INFO: 127.0.0.1 - - [31/Dec/2025 19:09:06] "GET / HTTP/1.1" 200 -
+2025-12-31 19:09:06,245 - INFO: Accessed route: /static/css/style.css
+2025-12-31 19:09:06,258 - INFO: 127.0.0.1 - - [31/Dec/2025 19:09:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-31 19:09:06,261 - INFO: Accessed route: /static/js/scripts.js
+2025-12-31 19:09:06,265 - INFO: Accessed route: /static/images/logo.png
+2025-12-31 19:09:06,274 - INFO: 127.0.0.1 - - [31/Dec/2025 19:09:06] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2025-12-31 19:09:06,279 - INFO: 127.0.0.1 - - [31/Dec/2025 19:09:06] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-12-31 19:09:06,335 - INFO: Accessed route: /favicon.ico
+2025-12-31 19:09:06,502 - INFO: 127.0.0.1 - - [31/Dec/2025 19:09:06] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-31 19:09:38,915 - INFO: Accessed route: /upload2
+2025-12-31 19:09:38,937 - INFO: Excel file received: _20251231185353.xlsx
+2025-12-31 19:09:38,949 - INFO: Excel file saved: ./uploads\20251231185353.xlsx
+2025-12-31 19:09:39,138 - INFO: Found Conducted Max value: 15.0 in TLP5-MTech-ADSA-LLJI.pdf
+2025-12-31 19:09:39,140 - INFO: Successfully processed TLP5-MTech-ADSA-LLJI.pdf: found 12 entries
+2025-12-31 19:09:39,141 - INFO: Total unique entries found across all files: 12
+2025-12-31 19:09:39,142 - INFO: Added 15.0 from TLP5-MTech-ADSA-LLJI.pdf to total
+2025-12-31 19:09:39,142 - INFO: Total Conducted Max across all files: 15.0
+2025-12-31 19:09:41,057 - INFO: Creating Excel sheet with append_file_path: ./uploads\20251231185353.xlsx
+2025-12-31 19:09:44,428 - INFO: Excel sheet created: ./download\20251231185353.xlsx
+2025-12-31 19:09:44,433 - INFO: 127.0.0.1 - - [31/Dec/2025 19:09:44] "POST /upload2 HTTP/1.1" 200 -
+2025-12-31 19:21:23,989 - INFO: Accessed route: /download/20251231185353.xlsx
+2025-12-31 19:21:24,052 - INFO: 127.0.0.1 - - [31/Dec/2025 19:21:24] "GET /download/20251231185353.xlsx HTTP/1.1" 200 -
+2025-12-31 19:49:12,015 - INFO: Accessed route: /
+2025-12-31 19:49:12,138 - INFO: 127.0.0.1 - - [31/Dec/2025 19:49:12] "GET / HTTP/1.1" 200 -
+2025-12-31 19:49:12,214 - INFO: Accessed route: /static/css/style.css
+2025-12-31 19:49:12,220 - INFO: Accessed route: /static/images/logo.png
+2025-12-31 19:49:12,231 - INFO: 127.0.0.1 - - [31/Dec/2025 19:49:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-31 19:49:12,234 - INFO: Accessed route: /static/js/scripts.js
+2025-12-31 19:49:12,236 - INFO: 127.0.0.1 - - [31/Dec/2025 19:49:12] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-12-31 19:49:12,240 - INFO: 127.0.0.1 - - [31/Dec/2025 19:49:12] "GET /static/js/scripts.js HTTP/1.1" 200 -
+2025-12-31 19:49:12,300 - INFO: Accessed route: /favicon.ico
+2025-12-31 19:49:12,437 - INFO: 127.0.0.1 - - [31/Dec/2025 19:49:12] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-31 19:49:42,134 - INFO: Accessed route: /upload1
+2025-12-31 19:49:47,395 - INFO: 127.0.0.1 - - [31/Dec/2025 19:49:47] "POST /upload1 HTTP/1.1" 200 -
+2025-12-31 19:50:22,637 - INFO: Accessed route: /upload2
+2025-12-31 19:50:22,645 - INFO: Excel file received: _20251231185353.xlsx
+2025-12-31 19:50:22,654 - INFO: Excel file saved: ./uploads\20251231185353.xlsx
+2025-12-31 19:50:22,766 - INFO: Found Conducted Max value: 15.0 in TLP5-MTech-ADSA-LLJI.pdf
+2025-12-31 19:50:22,768 - INFO: Successfully processed TLP5-MTech-ADSA-LLJI.pdf: found 12 entries
+2025-12-31 19:50:22,769 - INFO: Total unique entries found across all files: 12
+2025-12-31 19:50:22,769 - INFO: Added 15.0 from TLP5-MTech-ADSA-LLJI.pdf to total
+2025-12-31 19:50:22,770 - INFO: Total Conducted Max across all files: 15.0
+2025-12-31 19:50:24,396 - INFO: Creating Excel sheet with append_file_path: ./uploads\20251231185353.xlsx
+2025-12-31 19:50:27,982 - INFO: Excel sheet created: ./download\20251231185353.xlsx
+2025-12-31 19:50:27,987 - INFO: 127.0.0.1 - - [31/Dec/2025 19:50:27] "POST /upload2 HTTP/1.1" 200 -
+2025-12-31 19:51:34,199 - INFO: Accessed route: /
+2025-12-31 19:51:34,201 - INFO: 127.0.0.1 - - [31/Dec/2025 19:51:34] "GET / HTTP/1.1" 200 -
+2025-12-31 19:51:34,238 - INFO: Accessed route: /static/css/style.css
+2025-12-31 19:51:34,242 - INFO: Accessed route: /static/images/logo.png
+2025-12-31 19:51:34,248 - INFO: 127.0.0.1 - - [31/Dec/2025 19:51:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-31 19:51:34,251 - INFO: Accessed route: /static/js/scripts.js
+2025-12-31 19:51:34,257 - INFO: 127.0.0.1 - - [31/Dec/2025 19:51:34] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-12-31 19:51:34,269 - INFO: 127.0.0.1 - - [31/Dec/2025 19:51:34] "GET /static/js/scripts.js HTTP/1.1" 200 -
+2025-12-31 19:51:34,303 - INFO: Accessed route: /favicon.ico
+2025-12-31 19:51:34,415 - INFO: 127.0.0.1 - - [31/Dec/2025 19:51:34] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-12-31 19:52:08,700 - INFO: Accessed route: /upload2
+2025-12-31 19:52:08,705 - INFO: Excel file received: _20251231185353.xlsx
+2025-12-31 19:52:08,716 - INFO: Excel file saved: ./uploads\20251231185353.xlsx
+2025-12-31 19:52:08,830 - INFO: Found Conducted Max value: 15.0 in TLP5-MTech-ADSA-LLJI.pdf
+2025-12-31 19:52:08,830 - INFO: Successfully processed TLP5-MTech-ADSA-LLJI.pdf: found 12 entries
+2025-12-31 19:52:08,831 - INFO: Total unique entries found across all files: 12
+2025-12-31 19:52:08,831 - INFO: Added 15.0 from TLP5-MTech-ADSA-LLJI.pdf to total
+2025-12-31 19:52:08,832 - INFO: Total Conducted Max across all files: 15.0
+2025-12-31 19:52:10,624 - INFO: Creating Excel sheet with append_file_path: ./uploads\20251231185353.xlsx
+2025-12-31 19:52:13,929 - INFO: Excel sheet created: ./download\20251231185353.xlsx
+2025-12-31 19:52:13,935 - INFO: 127.0.0.1 - - [31/Dec/2025 19:52:13] "POST /upload2 HTTP/1.1" 200 -
+2025-12-31 19:53:20,081 - INFO: Accessed route: /
+2025-12-31 19:53:20,095 - INFO: 127.0.0.1 - - [31/Dec/2025 19:53:20] "GET / HTTP/1.1" 200 -
+2025-12-31 19:53:20,129 - INFO: Accessed route: /static/css/style.css
+2025-12-31 19:53:20,134 - INFO: 127.0.0.1 - - [31/Dec/2025 19:53:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-31 19:53:20,143 - INFO: Accessed route: /static/images/logo.png
+2025-12-31 19:53:20,147 - INFO: Accessed route: /static/js/scripts.js
+2025-12-31 19:53:20,153 - INFO: 127.0.0.1 - - [31/Dec/2025 19:53:20] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-12-31 19:53:20,155 - INFO: 127.0.0.1 - - [31/Dec/2025 19:53:20] "GET /static/js/scripts.js HTTP/1.1" 200 -
+2025-12-31 19:53:20,198 - INFO: Accessed route: /favicon.ico
+2025-12-31 19:53:20,324 - INFO: 127.0.0.1 - - [31/Dec/2025 19:53:20] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -

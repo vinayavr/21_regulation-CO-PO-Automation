@@ -1,3 +1,98 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Outcome</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="header">
+    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo">
+  </div>
+  
+  <div class="topic">
+    <h1>Department of Computer Science and Engineering</h1>
+  </div>
+  
+  <div class="container">
+    <div class="section-header ct-header">
+      <h2>CT Question Paper Template Generator</h2>
+    </div>
+    
+    <h3>Upload CT Question Papers</h3>
+    <input type="file" id="fileInput1" accept=".pdf" multiple hidden>
+    <button id="uploadButton1">Select PDFs</button>
+    <div id="fileName1"></div>
+    <br>
+    <div class="button-group">
+      <button id="uploadSyllabusButton">Upload Syllabus</button>
+    </div>
+    <button id="generateButton1" disabled>Generate Excel for CT</button>
+    <br>
+    <div id="ctMessage" style="margin: 10px 0; padding: 10px; display: none; font-size: 16px; font-weight: bold; text-align: center; border-radius: 5px;"></div>
+    <div class="button-group">
+      <button id="downloadButton1" style="display: none;">Download CT Excel Template</button>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="section-header tlp-header">
+      <h2>CO-PO Allocation Calculator</h2>
+    </div>
+    
+    <h3>Upload Filled Excel Sheet</h3>
+    <input type="file" id="fileInput3" name="co_filled_excel" accept=".xlsx, .xls" hidden>
+    <button id="uploadButton3">Select Excel File</button>
+    <div id="fileName3"></div>
+    <br><br>
+    
+    <h3>Upload TLP</h3>
+    <input type="file" id="fileInput2" accept=".pdf" multiple hidden>
+    <button id="uploadButton2">Select PDFs</button>
+    <div id="fileName2"></div>
+    <br>
+    
+    <h3>Enter CO Splits</h3>
+    <div id="coInputs" class="co-inputs">
+      <div>
+      <label>CO1:</label> <input type="number" id="co1" min="0" max="100" required>
+      <label>CO2:</label> <input type="number" id="co2" min="0" max="100" required>
+      <label>CO3:</label> <input type="number" id="co3" min="0" max="100" required>
+    </div>
+    <div>
+      <label>CO4:</label> <input type="number" id="co4" min="0" max="100" required>
+      <label>CO5:</label> <input type="number" id="co5" min="0" max="100" required>
+      <label>CO6:</label> <input type="number" id="co6" min="0" max="100" required>
+    </div>
+  </div>
+    
+    <button id="generateButton2" disabled>Generate Excel with TLP</button>
+    <br><br>
+    
+    <div class="button-group">
+      <button id="downloadButton2" style="display: none;">Download Excel with TLP</button>
+    </div>
+    
+    <div id="message"></div>
+  </div>
+  
+  <div class="Note">
+    <h3>Note</h3>
+    <ul>
+      <li>Ensure that the uploaded files are in <b>PDF format</b>.</li>
+      <li>For Excel upload, ensure the file is in <b>.xlsx or .xls format</b>.</li>
+      <li>Make sure that the uploaded file is in proper format (proper alignment of CO).</li>
+      <li>Make sure to close the excel sheet generated from the previous uploads.</li>
+      <li>Do not refresh the page while the upload is in progress.</li>
+    </ul>
+  </div>
+  
+  <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,14 +121,20 @@
     <button id="uploadButton1">Select PDFs</button>
     <div id="fileName1"></div>
     <br>
+    
+    <h3>Upload Syllabus</h3>
+    <input type="file" id="syllabusFileInput" accept=".pdf,.doc,.docx,.txt" hidden>
+    <div class="button-group">
+      <button id="uploadSyllabusButton">Upload Syllabus</button>
+    </div>
+    <div id="syllabusFileName"></div>
+    <br>
+    
     <button id="generateButton1" disabled>Generate Excel for CT</button>
     <br>
     <div id="ctMessage" style="margin: 10px 0; padding: 10px; display: none; font-size: 16px; font-weight: bold; text-align: center; border-radius: 5px;"></div>
     <div class="button-group">
       <button id="downloadButton1" style="display: none;">Download CT Excel Template</button>
-    </div>
-    <div class="button-group">
-      <button id="uploadSyllabusButton">Upload Syllabus</button>
     </div>
   </div>
   
@@ -84,9 +185,11 @@
     <ul>
       <li>Ensure that the uploaded files are in <b>PDF format</b>.</li>
       <li>For Excel upload, ensure the file is in <b>.xlsx or .xls format</b>.</li>
+      <li>For Syllabus upload, ensure the file is in <b>PDF, DOC, DOCX, or TXT format</b>.</li>
       <li>Make sure that the uploaded file is in proper format (proper alignment of CO).</li>
       <li>Make sure to close the excel sheet generated from the previous uploads.</li>
       <li>Do not refresh the page while the upload is in progress.</li>
+      <li>Both CT Question Papers and Syllabus must be uploaded before generating the Excel template.</li>
     </ul>
   </div>
   
