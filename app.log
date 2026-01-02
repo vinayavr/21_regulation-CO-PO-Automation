@@ -6918,3 +6918,43 @@ TypeError: TLPMarkConverter.create_excel_sheet() takes 5 positional arguments bu
 2025-12-31 19:53:20,155 - INFO: 127.0.0.1 - - [31/Dec/2025 19:53:20] "GET /static/js/scripts.js HTTP/1.1" 200 -
 2025-12-31 19:53:20,198 - INFO: Accessed route: /favicon.ico
 2025-12-31 19:53:20,324 - INFO: 127.0.0.1 - - [31/Dec/2025 19:53:20] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-01-02 12:32:36,961 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-01-02 12:32:36,964 - INFO: [33mPress CTRL+C to quit[0m
+2026-01-02 12:32:37,014 - INFO:  * Restarting with watchdog (windowsapi)
+2026-01-02 12:32:39,303 - WARNING:  * Debugger is active!
+2026-01-02 12:32:39,319 - INFO:  * Debugger PIN: 124-327-691
+2026-01-02 12:32:40,859 - INFO: Accessed route: /
+2026-01-02 12:32:40,973 - INFO: 127.0.0.1 - - [02/Jan/2026 12:32:40] "GET / HTTP/1.1" 200 -
+2026-01-02 12:32:41,107 - INFO: Accessed route: /static/css/style.css
+2026-01-02 12:32:41,115 - INFO: 127.0.0.1 - - [02/Jan/2026 12:32:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-01-02 12:32:41,128 - INFO: Accessed route: /static/js/scripts.js
+2026-01-02 12:32:41,136 - INFO: Accessed route: /static/images/logo.png
+2026-01-02 12:32:41,147 - INFO: 127.0.0.1 - - [02/Jan/2026 12:32:41] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2026-01-02 12:32:41,148 - INFO: 127.0.0.1 - - [02/Jan/2026 12:32:41] "GET /static/js/scripts.js HTTP/1.1" 200 -
+2026-01-02 12:32:41,295 - INFO: Accessed route: /favicon.ico
+2026-01-02 12:32:41,517 - INFO:  * Detected change in 'C:\\Users\\AMBIKHA\\AppData\\Roaming\\Python\\Python313\\site-packages\\jinja2\\loaders.py', reloading
+2026-01-02 12:32:41,568 - INFO:  * Detected change in 'C:\\Users\\AMBIKHA\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\ctx.py', reloading
+2026-01-02 12:32:41,702 - INFO:  * Detected change in 'C:\\Users\\AMBIKHA\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\routing\\map.py', reloading
+2026-01-02 12:32:41,758 - INFO:  * Detected change in 'C:\\Users\\AMBIKHA\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\routing\\matcher.py', reloading
+2026-01-02 12:32:41,963 - INFO: 127.0.0.1 - - [02/Jan/2026 12:32:41] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-01-02 12:32:42,992 - INFO:  * Restarting with watchdog (windowsapi)
+2026-01-02 12:32:46,034 - WARNING:  * Debugger is active!
+2026-01-02 12:32:46,082 - INFO:  * Debugger PIN: 124-327-691
+2026-01-02 12:33:58,358 - INFO: Accessed route: /upload1
+2026-01-02 12:34:06,367 - INFO: 127.0.0.1 - - [02/Jan/2026 12:34:06] "POST /upload1 HTTP/1.1" 200 -
+2026-01-02 12:34:47,668 - INFO: Accessed route: /upload2
+2026-01-02 12:34:47,688 - INFO: Excel file received: _20251231185353.xlsx
+2026-01-02 12:34:47,708 - INFO: Excel file saved: ./uploads\20251231185353.xlsx
+2026-01-02 12:34:47,912 - INFO: Found Conducted Max value: 15.0 in TLP5-MTech-ADSA-LLJI.pdf
+2026-01-02 12:34:47,913 - INFO: Successfully processed TLP5-MTech-ADSA-LLJI.pdf: found 12 entries
+2026-01-02 12:34:47,914 - INFO: Total unique entries found across all files: 12
+2026-01-02 12:34:47,915 - INFO: Added 15.0 from TLP5-MTech-ADSA-LLJI.pdf to total
+2026-01-02 12:34:47,916 - INFO: Total Conducted Max across all files: 15.0
+2026-01-02 12:34:50,799 - INFO: Creating Excel sheet with append_file_path: ./uploads\20251231185353.xlsx
+2026-01-02 12:34:56,669 - INFO: Excel sheet created: ./download\20251231185353.xlsx
+2026-01-02 12:34:56,678 - INFO: 127.0.0.1 - - [02/Jan/2026 12:34:56] "POST /upload2 HTTP/1.1" 200 -
+2026-01-02 12:34:59,501 - INFO: Accessed route: /download/_20260102123359.xlsx
+2026-01-02 12:34:59,577 - INFO: 127.0.0.1 - - [02/Jan/2026 12:34:59] "GET /download/_20260102123359.xlsx HTTP/1.1" 200 -
+2026-01-02 12:35:02,284 - INFO: Accessed route: /download/20251231185353.xlsx
+2026-01-02 12:35:02,358 - INFO: 127.0.0.1 - - [02/Jan/2026 12:35:02] "GET /download/20251231185353.xlsx HTTP/1.1" 200 -
