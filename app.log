@@ -6706,3 +6706,132 @@ TypeError: TLPMarkConverter.create_excel_sheet() takes 5 positional arguments bu
 2025-12-19 22:11:51,170 - INFO: 127.0.0.1 - - [19/Dec/2025 22:11:51] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
 2025-12-19 22:12:13,563 - INFO: Accessed route: /upload1
 2025-12-19 22:12:23,396 - INFO: 127.0.0.1 - - [19/Dec/2025 22:12:23] "POST /upload1 HTTP/1.1" 200 -
+2026-05-24 22:47:32,233 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-05-24 22:47:32,233 - INFO: [33mPress CTRL+C to quit[0m
+2026-05-24 22:47:32,235 - INFO:  * Restarting with stat
+2026-05-24 22:47:34,374 - WARNING:  * Debugger is active!
+2026-05-24 22:47:34,381 - INFO:  * Debugger PIN: 515-422-542
+2026-05-24 22:47:36,382 - INFO: Accessed route: /
+2026-05-24 22:47:36,437 - INFO: 127.0.0.1 - - [24/May/2026 22:47:36] "GET / HTTP/1.1" 200 -
+2026-05-24 22:47:36,515 - INFO: Accessed route: /static/css/style.css
+2026-05-24 22:47:36,520 - INFO: Accessed route: /static/js/scripts.js
+2026-05-24 22:47:36,521 - INFO: 127.0.0.1 - - [24/May/2026 22:47:36] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-05-24 22:47:36,526 - INFO: Accessed route: /static/images/logo.png
+2026-05-24 22:47:36,539 - INFO: 127.0.0.1 - - [24/May/2026 22:47:36] "GET /static/images/logo.png HTTP/1.1" 200 -
+2026-05-24 22:47:36,584 - INFO: 127.0.0.1 - - [24/May/2026 22:47:36] "GET /static/js/scripts.js HTTP/1.1" 200 -
+2026-05-24 22:47:36,645 - INFO: Accessed route: /favicon.ico
+2026-05-24 22:47:36,665 - INFO: 127.0.0.1 - - [24/May/2026 22:47:36] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-05-24 22:49:17,583 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-05-24 22:49:17,583 - INFO: [33mPress CTRL+C to quit[0m
+2026-05-24 22:49:17,585 - INFO:  * Restarting with stat
+2026-05-24 22:49:19,673 - WARNING:  * Debugger is active!
+2026-05-24 22:49:19,678 - INFO:  * Debugger PIN: 515-422-542
+2026-05-24 22:49:28,026 - INFO: Accessed route: /
+2026-05-24 22:49:28,040 - INFO: 127.0.0.1 - - [24/May/2026 22:49:28] "GET / HTTP/1.1" 200 -
+2026-05-24 22:49:28,241 - INFO: Accessed route: /static/css/style.css
+2026-05-24 22:49:28,245 - INFO: Accessed route: /static/images/logo.png
+2026-05-24 22:49:28,258 - INFO: Accessed route: /static/js/scripts.js
+2026-05-24 22:49:28,286 - INFO: 127.0.0.1 - - [24/May/2026 22:49:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-24 22:49:28,294 - INFO: 127.0.0.1 - - [24/May/2026 22:49:28] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2026-05-24 22:49:28,411 - INFO: 127.0.0.1 - - [24/May/2026 22:49:28] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2026-05-24 22:49:44,114 - INFO: Accessed route: /
+2026-05-24 22:49:44,121 - INFO: 127.0.0.1 - - [24/May/2026 22:49:44] "GET / HTTP/1.1" 200 -
+2026-05-24 22:49:44,154 - INFO: Accessed route: /static/css/style.css
+2026-05-24 22:49:44,157 - INFO: 127.0.0.1 - - [24/May/2026 22:49:44] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-05-24 22:49:44,166 - INFO: Accessed route: /static/images/logo.png
+2026-05-24 22:49:44,173 - INFO: 127.0.0.1 - - [24/May/2026 22:49:44] "GET /static/images/logo.png HTTP/1.1" 200 -
+2026-05-24 22:49:44,175 - INFO: Accessed route: /static/js/scripts.js
+2026-05-24 22:49:44,181 - INFO: 127.0.0.1 - - [24/May/2026 22:49:44] "GET /static/js/scripts.js HTTP/1.1" 200 -
+2026-05-24 22:49:44,220 - INFO: Accessed route: /favicon.ico
+2026-05-24 22:49:44,264 - INFO: 127.0.0.1 - - [24/May/2026 22:49:44] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-05-24 22:50:31,082 - INFO: Accessed route: /upload1
+2026-05-24 22:50:40,340 - INFO: 127.0.0.1 - - [24/May/2026 22:50:40] "POST /upload1 HTTP/1.1" 200 -
+2026-05-24 22:50:43,099 - INFO: Accessed route: /download/_20260524225032.xlsx
+2026-05-24 22:50:43,138 - INFO: 127.0.0.1 - - [24/May/2026 22:50:43] "GET /download/_20260524225032.xlsx HTTP/1.1" 200 -
+2026-05-24 22:51:25,591 - INFO: Accessed route: /upload2
+2026-05-24 22:51:25,602 - INFO: Excel file received: Template_With_Data.xlsx
+2026-05-24 22:51:25,618 - INFO: Excel file saved: ./uploads\Template_With_Data.xlsx
+2026-05-24 22:51:26,105 - INFO: Found Conducted Max value: 10.0 in TLP5-AI-CSE-B-LLTI.pdf
+2026-05-24 22:51:26,107 - INFO: Successfully processed TLP5-AI-CSE-B-LLTI.pdf: found 58 entries
+2026-05-24 22:51:26,109 - INFO: Total unique entries found across all files: 58
+2026-05-24 22:51:26,112 - INFO: Added 10.0 from TLP5-AI-CSE-B-LLTI.pdf to total
+2026-05-24 22:51:26,115 - INFO: Total Conducted Max across all files: 10.0
+2026-05-24 22:51:29,152 - INFO: Creating Excel sheet with append_file_path: ./uploads\Template_With_Data.xlsx
+2026-05-24 22:51:34,513 - INFO: Excel sheet created: ./download\Template_With_Data.xlsx
+2026-05-24 22:51:34,518 - INFO: 127.0.0.1 - - [24/May/2026 22:51:34] "POST /upload2 HTTP/1.1" 200 -
+2026-05-24 22:51:40,837 - INFO: Accessed route: /download/Template_With_Data.xlsx
+2026-05-24 22:51:40,872 - INFO: 127.0.0.1 - - [24/May/2026 22:51:40] "GET /download/Template_With_Data.xlsx HTTP/1.1" 200 -
+2026-05-24 22:51:54,888 - INFO: Accessed route: /upload1
+2026-05-24 22:52:02,134 - INFO: 127.0.0.1 - - [24/May/2026 22:52:02] "POST /upload1 HTTP/1.1" 200 -
+2026-05-24 22:52:03,553 - INFO: Accessed route: /download/_20260524225032.xlsx
+2026-05-24 22:52:03,594 - INFO: 127.0.0.1 - - [24/May/2026 22:52:03] "GET /download/_20260524225032.xlsx HTTP/1.1" 200 -
+2026-05-24 22:56:44,787 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-05-24 22:56:44,788 - INFO: [33mPress CTRL+C to quit[0m
+2026-05-24 22:56:44,789 - INFO:  * Restarting with stat
+2026-05-24 22:56:46,486 - WARNING:  * Debugger is active!
+2026-05-24 22:56:46,490 - INFO:  * Debugger PIN: 515-422-542
+2026-05-24 22:56:53,759 - INFO: Accessed route: /
+2026-05-24 22:56:53,818 - INFO: 127.0.0.1 - - [24/May/2026 22:56:53] "GET / HTTP/1.1" 200 -
+2026-05-24 22:56:53,858 - INFO: Accessed route: /static/css/style.css
+2026-05-24 22:56:53,859 - INFO: 127.0.0.1 - - [24/May/2026 22:56:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-24 22:56:53,862 - INFO: Accessed route: /static/images/logo.png
+2026-05-24 22:56:53,872 - INFO: 127.0.0.1 - - [24/May/2026 22:56:53] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2026-05-24 22:56:53,873 - INFO: Accessed route: /static/js/scripts.js
+2026-05-24 22:56:53,881 - INFO: 127.0.0.1 - - [24/May/2026 22:56:53] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2026-05-24 22:57:03,499 - INFO: Accessed route: /
+2026-05-24 22:57:03,502 - INFO: 127.0.0.1 - - [24/May/2026 22:57:03] "GET / HTTP/1.1" 200 -
+2026-05-24 22:57:03,542 - INFO: Accessed route: /static/css/style.css
+2026-05-24 22:57:03,548 - INFO: 127.0.0.1 - - [24/May/2026 22:57:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-24 22:57:03,549 - INFO: Accessed route: /static/images/logo.png
+2026-05-24 22:57:03,561 - INFO: Accessed route: /static/js/scripts.js
+2026-05-24 22:57:03,562 - INFO: 127.0.0.1 - - [24/May/2026 22:57:03] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2026-05-24 22:57:03,580 - INFO: 127.0.0.1 - - [24/May/2026 22:57:03] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2026-05-24 22:57:03,615 - INFO: Accessed route: /favicon.ico
+2026-05-24 22:57:03,949 - INFO: 127.0.0.1 - - [24/May/2026 22:57:03] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-05-24 23:04:27,469 - INFO: Accessed route: /
+2026-05-24 23:04:27,475 - INFO: 127.0.0.1 - - [24/May/2026 23:04:27] "GET / HTTP/1.1" 200 -
+2026-05-24 23:04:27,523 - INFO: Accessed route: /static/css/style.css
+2026-05-24 23:04:27,531 - INFO: 127.0.0.1 - - [24/May/2026 23:04:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-24 23:04:27,537 - INFO: Accessed route: /static/images/logo.png
+2026-05-24 23:04:27,545 - INFO: Accessed route: /static/js/scripts.js
+2026-05-24 23:04:27,567 - INFO: 127.0.0.1 - - [24/May/2026 23:04:27] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2026-05-24 23:04:27,568 - INFO: 127.0.0.1 - - [24/May/2026 23:04:27] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2026-05-24 23:04:27,605 - INFO: Accessed route: /favicon.ico
+2026-05-24 23:04:27,673 - INFO: 127.0.0.1 - - [24/May/2026 23:04:27] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-05-24 23:05:48,593 - INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-05-24 23:05:48,594 - INFO: [33mPress CTRL+C to quit[0m
+2026-05-24 23:05:48,596 - INFO:  * Restarting with stat
+2026-05-24 23:05:50,715 - WARNING:  * Debugger is active!
+2026-05-24 23:05:50,719 - INFO:  * Debugger PIN: 515-422-542
+2026-05-24 23:05:53,472 - INFO: Accessed route: /
+2026-05-24 23:05:53,553 - INFO: 127.0.0.1 - - [24/May/2026 23:05:53] "GET / HTTP/1.1" 200 -
+2026-05-24 23:05:53,660 - INFO: Accessed route: /static/css/style.css
+2026-05-24 23:05:53,667 - INFO: 127.0.0.1 - - [24/May/2026 23:05:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-24 23:05:53,676 - INFO: Accessed route: /static/images/logo.png
+2026-05-24 23:05:53,686 - INFO: 127.0.0.1 - - [24/May/2026 23:05:53] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2026-05-24 23:05:53,687 - INFO: Accessed route: /static/js/scripts.js
+2026-05-24 23:05:53,701 - INFO: 127.0.0.1 - - [24/May/2026 23:05:53] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2026-05-24 23:06:21,783 - INFO: Accessed route: /'
+2026-05-24 23:06:21,854 - INFO: 127.0.0.1 - - [24/May/2026 23:06:21] "[35m[1mGET /' HTTP/1.1[0m" 500 -
+2026-05-24 23:06:21,930 - INFO: 127.0.0.1 - - [24/May/2026 23:06:21] "GET /'?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2026-05-24 23:06:21,997 - INFO: 127.0.0.1 - - [24/May/2026 23:06:21] "GET /'?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2026-05-24 23:06:22,169 - INFO: 127.0.0.1 - - [24/May/2026 23:06:22] "GET /'?__debugger__=yes&cmd=resource&f=console.png&s=n8yumLA0DYFP87RyJ8oo HTTP/1.1" 200 -
+2026-05-24 23:06:22,182 - INFO: 127.0.0.1 - - [24/May/2026 23:06:22] "GET /'?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2026-05-24 23:06:28,500 - INFO: Accessed route: /
+2026-05-24 23:06:28,504 - INFO: 127.0.0.1 - - [24/May/2026 23:06:28] "GET / HTTP/1.1" 200 -
+2026-05-24 23:06:28,537 - INFO: Accessed route: /static/css/style.css
+2026-05-24 23:06:28,544 - INFO: 127.0.0.1 - - [24/May/2026 23:06:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-24 23:06:28,555 - INFO: Accessed route: /static/js/scripts.js
+2026-05-24 23:06:28,559 - INFO: Accessed route: /static/images/logo.png
+2026-05-24 23:06:28,561 - INFO: 127.0.0.1 - - [24/May/2026 23:06:28] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -
+2026-05-24 23:06:28,566 - INFO: 127.0.0.1 - - [24/May/2026 23:06:28] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2026-05-24 23:06:28,624 - INFO: Accessed route: /favicon.ico
+2026-05-24 23:06:28,685 - INFO: 127.0.0.1 - - [24/May/2026 23:06:28] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2026-05-24 23:06:39,137 - INFO: Accessed route: /upload1
+2026-05-24 23:06:48,339 - INFO: 127.0.0.1 - - [24/May/2026 23:06:48] "POST /upload1 HTTP/1.1" 200 -
+2026-05-24 23:06:50,968 - INFO: Accessed route: /download/21CSE354T – FULL STACK DEVELOPMENT_III yr_05 sem B_Tech_CSE_20260524230641.xlsx
+2026-05-24 23:06:51,032 - INFO: 127.0.0.1 - - [24/May/2026 23:06:51] "GET /download/21CSE354T%20–%20FULL%20STACK%20DEVELOPMENT_III%20yr_05%20sem%20B_Tech_CSE_20260524230641.xlsx HTTP/1.1" 200 -
